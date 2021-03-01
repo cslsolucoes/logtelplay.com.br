@@ -13,7 +13,69 @@ $( "#passo-um" ).click(function() {
     data: data,
     dataType: "json",
     success: function (response) {
+      var internet = false, mumo = false, cdn = false, tv = false, qualifica = false;
       $("#response").html(response[0].nome);
+      for(var i = 0; i < response.length; i++) {
+        try {
+          // VERIFICAR INTERNET
+          if(response[i].servico_internet) {
+            var servico_internet = JSON.parse(response[i].servico_internet);
+            if(servico_internet[0].status) {
+              internet = true;
+            }
+          }
+          
+          if(response[i].servico_multimida) {
+            var servico_multimidia = JSON.parse(response[i].servico_multimida);
+            // VERIFICAR QUALIFICA
+            if(servico_multimidia[0].email != null && servico_multimidia[0].descricao == "Qualifica treinamentos") {
+              qualifica = true;            
+            }
+            // VERIFICAR MUMO
+            if(servico_multimidia[0].email != null && servico_multimidia[0].descricao == "Mumo Logtel Music") {
+              mumo = true
+            }
+          }
+
+          // VERIFICAR CDNTV
+          if(response[i].servico_tv) {
+            var servico_cdntv = JSON.parse(response[i].servico_tv);
+            if(servico_cdntv[0].login != null && servico_cdntv[0].descricao == "CDNTV - Total") {
+              cdn = true;
+            }
+          }
+
+          // VERIFICAR WATCHTV
+          if(response[i].servico_tv) {
+            var servico_tv = JSON.parse(response[i].servico_tv);
+            if(servico_tv[0].smartcard != null && servico_tv[0].descricao == "WatchTV") {
+              tv = true;
+            }
+          }
+        } catch (e) {}
+      }
+
+      if(internet)
+        console.log('Internet ativo');
+      else
+        console.log('Internet inativo');
+      if(mumo)
+        console.log('Mumo ativo');
+      else
+        console.log('Mumo inativo');
+      if(qualifica)
+        console.log('Qualifica ativo');
+      else
+        console.log('Qualifica inativo');
+      if(cdn)
+        console.log('CDN ativo');
+      else
+        console.log('CDN inativo');
+      if(tv)
+        console.log('WatchTV ativo');
+      else
+        console.log('WatchTV inativo');
+
       $("#response").css("color", "white");
       $( ".passo-dois").animate({ width: "show", 'left': 0 }, "slow");
       $( ".passo-um").hide();
