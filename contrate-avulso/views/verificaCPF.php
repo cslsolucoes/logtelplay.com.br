@@ -10,7 +10,7 @@
     </div>
     <div class="container">
       <div class=" col-md-4  offset-md-4 input-group input-group-newsletter">
-        <input type="text" class="form-control" placeholder="000.000.000-00" aria-label="Insira seu CPF" aria-describedby="submit-button">
+        <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" aria-label="Insira seu CPF" aria-describedby="submit-button">
         <div class="input-group-append">
           <button class="btn btn-secondary" type="button" id="passo-um">Cadastrar</button>
         </div>
@@ -24,6 +24,7 @@
       <div class="section-heading text-center" >
         <h2 class="text-white">Contrate um serviço avulso da Logtel Play</h2>
         <p class="text-white">Personalize sua Logtel Play. Escolha abaixo os serviços desejados</p>
+        <p id="response"></p>
         <hr>
       </div>
       <div class="row ">

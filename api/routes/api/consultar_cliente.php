@@ -1,6 +1,6 @@
 <?php
 
-$this->post('api/v1/consultar_cliente', function () {
+$this->post('consultar_cliente', function () {
   (string)$busca = '';
   extract($_POST);
   if($busca) {
@@ -10,6 +10,6 @@ $this->post('api/v1/consultar_cliente', function () {
   }
 });
 
-$this->get('api/v1/consultar_cliente', function () {
+$this->get('consultar_cliente', function () {
   $this->core->loadModule('template')->render('403');
 });
