@@ -40,10 +40,6 @@
 </div>
 
 </section>
-
-
-
-
   <section class="sec-contratar passo-um" id="features">
     <div class="container-fluid">
       <div class="section-heading text-center" >
