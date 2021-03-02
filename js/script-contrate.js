@@ -14,7 +14,6 @@ $( "#passo-um" ).click(function() {
     dataType: "json",
     success: function (response) {
       var internet = false, mumo = false, cdn = false, tv = false, qualifica = false;
-      $("#response").html(response[0].nome);
       for(var i = 0; i < response.length; i++) {
         try {
           // VERIFICAR INTERNET
@@ -76,7 +75,14 @@ $( "#passo-um" ).click(function() {
       else
         console.log('WatchTV inativo');
 
-      $("#buscaCPF #response").html("Tudo certo com o seu CPF, podemos continuar com o cadastro");
+      try {
+        if(response[0].nome) {
+          $("#buscaCPF #response").html("Tudo certo com o seu CPF, podemos continuar com o cadastro");
+        }
+      } catch(e) {
+        $("#buscaCPF #response").html("Você não tem cadastro.");
+      }
+
       $( ".passo-dois").animate({ width: "show", 'left': 0 }, "slow");
       $( ".passo-um").hide();
       $( ".passo-tres").hide();
