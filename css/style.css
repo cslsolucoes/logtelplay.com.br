@@ -138,7 +138,7 @@ background-color: #f4f8ff;
   background: url("../img/bg-pattern.png"), #F27124;
   background: url("../img/bg-pattern.png"), linear-gradient(to left, #f2bc24, #fbaf17);
 }
-.btn-qualifica:hover,::after{
+.btn-qualifica:hover{
   background: url("../img/bg-pattern.png"), #F27124;
   background: url("../img/bg-pattern.png"), linear-gradient(to left, #f2bc24, #fbaf17);
 }

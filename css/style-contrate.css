@@ -1,3 +1,155 @@
+
+/*------Barra de progresso------*/
+
+.area {
+  /* width: 600px;*/
+  margin: 40px auto;
+}
+
+.progressbar {
+  margin: 0;
+  counter-reset: step;
+  padding: 0;
+  position: relative;
+  /*left: 55%;
+  transform: translateX(-50%);
+  width: 100%;*/
+  margin: auto !important;
+  width: 760px;
+}
+
+.progressbar li {
+  list-style-type: none;
+  /*width: 11%;*/
+  width: 140px;
+  float: left;
+  font-size: 14px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  color: #c8cacb;
+}
+
+.progressbar li:before {
+  width: 40px;
+  height: 40px;
+  content: counter(step);
+  counter-increment: step;
+  line-height: 35px;
+  border: 2px solid #c8cacb;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.progressbar li:after {
+  width: 74%;
+  height: 2px;
+  content: '';
+  position: absolute;
+  background-color: #c8cacb;
+  top: 15px;
+  left: -37%;
+  z-index: -1;
+}
+
+.progressbar li.active:after {
+  width: 74%;
+  height: 2px;
+  content: '';
+  position: absolute;
+  background-color: #1f7dde !important;
+  top: 15px;
+  left: -37%;
+  z-index: -1;
+}
+
+.progressbar li:first-child:after {
+  content: none;
+}
+
+.progressbar li.active {
+  color: #1f7dde;
+}
+
+.progressbar li.active:before {
+  border-color: #1f7dde;
+  color: #fff;
+  color: #1f7dde;
+  background-color: #fff;
+}
+
+.progressbar li.active+li:after {
+  background-color: #c8cacb;
+}
+
+.progressbar li a {
+  color: #1f7dde !important;
+  padding-top: 48px;
+}
+
+.progressbar li a:hover {
+  color: #1f7dde;
+  text-decoration: none;
+  opacity: .85;
+}
+
+.progressbar li.active.last:before {
+  color: #fff;
+  background-color: #1f7dde;
+}
+
+::after, ::before {
+  box-sizing: border-box;
+  background: url("../img/bg-pattern.png"), #b3b3b359;
+}
+
+.TexIdentificao {
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.82;
+  letter-spacing: normal;
+  text-align: center;
+  color: #1f7dde;
+}
+
+
+.sec-contratar {
+  background-color: #f5f9ff;
+  height: 100%;
+  position: relative;
+
+}
+
+.btn-primary {
+  font-size: 12px;
+  width: 244.6px;
+  height: 40px;
+  border-radius: 20px;
+  background-image: linear-gradient(263deg, #ffa351, #ffcb44);
+  border-color: #f5f9ff;
+  
+}
+
+.btn-primary:hover {
+  width: 244.6px;
+  height: 40px;
+  border-radius: 20px;
+  background-image: linear-gradient(263deg,#ffcb44, #ffa351 );
+  border-color: #f5f9ff;
+  
+}
+
+.form-control-contate{
+  border-radius: 20px;
+  border: 1px solid#c2c7cf;
+}
+
+/*  */
 section.features{
     min-height: 93vh;
 }

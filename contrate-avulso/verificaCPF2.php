@@ -1,23 +1,66 @@
-</head>
-<body id="page-top">  
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <div class="container-fluid ml-4">
+    <a class="navbar-brand" href="#"><img src="<?= $uri ?>img/logoplay-preta-oficial-navbar.png" class="img-fluid" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<section class="features pricing py-5 passo-um" id="features">
-  <div class="container-fluid">
-    <div class="section-heading text-center" >
-      <h2 class="text-white">Informe seu CPF, por gentileza</h2>
-      <p class="text-white">Vamos Buscar seu CPF no sistema</p>
-      <hr>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+      <i class="fa fa-question-circle-o" aria-hidden="true"></i> 
+      <h6 class="m-2"> Precisa de Ajuda?</h6>
+      </form>
     </div>
-    <div class="container">
-      <div class=" col-md-4  offset-md-4 input-group input-group-newsletter">
-        <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" aria-label="Insira seu CPF" aria-describedby="submit-button">
-        <div class="input-group-append">
-          <button class="btn btn-secondary" type="button" id="passo-um">Cadastrar</button>
+  </div>
+</nav>
+<div class="footer-div ">
+    <div class="border-box">
+      <div class="border-1"></div>    
+      <div class="border-2"></div>    
+      <div class="border-3"></div>
+      <div class="border-4"></div>
+      <div class="border-5"></div>
+      <div class="border-6"></div>
+    </div>
+  </div>
+<section class="sec-progressbar">
+<div class="row">
+  <div class="col-12 col-xl-10 px-0 px-lg-3 py-3 m-auto" style="overflow: auto">
+      <ul class="progressbar">
+          <li class="TexIdentificao">CPF</li>
+          <li class="TexIdentificao">PLANOS</li>
+          <li class="TexIdentificao">SEU NÚMERO</li>
+          <li class="TexIdentificao">ENDEREÇO</li>
+          <li class="TexIdentificao">PAGAMENTO</li>
+      </ul>
+  </div>
+</div>
+
+</section>
+
+
+
+
+  <section class="sec-contratar passo-um" id="features">
+    <div class="container-fluid">
+      <div class="section-heading text-center" >
+        <h2 class="">Vamos começar?</h2>
+        <p class="">Nos informe seu CPF</p>
+        <hr>
+      </div>
+      <div class="container text-center mt-4">
+        <div class=" col-md-3  mx-auto text-center">
+          <input type="text" class="form-control form-control-contate text-center" id="cpf" placeholder="000.000.000-00" aria-label="Insira seu CPF" aria-describedby="submit-button">
+        </div>
+        <div class=" col-md-3  mx-auto">
+          <button type="button" id="passo-um" class="btn btn-primary col-md-11 mt-4"  data-toggle="modal" data-target="#buscaCPF">Começar</button>
         </div>
       </div>
     </div>
-  </div>
-</section> 
+  </section> 
     
   <section class="features pricing py-5 passo-dois" id="features">
     <div class="container">
@@ -63,7 +106,7 @@
     </div>
   </section>
 
-  <section class="features pricing py-5 nome passo-tres" id="features">
+  <section class="features pricing py-5 passo-tres" id="features">
     <div class="container-fluid">
       <div class="section-heading text-center" >
         <h2 class="text-white">Tudo Ok com o CPF, agora, me informe os dados abaixo, por gentileza... <br>
@@ -121,7 +164,7 @@
     </div>
   </section>
 
-  <section class="features pricing py-5 nome passo-quatro" id="features">
+  <section class="features pricing py-5 passo-quatro" id="features">
     <div class="container-fluid">
       <div class="section-heading text-center" >
         <h2 class="text-white">Certo, Agora me informe seu endereço...<br>
@@ -191,25 +234,19 @@
     </div>
   </section>
 
-  <div class="bg-white barra-conversao fixed-bottom active d-none d-xl-block fixed-bottom">
-    <div class="container">
-        <div class="form-row">
-          <div class="col-md-3 offset-md-2 mt-1">
-            <a href="<?= $uri ?>/img/#nossosPlanos" class="col btn btn-light" >
-              <spam class=""> Desconto R$ N,00 </spam>
-            </a>
-          </div>   
-          <div class="col-md-3 m-1">
-            <a href="tel:40639001" class="col btn btn-light" >
-              <!-- <i class="fa fa-phone cyan-gradient fa-2x "></i>  -->
-              <spam class="ml-4"> Total: R$ N,00 </spam>
-            </a>
-          </div>    
-          <div class="col-md-3">
-              <!-- <i class="fa fa-whatsapp green-gradient fa-2x"></i>  -->
-              <spam class="ml-4 pt-2 pb-2 btn btn-primary" id="passo-dois"> Contratar </spam>
-            </a>
-          </div>  
-        </div>
+  
+
+<!-- Modal -->
+<div class="modal fade" id="buscaCPF" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p id="response"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Prosseguir</button>
+      </div>
     </div>
   </div>
+</div>

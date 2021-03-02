@@ -83,7 +83,20 @@ $( "#passo-um" ).click(function() {
       $( ".passo-quatro").hide();
       $( ".barra-conversao").hide();
     }
+    error: function (response){
+      $("#response").html("Tudo certo com o seu CPF, podemos continuar com o cadastro");
+    }
   });
+});
+
+
+
+$( "#passo-um" ).click(function() {
+    $( ".passo-dois").animate({ width: "show", 'left': 0 }, "slow");
+    $( ".passo-um").hide();
+    $( ".passo-tres").hide();
+    $( ".passo-quatro").hide();
+    $( ".barra-conversao").hide();
 });
 
 $( "#passo-dois" ).click(function() {
@@ -98,14 +111,6 @@ $( "#passo-tres" ).click(function() {
     $( ".passo-um").hide();
     $( ".passo-tres").hide();
     $( ".passo-dois").hide();
-    $( ".barra-conversao").hide();
-});
-
-$( "#passo-um" ).click(function() {
-    $( ".passo-dois").animate({ width: "show", 'left': 0 }, "slow");
-    $( ".passo-um").hide();
-    $( ".passo-tres").hide();
-    $( ".passo-quatro").hide();
     $( ".barra-conversao").hide();
 });
 
