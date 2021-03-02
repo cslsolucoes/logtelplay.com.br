@@ -82,7 +82,7 @@ $( "#passo-um" ).click(function() {
       $( ".passo-tres").hide();
       $( ".passo-quatro").hide();
       $( ".barra-conversao").hide();
-    }
+    },
     error: function (response){
       $("#response").html("Tudo certo com o seu CPF, podemos continuar com o cadastro");
     }
