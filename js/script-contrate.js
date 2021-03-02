@@ -93,14 +93,14 @@ $( "#passo-um" ).click(function() {
 });
 
 
-
-$( "#passo-um" ).click(function() {
+// NÃO PRECISA DESSE CÓDIGO, VISTO QUE ACIMA JÁ TEM O CÓDIGO QUE FAZ O MESMO
+/* $( "#passo-um" ).click(function() {
     $( ".passo-dois").animate({ width: "show", 'left': 0 }, "slow");
     $( ".passo-um").hide();
     $( ".passo-tres").hide();
     $( ".passo-quatro").hide();
     $( ".barra-conversao").hide();
-});
+}); */
 
 $( "#passo-dois" ).click(function() {
     $( ".passo-tres").animate({ width: "show", 'left': 0 }, "slow");
