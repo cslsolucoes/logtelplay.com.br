@@ -1,4 +1,7 @@
-$(document).ready(function(){
+// NÃO PRECISA DO .ready, SE NÃO OS COMANDOS PRA ESCONDER OS PASSOS 2, 3 E 4 SÓ
+// VÃO EXECUTAR QUANDO O JAVASCRIPT INTEIRO CARREGAR, SE A INTERNET TIVER LENTA,
+// O CLIENTE VAI PODER ENXERGAR TODOS OS PASSOS
+//$(document).ready(function(){
 
 $(".passo-dois").hide();
 $(".passo-tres").hide();
@@ -118,4 +121,4 @@ $( "#passo-tres" ).click(function() {
 });
 
 
-});
+//});
