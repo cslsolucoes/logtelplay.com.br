@@ -1,3 +1,3 @@
 <?php include("header.php")?>
-<?php include("views/verificaCPF.php")?>
+<?php include("verificaCPF2.php")?>
 <?php include("footer.php")?>
