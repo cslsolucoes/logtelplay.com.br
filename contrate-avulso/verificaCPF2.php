@@ -40,10 +40,6 @@
 </div>
 
 </section>
-
-
-
-
   <section class="sec-contratar passo-um" id="features">
     <div class="container-fluid">
       <div class="section-heading text-center" >
@@ -244,8 +240,8 @@
         <p id="response"></p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary">Prosseguir</button>
+        <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">OK</button>
       </div>
     </div>
   </div>
