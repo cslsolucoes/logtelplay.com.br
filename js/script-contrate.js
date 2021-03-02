@@ -76,15 +76,12 @@ $( "#passo-um" ).click(function() {
       else
         console.log('WatchTV inativo');
 
-      $("#response").css("color", "white");
+      $("#buscaCPF #response").html("Tudo certo com o seu CPF, podemos continuar com o cadastro");
       $( ".passo-dois").animate({ width: "show", 'left': 0 }, "slow");
       $( ".passo-um").hide();
       $( ".passo-tres").hide();
       $( ".passo-quatro").hide();
       $( ".barra-conversao").hide();
-    }
-    error: function (response){
-      $("#response").html("Tudo certo com o seu CPF, podemos continuar com o cadastro");
     }
   });
 });
