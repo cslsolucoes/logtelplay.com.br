@@ -81,10 +81,13 @@ $( "#passo-um" ).click(function() {
 
       try {
         if(response[0].nome) {
-          $("#buscaCPF #response").html("Tudo certo com o seu CPF, podemos continuar com o cadastro");
+          $("#buscaCPF #response").html("Você já tem contrato ativo conosco. Já tem direito logtel play.");
+        }
+        else {
+          $("#buscaCPF #response").html("Já identificamos seu cadastro no sistema, com serviço de internet Inativo. Deseja prosseguir com o contrato da Logtel Play? ");
         }
       } catch(e) {
-        $("#buscaCPF #response").html("Você não tem cadastro.");
+        $("#buscaCPF #response").html("Tudo certo. Deseja continuar com o contrato de serviço avulso da Logtel Play?");
       }
 
       $( ".passo-dois").animate({ width: "show", 'left': 0 }, "slow");
