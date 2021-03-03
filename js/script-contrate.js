@@ -5,9 +5,13 @@
 
 var cpf;
 
+<<<<<<< HEAD
 $(".passo-dois").hide();
 $(".passo-tres").hide();
 $(".passo-quatro").hide();
+=======
+
+>>>>>>> 9543b149fab518e953971622fc3a506f4f3a008d
 
 $( "#passo-um" ).click(function() {
   cpf = busca = $("#cpf").val().toUpperCase().replace(/[^a-zA-Z0-9 çÇáÁéÉíÍóÓúÚãÃõÕ]/g, "");
@@ -102,6 +106,39 @@ $( "#passo-um" ).click(function() {
 });
 
 
+var cadastroVenda = { 
+  
+  'cpf' : cpf,
+  'nome': $('#nome').val(),
+  'email': $('#email').val(),
+  'telefone': $('#telefone').val(),
+  'cep':$('#cep').val(),
+  'bairro': $('#bairro').val(),
+  'cidade': $('#cidade').val(),
+  'uf': $('#uf').val(),
+  'logradouro': $('#logradouro').val(),
+  'numero': $('#numero').val(),
+  'servico': $('#servico').val()
+ };
+
+$("#cadastrar_venda");
+console.log(cadastroVenda);
+
+/* 
+$("#cadastrar-venda").click(function() {
+  $.ajax({
+    method: "POST",
+    url: "../api/cadastrar_vendas",
+    data: data,
+    dataType: "json",
+    success: function (response) {
+      var internet = false, mumo = false, cdn = false, tv = false, qualifica = false;
+     
+    }
+  });
+});
+
+ */
 // NÃO PRECISA DESSE CÓDIGO, VISTO QUE ACIMA JÁ TEM O CÓDIGO QUE FAZ O MESMO
 /* $( "#passo-um" ).click(function() {
     $( ".passo-dois").animate({ width: "show", 'left': 0 }, "slow");
