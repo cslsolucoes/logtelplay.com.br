@@ -89,6 +89,7 @@ $( "#passo-um" ).click(function() {
 });
 
 $("#cadastrar-logtelplay").click(function(){
+  $('#buscaCPF').modal('hide');
   $( ".passo-dois").animate({ width: "show", 'left': 0 }, "slow");
   $( ".passo-um").hide();
   $( ".passo-tres").hide();
