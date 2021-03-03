@@ -31,6 +31,9 @@ $( "#passo-um" ).click(function() {
               console.log(servico_internet[0].status);
               internet = true;
             }
+            else{
+              internet = false;
+            }
           }
           
           if(response[i].servico_multimida) {
@@ -64,20 +67,22 @@ $( "#passo-um" ).click(function() {
       }
 
       try {
-        if(internet == true) {
+        if(internet) {
           $("#buscaCPF #response").html("Você já tem contrato ativo conosco. Já tem direito logtel play.");
           $( "#acessar-logtelplay").show();
           $( "#cadastrar-logtelplay").hide();
         }
         else {
-          $("#buscaCPF #response").html("Tudo certo. Deseja continuar com o contrato de serviço avulso da Logtel Play?");
+          $("#buscaCPF #response").html("Identificamos que você tem um contrato cancelado conosco. Deseja continuar com o contrato de serviço avulso da Logtel Play?");
           $( "#acessar-logtelplay").hide();
           $( "#cadastrar-logtelplay").show();
+          console.log(servico_internet[0].status);
         }
       } catch(e) {
         $("#buscaCPF #response").html("Tudo certo. Deseja continuar com o contrato de serviço avulso da Logtel Play?");
         $( "#acessar-logtelplay").hide();
         $( "#cadastrar-logtelplay").show();
+        console.log(servico_internet[0].status);
       }
     }
   });
@@ -91,7 +96,7 @@ $("#cadastrar-logtelplay").click(function(){
   $( ".barra-conversao").hide();
 });
 
-
+/* 
 var cadastroVenda = { 
   
   'cpf' : cpf,
@@ -109,7 +114,7 @@ var cadastroVenda = {
 
 $("#cadastrar_venda");
 console.log(cadastroVenda);
-
+ */
 /* 
 $("#cadastrar-venda").click(function() {
   $.ajax({
