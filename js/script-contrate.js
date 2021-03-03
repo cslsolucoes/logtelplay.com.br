@@ -36,7 +36,7 @@ $( "#passo-um" ).click(function() {
             }
             // VERIFICAR MUMO
             if(servico_multimidia[0].email != null && servico_multimidia[0].descricao == "Mumo Logtel Music") {
-              mumo = true
+              mumo = true;
             }
           }
 
