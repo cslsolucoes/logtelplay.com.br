@@ -3,12 +3,12 @@
 // O CLIENTE VAI PODER ENXERGAR TODOS OS PASSOS
 //$(document).ready(function(){
 
-$(".passo-dois").hide();
-$(".passo-tres").hide();
-$(".passo-quatro").hide();
+var cpf;
+
+
 
 $( "#passo-um" ).click(function() {
-  var cpf = busca = $("#cpf").val().toUpperCase().replace(/[^a-zA-Z0-9 çÇáÁéÉíÍóÓúÚãÃõÕ]/g, "");
+  cpf = busca = $("#cpf").val().toUpperCase().replace(/[^a-zA-Z0-9 çÇáÁéÉíÍóÓúÚãÃõÕ]/g, "");
   var data = { busca:cpf, tipo:"todos" }
   $.ajax({
     method: "POST",
@@ -100,6 +100,39 @@ $( "#passo-um" ).click(function() {
 });
 
 
+var cadastroVenda = { 
+  
+  'cpf' : cpf,
+  'nome': $('#nome').val(),
+  'email': $('#email').val(),
+  'telefone': $('#telefone').val(),
+  'cep':$('#cep').val(),
+  'bairro': $('#bairro').val(),
+  'cidade': $('#cidade').val(),
+  'uf': $('#uf').val(),
+  'logradouro': $('#logradouro').val(),
+  'numero': $('#numero').val(),
+  'servico': $('#servico').val()
+ };
+
+$("#cadastrar_venda");
+console.log(cadastroVenda);
+
+/* 
+$("#cadastrar-venda").click(function() {
+  $.ajax({
+    method: "POST",
+    url: "../api/cadastrar_vendas",
+    data: data,
+    dataType: "json",
+    success: function (response) {
+      var internet = false, mumo = false, cdn = false, tv = false, qualifica = false;
+     
+    }
+  });
+});
+
+ */
 // NÃO PRECISA DESSE CÓDIGO, VISTO QUE ACIMA JÁ TEM O CÓDIGO QUE FAZ O MESMO
 /* $( "#passo-um" ).click(function() {
     $( ".passo-dois").animate({ width: "show", 'left': 0 }, "slow");
