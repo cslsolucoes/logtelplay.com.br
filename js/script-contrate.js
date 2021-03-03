@@ -22,7 +22,8 @@ $( "#passo-um" ).click(function() {
           // VERIFICAR INTERNET
           if(response[i].servico_internet) {
             var servico_internet = JSON.parse(response[i].servico_internet);
-            if(servico_internet[0].status) {
+            if(servico_internet[0].status == 1 || servico_internet[0].status == 4) {
+              console.log(servico_internet[0].status);
               internet = true;
             }
           }
@@ -31,7 +32,7 @@ $( "#passo-um" ).click(function() {
             var servico_multimidia = JSON.parse(response[i].servico_multimida);
             // VERIFICAR QUALIFICA
             if(servico_multimidia[0].email != null && servico_multimidia[0].descricao == "Qualifica treinamentos") {
-              qualifica = true;            
+              qualifica = true;
             }
             // VERIFICAR MUMO
             if(servico_multimidia[0].email != null && servico_multimidia[0].descricao == "Mumo Logtel Music") {
