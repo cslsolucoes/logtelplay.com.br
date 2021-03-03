@@ -9,7 +9,7 @@
       <hr>
     </div>
     <div class="container">
-      <div class=" col-md-4  offset-md-4 input-group input-group-newsletter">
+      <div class=" col-md-4  offset-md-4 input-group">
         <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" aria-label="Insira seu CPF" aria-describedby="submit-button">
         <div class="input-group-append">
           <button class="btn btn-secondary" type="button" id="passo-um">Cadastrar</button>
@@ -71,22 +71,22 @@
         <hr>
       </div>
       <div class="container " >
-        <div class=" col-md-4  mb-3 offset-md-4 input-group input-group-newsletter">
+        <div class=" col-md-4  mb-3 offset-md-4 input-group">
           <input type="text" class="form-control" placeholder="123.456.789-56" aria-label="Insira seu CPF" aria-describedby="submit-button">
           <div class="input-group-append">
           </div>
         </div>
-        <div class=" col-md-4 mb-3 offset-md-4 input-group input-group-newsletter">
+        <div class=" col-md-4 mb-3 offset-md-4 input-group">
           <input type="text" class="form-control" placeholder="Gabriely Souza Mendes Montes" aria-label="Insira seu CPF" aria-describedby="submit-button">
           <div class="input-group-append">
           </div>
         </div>
-        <div class=" col-md-4 mb-3 offset-md-4 input-group input-group-newsletter">
+        <div class=" col-md-4 mb-3 offset-md-4 input-group">
           <input type="text" class="form-control" placeholder="gabrily@gmail.com" aria-label="Insira seu CPF" aria-describedby="submit-button">
           <div class="input-group-append">
           </div>
         </div>
-        <div class=" col-md-4  mb-3 offset-md-4 input-group input-group-newsletter">
+        <div class=" col-md-4  mb-3 offset-md-4 input-group">
           <input type="text" class="form-control" placeholder="Telefone" aria-label="Insira seu CPF" aria-describedby="submit-button">
           <div class="input-group-append">
             <button class="btn btn-secondary" type="button" id="passo-tres">Próximo</button>
@@ -152,7 +152,7 @@
             <label for="instalacao">Logradouro</label>
             <input type="text" class="form-control form-control-inline" id="rua" value="" name="logradouro" >
           </div>
-          <div class="form-group col-md-3 input-group input-group-newsletter">
+          <div class="form-group col-md-3 input-group">
               <label for="instalacao">Número</label>
               <input type="text" class="form-control" placeholder="Telefone" aria-label="Insira seu CPF" aria-describedby="submit-button">
               <div class="input-group-append">

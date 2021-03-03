@@ -4,7 +4,13 @@
 //$(document).ready(function(){
 
 var cpf;
-
+$( ".passo-dois").hide();
+$( ".passo-tres").hide();
+$( ".passo-quatro").hide();
+$( ".barra-conversao").hide();
+$( "#acessar-logtelplay").hide();
+$( "#cadastrar-logtelplay").hide();
+var cliente; /* Novo cliente / Cliente com contrato cancelado */
 
 
 $( "#passo-um" ).click(function() {
@@ -58,45 +64,32 @@ $( "#passo-um" ).click(function() {
         } catch (e) {}
       }
 
-      if(internet)
-        console.log('Internet ativo');
-      else
-        console.log('Internet inativo');
-      if(mumo)
-        console.log('Mumo ativo');
-      else
-        console.log('Mumo inativo');
-      if(qualifica)
-        console.log('Qualifica ativo');
-      else
-        console.log('Qualifica inativo');
-      if(cdn)
-        console.log('CDN ativo');
-      else
-        console.log('CDN inativo');
-      if(tv)
-        console.log('WatchTV ativo');
-      else
-        console.log('WatchTV inativo');
-
       try {
         if(response[0].nome) {
           $("#buscaCPF #response").html("Você já tem contrato ativo conosco. Já tem direito logtel play.");
+          $( "#acessar-logtelplay").show();
+          $( "#cadastrar-logtelplay").hide();
         }
         else {
-          $("#buscaCPF #response").html("Já identificamos seu cadastro no sistema, com serviço de internet Inativo. Deseja prosseguir com o contrato da Logtel Play? ");
+          $("#buscaCPF #response").html("Tudo certo. Deseja continuar com o contrato de serviço avulso da Logtel Play?");
+          $( "#acessar-logtelplay").hide();
+          $( "#cadastrar-logtelplay").show();
         }
       } catch(e) {
-        $("#buscaCPF #response").html("Tudo certo. Deseja continuar com o contrato de serviço avulso da Logtel Play?");
+        $("#buscaCPF #response").html("Já identificamos seu cadastro no sistema, com serviço de internet cancelado. Deseja prosseguir com o contrato da Logtel Play? ");
+        $( "#acessar-logtelplay").hide();
+        $( "#cadastrar-logtelplay").show();
       }
-
-      $( ".passo-dois").animate({ width: "show", 'left': 0 }, "slow");
-      $( ".passo-um").hide();
-      $( ".passo-tres").hide();
-      $( ".passo-quatro").hide();
-      $( ".barra-conversao").hide();
     }
   });
+});
+
+$("#cadastrar-logtelplay").click(function(){
+  $( ".passo-dois").animate({ width: "show", 'left': 0 }, "slow");
+  $( ".passo-um").hide();
+  $( ".passo-tres").hide();
+  $( ".passo-quatro").hide();
+  $( ".barra-conversao").hide();
 });
 
 

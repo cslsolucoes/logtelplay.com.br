@@ -61,11 +61,11 @@
   </div>
 </section> 
     
-<section class="features pricing py-5 passo-dois" id="features">
+<section class="sec-contratar passo-dois" id="features">
   <div class="container">
     <div class="section-heading text-center" >
-      <h2 class="text-white">Contrate um serviço avulso da Logtel Play</h2>
-      <p class="text-white">Personalize sua Logtel Play. Escolha abaixo os serviços desejados</p>
+      <h2 class="">Contrate um serviço avulso da Logtel Play</h2>
+      <p class="">Personalize sua Logtel Play. Escolha abaixo os serviços desejados</p>
       <p id="response"></p>
       <hr>
     </div>
@@ -105,38 +105,42 @@
   </div>
 </section>
 
-<section class="features pricing py-5 passo-tres" id="features">
-  <div class="container-fluid">
+<section class="sec-contratar passo-tres" id="features">
+  <div class="container">
     <div class="section-heading text-center" >
-      <h2 class="text-white">Tudo Ok com o CPF, agora, me informe os dados abaixo, por gentileza... <br>
-      <p class="text-white">Cadastro</p>
+      <h2 class="">Tudo Ok com o CPF, agora, me informe os dados abaixo, por gentileza... <br>
+      <p class="">Cadastro</p>
       <hr>
     </div>
     <div class="container " >
-      <div class=" col-md-4  mb-3 offset-md-4 input-group input-group-newsletter">
-        <input type="text" class="form-control" placeholder="123.456.789-56" aria-label="Insira seu CPF" aria-describedby="submit-button">
+      <div class=" col-md-4  mb-3 offset-md-4">
+        <!-- <label for="cpf">CPF</label> -->
+        <input type="text" id="cpf" class="form-control form-control-contate text-center" aria-label="Insira seu CPF" value="cpf" name="cpf" disabled>
         <div class="input-group-append">
         </div>
       </div>
-      <div class=" col-md-4 mb-3 offset-md-4 input-group input-group-newsletter">
-        <input type="text" class="form-control" placeholder="Gabriely Souza Mendes Montes" aria-label="Insira seu CPF" aria-describedby="submit-button">
+      <div class=" col-md-4 mb-3 offset-md-4">
+        <!-- <label for="nome">Nome</label> -->
+        <input type="text" id="nome" class="form-control form-control-contate text-center" placeholder="Insira seu nome" aria-label="Insira seu nome" value="nome" name="nome">
         <div class="input-group-append">
         </div>
       </div>
-      <div class=" col-md-4 mb-3 offset-md-4 input-group input-group-newsletter">
-        <input type="text" class="form-control" placeholder="gabrily@gmail.com" aria-label="Insira seu CPF" aria-describedby="submit-button">
+      <div class=" col-md-4 mb-3 offset-md-4">
+        <!-- <label for="email">E-mail</label> -->
+        <input type="text" id="email" class="form-control form-control-contate text-center" placeholder="exemplo@logtel.com.br" aria-label="Insira seu e-mail" value="email" name="email">
         <div class="input-group-append">
         </div>
       </div>
-      <div class=" col-md-4  mb-3 offset-md-4 input-group input-group-newsletter">
-        <input type="text" class="form-control" placeholder="Telefone" aria-label="Insira seu CPF" aria-describedby="submit-button">
-        <div class="input-group-append">
-          <button class="btn btn-secondary" type="button" id="passo-tres">Próximo</button>
-        </div>
+      <div class=" col-md-4  mb-3 offset-md-4">
+        <!-- <label for="telefone">Telefone</label> -->
+        <input type="text" id="telefone" class="form-control  form-control-contate text-center" placeholder="9 9999-9999" aria-label="Insira seu Telefone" id="telefone" value="telefone" name="telefone">
+      </div>
+      <div class=" col-md-3  mx-auto">
+        <button type="button" id="passo-um" class="btn btn-primary col-md-11 mt-4"  data-toggle="modal" data-target="#buscaCPF">Começar</button>
       </div>
       
-      <h4 class="text-white text-center ">Você escolheu os serviços abaixo <h4>
-        <div class="container-fluid">
+      <h4 class=" text-center mt-5 ">Você escolheu os serviços abaixo <h4>
+        <div class="container-fluid mt-5">
           <div class="row offset-md-2">
             <div class="col-lg-3">
               <div class="feature-item" id="">
@@ -163,51 +167,46 @@
   </div>
 </section>
 
-<section class="features pricing py-5 passo-quatro" id="features">
+<section class="sect-contratar passo-quatro" id="features">
   <div class="container-fluid">
     <div class="section-heading text-center" >
-      <h2 class="text-white">Certo, Agora me informe seu endereço...<br>
+      <h2 class="">Certo, Agora me informe seu endereço...<br>
       <hr>
     </div>
     <div class="container " >
       
-      <div class="form-group col-md-4">
+      <div class="form-group col-md-3">
         <label for="cep">CEP</label>
-        <input type="number" class="form-control" id="cep" maxlength="8" value="" name="cep">
+        <input type="text" class="form-control form-control-contate " id="cep" maxlength="8" value="cep" name="cep">
       </div>
-      <div class="form-row mt-3">
+      <div class="form-row mt-3 col-md-12">
         <div class="form-group col-md-5">
           <label for="bairro">Bairro</label>
-          <input type="text" class="form-control form-control-inline" id="bairro" value="" name="bairro">
+          <input type="text" class="form-control form-control-contate " id="bairro" value="bairro" name="bairro">
         </div>
         <div class="form-group col-md-5">
           <label for="cidade">Cidade</label>
-          <input type="text" class="form-control form-control-inline" id="cidade" value="" name="cidade">
+          <input type="text" class="form-control form-control-contate " id="cidade" value="cidade" name="cidade">
         </div>
         <div class="form-group col-md-2">
-          <label for="numero">UF</label>
-          <input type="text" class="form-control form-control-inline" id="uf" value="" name="uf">
+          <label for="uf">UF</label>
+          <input type="text" class="form-control form-control-contate " id="uf" value="uf" name="uf">
         </div>
       </div>
-      <div class="form-row mt-3">
-        <div class="form-group col-md-9">
-          <label for="instalacao">Logradouro</label>
-          <input type="text" class="form-control form-control-inline" id="rua" value="" name="logradouro" >
+      <div class="form-row mt-3 col-md-12">
+        <div class="form-group col-md-10">
+          <label for="logradouro">Logradouro</label>
+          <input type="text" class="form-control form-control-contate " id="logradouro" value="logradouro" name="logradouro" >
         </div>
-        <div class="form-group col-md-3 input-group input-group-newsletter">
-            <label for="instalacao">Número</label>
-            <input type="text" class="form-control" placeholder="Telefone" aria-label="Insira seu CPF" aria-describedby="submit-button">
-            <div class="input-group-append">
-              <button class="btn btn-secondary" type="button" id="passo-tres">Próximo</button>
-              
-              
-            </div>
+        <div class="form-group col-md-2">
+            <label for="telefone">Número</label>
+            <input type="text" class="form-control form-control-contate " placeholder="9 9999-9999" id="numero" value="numero" name="numero"  >
         </div>
       </div>
       
       </div>
       
-      <h4 class="text-white text-center ">Você escolheu os serviços abaixo <h4>
+      <h4 class=" text-center mt-5 ">Você escolheu os serviços abaixo <h4>
       <div class="container-fluid">
         <div class="row offset-md-2">
           <div class="col-lg-3">
@@ -247,11 +246,13 @@
     <div class="modal-content">
       <div class="modal-body">
         <p id="response"></p>
-        <button class="btn btn-secondary" type="button" id="cadastrar-venda">Cadastrar Vendas</button>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">OK</button>
+        <a href="<?= $uri ?>#cta" id="acessar-logtelplay">
+          <button type="button" class="btn btn-primary">Saiba como acessar</button>
+        </a>
+        <button type="button" id="cadastrar-logtelplay" class="btn btn-primary">Contratar Logtel Play</button>
       </div>
     </div>
   </div>
