@@ -5,13 +5,6 @@
 
 var cpf;
 
-<<<<<<< HEAD
-$(".passo-dois").hide();
-$(".passo-tres").hide();
-$(".passo-quatro").hide();
-=======
-
->>>>>>> 9543b149fab518e953971622fc3a506f4f3a008d
 
 $( "#passo-um" ).click(function() {
   cpf = busca = $("#cpf").val().toUpperCase().replace(/[^a-zA-Z0-9 çÇáÁéÉíÍóÓúÚãÃõÕ]/g, "");
