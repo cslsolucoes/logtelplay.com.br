@@ -64,7 +64,7 @@ $( "#passo-um" ).click(function() {
       }
 
       try {
-        if(response[0].nome) {
+        if(internet == true) {
           $("#buscaCPF #response").html("Você já tem contrato ativo conosco. Já tem direito logtel play.");
           $( "#acessar-logtelplay").show();
           $( "#cadastrar-logtelplay").hide();
@@ -75,7 +75,7 @@ $( "#passo-um" ).click(function() {
           $( "#cadastrar-logtelplay").show();
         }
       } catch(e) {
-        $("#buscaCPF #response").html("Já identificamos seu cadastro no sistema, com serviço de internet cancelado. Deseja prosseguir com o contrato da Logtel Play? ");
+        $("#buscaCPF #response").html("Tudo certo. Deseja continuar com o contrato de serviço avulso da Logtel Play?");
         $( "#acessar-logtelplay").hide();
         $( "#cadastrar-logtelplay").show();
       }
