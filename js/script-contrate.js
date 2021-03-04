@@ -4,10 +4,6 @@
 //$(document).ready(function(){
 
 var cpf;
-$( ".passo-dois").hide();
-$( ".passo-tres").hide();
-$( ".passo-quatro").hide();
-$( ".barra-conversao").hide();
 $( "#acessar-logtelplay").hide();
 $( "#cadastrar-logtelplay").hide();
 var cliente; /* Novo cliente / Cliente com contrato cancelado */
