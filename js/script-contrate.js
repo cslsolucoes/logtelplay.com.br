@@ -6,7 +6,7 @@
 var cpf;
 
 
-$(".passo-dois").hide();
+$(".passo-um").hide();
 $(".passo-tres").hide();
 $(".passo-quatro").hide();
 $(".barra-conversao").show();
@@ -161,13 +161,15 @@ $("#cadastrar-venda").click(function() {
 
 $("#mumo").on("click", function(e){
   var $this = $(this);
-  var valor = $("#total").html() || 0;
+  var valor = $("#total").html() || 0.00;
   if($this.attr("data-ativo") == "0") {
     $this.attr("data-ativo", "1");
     $("#total").html(parseFloat(valor) + parseFloat($this.data('valor')));
+    $("#total").html(n.toPrecision(4));
   } else {
     $this.attr("data-ativo", "0");
     $("#total").html(parseFloat(valor) - parseFloat($this.data('valor')));
+    $("#total").html(n.toPrecision(4));
   }
 });
 
@@ -187,7 +189,7 @@ $("#qualifica").on("click", function(e){
 
 $("#watch").on("click", function(e){
   var $this = $(this);
-  var valor = $("#total").html() || 0;
+  var valor = $("#total").html() || 0.00;
   if($this.attr("data-ativo") == "0") {
     $this.attr("data-ativo", "1");
     var n = parseFloat(valor) + parseFloat($this.data('valor'));
