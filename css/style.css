@@ -338,14 +338,3 @@ a.socialIcon:hover,
   font-weight: bold;
 }
 
-.identificador-passos-ativo:before {
-  background-color:#7c06c2 !important;
-}
-
-.identificador-passos-ativo {
-  color: #7c06c2;
-}
-
-.identificador-passos-inativo::before {
-  color:#c8cacb;
-}

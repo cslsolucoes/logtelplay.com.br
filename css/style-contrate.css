@@ -5,6 +5,29 @@ label {
 }
 
 
+/* barra conversao */
+
+/* barra de conversao */
+
+
+.barra-conversao {
+  position: relative;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  transition: margin 0.5s ease-in-out;
+  z-index: 10;
+  box-shadow: 0 0 40px 10px rgba(63, 63, 62, 0.4);
+  background-color:#F27124!important;
+  display: none;
+}
+
+.barra-conversao.active {
+  margin-bottom: 0;
+}
+
 /*------Barra de progresso------*/
 
 .area {
@@ -109,7 +132,7 @@ label {
 
 ::after, ::before {
   box-sizing: border-box;
-  background: url("../img/bg-pattern.png"), #b3b3b359;
+  background:  #b3b3b359;
 }
 
 .TexIdentificao {
@@ -123,12 +146,63 @@ label {
   color: #1f7dde;
 }
 
+/* cores passos */
+.identificador-passos-ativo:before {
+  background-color:#2c2c6f !important;
+}
+
+.identificador-passos-ativo {
+  color: #2c2c6f;
+}
+
+.identificador-passos-inativo::before {
+  color:#c8cacb;
+}
+
+/* fim barra de progresso */
+
+
+/* card */
+
+
+
+.card:hover{
+  background-color: #0061de;
+  background: #0e5fd959;
+  background: 
+  linear-gradient(to left, #0e5fd991, #0e1cd993);
+  box-shadow: rgb(37 37 37 / 10%) 2px 2px 2px 2px;
+  cursor: pointer;
+  
+}
+
+.card-teste{
+  color: #0003b6;
+}
+
+.btn-planos {
+  padding: 30px;
+  border: 2px solid rgb(122, 85, 209);
+  border-radius: 50%;
+  margin-bottom: 30px;
+  position: relative;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  cursor: pointer;
+  background-color: #d3d8e2;
+  animation-name: ringer2;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* pagina contratar */
 
 .sec-contratar {
   background-color: #f5f9ff;
-  height: 100%;
   position: relative;
-
+  min-height: 50vh;
 }
 
 .btn-primary {
@@ -219,25 +293,6 @@ section.pricing {
   transition: all 0.2s;
 }
 
-
-.barra-conversao {
-  position: relative;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  margin-bottom: -200px;
-  transition: margin 0.5s ease-in-out;
-  z-index: 10;
-  box-shadow: 0 0 40px 10px rgba(63, 63, 62, 0.4);
-  background-color:#ffffff!important;
-  display: none;
-}
-
-.barra-conversao.active {
-  margin-bottom: 0;
-}
 
 /* Hover Effects on Card */
 

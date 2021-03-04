@@ -5,17 +5,13 @@
 
 var cpf;
 
-// MUDAR A COR DO IDENTIFICADOR DO PASSO EM QUE O CLIENTE ESTÁ PARA O NÚMERO 1
-$("#identificador-passo1").addClass("identificador-passos-ativo");
-$("#texto-passo1").css("color", "#7c06c2");
 
 $(".passo-dois").hide();
 $(".passo-tres").hide();
 $(".passo-quatro").hide();
-$(".barra-conversao").hide();
+$(".barra-conversao").show();
 $("#acessar-logtelplay").hide();
 $("#cadastrar-logtelplay").hide();
-
 var cliente; /* Novo cliente / Cliente com contrato cancelado */
 var passos = 1; /* Controlador de onde o cliente está */
 
@@ -129,9 +125,8 @@ $("#cadastrar-logtelplay").click(function(){
   $(".passo-um").hide();
   $(".passo-tres").hide();
   $(".passo-quatro").hide();
-  $(".barra-conversao").hide();
 });
-
+ 
 /* 
 var cadastroVenda = { 
   
@@ -166,14 +161,7 @@ $("#cadastrar-venda").click(function() {
 });
 
  */
-// NÃO PRECISA DESSE CÓDIGO, VISTO QUE ACIMA JÁ TEM O CÓDIGO QUE FAZ O MESMO
-/* $( "#passo-um" ).click(function() {
-    $( ".passo-dois").animate({ width: "show", 'left': 0 }, "slow");
-    $( ".passo-um").hide();
-    $( ".passo-tres").hide();
-    $( ".passo-quatro").hide();
-    $( ".barra-conversao").hide();
-}); */
+
 
 $( "#passo-dois" ).click(function() {
     $( ".passo-tres").animate({ width: "show", 'left': 0 }, "slow");
@@ -187,7 +175,6 @@ $( "#passo-tres" ).click(function() {
     $( ".passo-um").hide();
     $( ".passo-tres").hide();
     $( ".passo-dois").hide();
-    $( ".barra-conversao").hide();
 });
 
 function setCookie(name,value,days) {
@@ -217,3 +204,7 @@ function eraseCookie(name) {
 
 
 //});
+
+// MUDAR A COR DO IDENTIFICADOR DO PASSO EM QUE O CLIENTE ESTÁ PARA O NÚMERO 1
+$("#identificador-passo1").addClass("identificador-passos-ativo");
+$("#texto-passo1").css("color", "#7c06c2");
