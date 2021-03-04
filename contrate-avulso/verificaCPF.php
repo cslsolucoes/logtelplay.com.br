@@ -72,7 +72,7 @@
       <div class="row ">
         <!-- Free Tier -->
         <div class="col-md-4 text-center offset-md-2">
-          <div class="card mb-5 mb-lg-0">
+          <div class="card mb-5 mb-lg-0" id="mumo" data-valor="11.90" data-ativo="0">
             <div class="card-body"><img src="../img/logo/mumo1.png" class="img-fluid btn-planos btn-planos-paramount" alt=""></a>
               <h6 class="card-price text-center">R$11,90<span class="period">/mês</span></h6>
             </div>
@@ -80,7 +80,7 @@
         </div>
         <!-- Pro Tier -->
         <div class="col-md-4 text-center">
-          <div class="card mb-5">
+          <div class="card mb-5" id="qualifica" data-valor="24.90"  data-ativo="0">
             <div class="card-body"><img src="../img/logo/qualifica1.png" class="img-fluid btn-planos btn-planos-paramount" alt=""></a>
               <h6 class="card-price text-center">R$24,90<span class="period">/mês</span></h6>
             </div>
@@ -90,7 +90,7 @@
       <div class="row">
         <!-- Plus Tier -->
         <div class="col-md-8 offset-md-2">
-          <div class="card mb-5 mb-lg-0" >
+          <div class="card mb-5 mb-lg-0" id="watch" data-valor="62.90" data-ativo="0">
             <div class="card-body">
               <div class="row  col-md-11 offset-md-1">
               <img src="../img/logo/watch1.png" class="img-fluid btn-planos btn-planos-paramount m-3" alt="">
@@ -104,6 +104,8 @@
       </div>
     </div>
   </section>
+
+  <p id="total" style="font-size:32px; color:black;"></p>
 
   <section class="sec-contratar passo-tres" id="features">
     <div class="container">

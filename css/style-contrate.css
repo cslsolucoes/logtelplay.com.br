@@ -176,6 +176,14 @@ label {
   
 }
 
+#mumo[data-ativo="0"] {
+  background-color:rgb(122, 85, 209) !important;
+}
+
+#mumo[data-ativo="1"] {
+  background-color:rgb(255, 255, 255) !important;
+}
+
 .card-teste{
   color: #0003b6;
 }

@@ -31,7 +31,6 @@ $( "#passo-um" ).click(function() {
           if(response[i].servico_internet) {
             var servico_internet = JSON.parse(response[i].servico_internet);
             if(servico_internet[0].status == 1 || servico_internet[0].status == 4) {
-              console.log(servico_internet[0].status);
               internet = true;
             }
             else{
@@ -79,7 +78,6 @@ $( "#passo-um" ).click(function() {
           $("#buscaCPF #response").html("Identificamos que você tem um contrato cancelado conosco. Deseja continuar com o contrato de serviço avulso da Logtel Play?");
           $("#acessar-logtelplay").hide();
           $("#cadastrar-logtelplay").show();
-          console.log(servico_internet[0].status);
         }
       } catch(e) {
         $("#buscaCPF #response").html("Tudo certo. Deseja continuar com o contrato de serviço avulso da Logtel Play?");
@@ -113,7 +111,6 @@ $( "#passo-um" ).click(function() {
           $(".passo-dois").animate({ width: "show", 'left': 0 }, "slow");
           $(".passo-um").hide();
         });
-        console.log(servico_internet[0].status);
       }
     }
   });
@@ -161,6 +158,46 @@ $("#cadastrar-venda").click(function() {
 });
 
  */
+
+$("#mumo").on("click", function(e){
+  var $this = $(this);
+  var valor = $("#total").html() || 0;
+  if($this.attr("data-ativo") == "0") {
+    $this.attr("data-ativo", "1");
+    $("#total").html(parseFloat(valor) + parseFloat($this.data('valor')));
+  } else {
+    $this.attr("data-ativo", "0");
+    $("#total").html(parseFloat(valor) - parseFloat($this.data('valor')));
+  }
+});
+
+$("#qualifica").on("click", function(e){
+  var $this = $(this);
+  var valor = $("#total").html() || 0.00;
+  if($this.attr("data-ativo") == "0") {
+    $this.attr("data-ativo", "1");
+    var n = parseFloat(valor) + parseFloat($this.data('valor'));
+    $("#total").html(n.toPrecision(4));
+  } else {
+    $this.attr("data-ativo", "0");
+    var n = parseFloat(valor) - parseFloat($this.data('valor'));
+    $("#total").html(n.toPrecision(4));
+  }
+});
+
+$("#watch").on("click", function(e){
+  var $this = $(this);
+  var valor = $("#total").html() || 0;
+  if($this.attr("data-ativo") == "0") {
+    $this.attr("data-ativo", "1");
+    var n = parseFloat(valor) + parseFloat($this.data('valor'));
+    $("#total").html(n.toPrecision(4));
+  } else {
+    $this.attr("data-ativo", "0");
+    var n = parseFloat(valor) - parseFloat($this.data('valor'));
+    $("#total").html(n.toPrecision(4));
+  }
+});
 
 
 $( "#passo-dois" ).click(function() {

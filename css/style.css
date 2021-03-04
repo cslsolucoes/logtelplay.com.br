@@ -338,3 +338,10 @@ a.socialIcon:hover,
   font-weight: bold;
 }
 
+#mumo[data-ativo=0] {
+  background-color:rgb(122, 85, 209);
+}
+
+#mumo[data-ativo=1] {
+  background-color:rgb(255, 255, 255);
+}
