@@ -109,15 +109,16 @@
             Sua Logtel PLay
           </div>
           <div class="card-body mt-5">
-            <spam class="md-3" style="font-size:26px; ;"><i class="fa fa-film" aria-hidden="true"></i></spam>
-            <spam class="md-5 offset-md-1" style="font-size:16px; color:black;">WATCH + NOGGIN + PARAMOUNT</spam><br>
-            <spam class="md-3" style="font-size:26px;"><i class="fa fa-music" aria-hidden="true"></i></spam>
-            <spam class="md-5 offset-md-1" style="font-size:16px; color:black;">  MUMO</spam><br>
-            <spam class="md-3" style="font-size:26px;"><i class="fa fa-book" aria-hidden="true"></i></spam>
-            <spam class="md-5 offset-md-1" style="font-size:16px; color:black;"> QUALIFICA</spam><br>
+            <spam class="md-3 movie" style="font-size:26px; ;"><i class="fa fa-film" aria-hidden="true"></i></spam>
+            <spam class="md-5 movie offset-md-1" style="font-size:16px; color:black;">WATCH + NOGGIN + PARAMOUNT</spam><br>
+            <spam class="md-3 music" style="font-size:26px;"><i class="fa fa-music" aria-hidden="true"></i></spam>
+            <spam class="md-5 music offset-md-1" style="font-size:16px; color:black;">  MUMO</spam><br>
+            <spam class="md-3 book" style="font-size:26px;"><i class="fa fa-book" aria-hidden="true"></i></spam>
+            <spam class="md-5 book offset-md-1" style="font-size:16px; color:black;"> QUALIFICA</spam><br>
           </div>
           <div class="card-footer">
             <spam class="md-5" style="font-size:26px; color: #f0f0f0f;">Valor Total</spam>
+            <spam class="md-2 offset-md-1" style="font-size:26px; color:black;"> RS</spam>
             <spam class="md-2 offset-md-1" id="total" style="font-size:26px; color:black;"></spam>
           </div>
         </div>

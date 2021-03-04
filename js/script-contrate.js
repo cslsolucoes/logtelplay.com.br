@@ -158,6 +158,11 @@ $("#cadastrar-venda").click(function() {
 });
 
  */
+  
+    var valorteste = 0.00;
+    $("#total").html(valorteste);
+  
+
 
 $("#mumo").on("click", function(e){
   var $this = $(this);
@@ -166,10 +171,12 @@ $("#mumo").on("click", function(e){
     $this.attr("data-ativo", "1");
     $("#total").html(parseFloat(valor) + parseFloat($this.data('valor')));
     $("#total").html(n.toPrecision(4));
+    $(".music").hide();
   } else {
     $this.attr("data-ativo", "0");
     $("#total").html(parseFloat(valor) - parseFloat($this.data('valor')));
     $("#total").html(n.toPrecision(4));
+    $(".music").show();
   }
 });
 
