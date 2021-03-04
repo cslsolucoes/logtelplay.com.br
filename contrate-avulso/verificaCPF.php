@@ -7,11 +7,11 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        
+
       </ul>
       <form class="form-inline my-2 my-lg-0">
-      <i class="fa fa-question-circle-o" aria-hidden="true"></i> 
-      <h6 class="m-2"> Precisa de Ajuda?</h6>
+        <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+        <h6 class="m-2"> Precisa de Ajuda?</h6>
       </form>
     </div>
   </div>
@@ -19,8 +19,8 @@
 
 <div class="footer-div ">
   <div class="border-box">
-    <div class="border-1"></div>    
-    <div class="border-2"></div>    
+    <div class="border-1"></div>
+    <div class="border-2"></div>
     <div class="border-3"></div>
     <div class="border-4"></div>
     <div class="border-5"></div>
@@ -31,13 +31,13 @@
 <section class="sec-progressbar">
   <div class="row">
     <div class="col-12 col-xl-10 px-0 px-lg-3 py-3 m-auto" style="overflow: auto">
-        <ul class="progressbar">
-            <li class="TexIdentificao">CPF</li>
-            <li class="TexIdentificao">PLANOS</li>
-            <li class="TexIdentificao">SEU NÚMERO</li>
-            <li class="TexIdentificao">ENDEREÇO</li>
-            <li class="TexIdentificao">PAGAMENTO</li>
-        </ul>
+      <ul class="progressbar">
+        <li class="TexIdentificao" id="identificador-passo1" data-passo="1"><span id="texto-passo1">CPF</span></li>
+        <li class="TexIdentificao" id="identificador-passo2" data-passo="2"><span id="texto-passo2">PLANOS</span></li>
+        <li class="TexIdentificao" id="identificador-passo3" data-passo="3"><span id="texto-passo3">SEU NÚMERO</span></li>
+        <li class="TexIdentificao" id="identificador-passo4" data-passo="4"><span id="texto-passo4">ENDEREÇO</span></li>
+        <li class="TexIdentificao" id="identificador-passo5" data-passo="5"><span id="texto-passo5">PAGAMENTO</span></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -45,7 +45,7 @@
 
 <section class="sec-contratar passo-um" id="features">
   <div class="container-fluid">
-    <div class="section-heading text-center" >
+    <div class="section-heading text-center">
       <h2 class="">Vamos começar?</h2>
       <p class="">Nos informe seu CPF</p>
       <hr>
@@ -55,15 +55,15 @@
         <input type="text" class="form-control form-control-contate text-center" id="cpf" placeholder="000.000.000-00" aria-label="Insira seu CPF" aria-describedby="submit-button">
       </div>
       <div class=" col-md-3  mx-auto">
-        <button type="button" id="passo-um" class="btn btn-primary col-md-11 mt-4"  data-toggle="modal" data-target="#buscaCPF">Começar</button>
+        <button type="button" id="passo-um" class="btn btn-primary col-md-11 mt-4" data-toggle="modal" data-target="#buscaCPF">Começar</button>
       </div>
     </div>
   </div>
-</section> 
-    
+</section>
+
 <section class="sec-contratar passo-dois" id="features">
   <div class="container">
-    <div class="section-heading text-center" >
+    <div class="section-heading text-center">
       <h2 class="">Contrate um serviço avulso da Logtel Play</h2>
       <p class="">Personalize sua Logtel Play. Escolha abaixo os serviços desejados</p>
       <p id="response"></p>
@@ -90,12 +90,12 @@
     <div class="row">
       <!-- Plus Tier -->
       <div class="col-md-8 offset-md-2">
-        <div class="card mb-5 mb-lg-0" >
+        <div class="card mb-5 mb-lg-0">
           <div class="card-body">
             <div class="row  col-md-11 offset-md-1">
-            <img src="../img/logo/watch1.png" class="img-fluid btn-planos btn-planos-paramount m-3" alt="">
-            <img src="../img/logo/noggin1.png" class="img-fluid btn-planos btn-planos-paramount m-3" alt="">
-            <img src="../img/logo/paramount1.png" class="img-fluid btn-planos btn-planos-paramount m-3" alt="">
+              <img src="../img/logo/watch1.png" class="img-fluid btn-planos btn-planos-paramount m-3" alt="">
+              <img src="../img/logo/noggin1.png" class="img-fluid btn-planos btn-planos-paramount m-3" alt="">
+              <img src="../img/logo/paramount1.png" class="img-fluid btn-planos btn-planos-paramount m-3" alt="">
             </div>
             <h6 class="card-price text-center">R$62,90<span class="period">/mês</span></h6>
           </div>
@@ -107,12 +107,12 @@
 
 <section class="sec-contratar passo-tres" id="features">
   <div class="container">
-    <div class="section-heading text-center" >
+    <div class="section-heading text-center">
       <h2 class="">Tudo Ok com o CPF, agora, me informe os dados abaixo, por gentileza... <br>
-      <p class="">Cadastro</p>
-      <hr>
+        <p class="">Cadastro</p>
+        <hr>
     </div>
-    <div class="container " >
+    <div class="container ">
       <div class=" col-md-4  mb-3 offset-md-4">
         <!-- <label for="cpf">CPF</label> -->
         <input type="text" id="cpf" class="form-control form-control-contate text-center" aria-label="Insira seu CPF" value="cpf" name="cpf" disabled>
@@ -136,32 +136,32 @@
         <input type="text" id="telefone" class="form-control  form-control-contate text-center" placeholder="9 9999-9999" aria-label="Insira seu Telefone" id="telefone" value="telefone" name="telefone">
       </div>
       <div class=" col-md-3  mx-auto">
-        <button type="button" id="passo-um" class="btn btn-primary col-md-11 mt-4"  data-toggle="modal" data-target="#buscaCPF">Começar</button>
+        <button type="button" id="passo-um" class="btn btn-primary col-md-11 mt-4" data-toggle="modal" data-target="#buscaCPF">Começar</button>
       </div>
-      
+
       <h4 class=" text-center mt-5 ">Você escolheu os serviços abaixo <h4>
-        <div class="container-fluid mt-5">
-          <div class="row offset-md-2">
-            <div class="col-lg-3">
-              <div class="feature-item" id="">
-                <a href="#mokup" class="js-scroll-trigger">
-                <img src="../img/logo/mumo1.png" class="img-fluid btn-planos btn-planos-mumo" alt=""></a>
+          <div class="container-fluid mt-5">
+            <div class="row offset-md-2">
+              <div class="col-lg-3">
+                <div class="feature-item" id="">
+                  <a href="#mokup" class="js-scroll-trigger">
+                    <img src="../img/logo/mumo1.png" class="img-fluid btn-planos btn-planos-mumo" alt=""></a>
+                </div>
               </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="feature-item">
-                <a href="#mokup" class="js-scroll-trigger">
-                <img src="../img/logo/watch1.png" class="img-fluid  btn-planos btn-planos-watch" alt=""></a>
+              <div class="col-lg-3">
+                <div class="feature-item">
+                  <a href="#mokup" class="js-scroll-trigger">
+                    <img src="../img/logo/watch1.png" class="img-fluid  btn-planos btn-planos-watch" alt=""></a>
+                </div>
               </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="feature-item">
-                <a href="#mokup" class="js-scroll-trigger">
-                <img src="../img/logo/noggin1.png" class="img-fluid btn-planos btn-planos-noggin" alt=""></a>
+              <div class="col-lg-3">
+                <div class="feature-item">
+                  <a href="#mokup" class="js-scroll-trigger">
+                    <img src="../img/logo/noggin1.png" class="img-fluid btn-planos btn-planos-noggin" alt=""></a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
     </div>
   </div>
@@ -169,12 +169,12 @@
 
 <section class="sect-contratar passo-quatro" id="features">
   <div class="container-fluid">
-    <div class="section-heading text-center" >
+    <div class="section-heading text-center">
       <h2 class="">Certo, Agora me informe seu endereço...<br>
-      <hr>
+        <hr>
     </div>
-    <div class="container " >
-      
+    <div class="container ">
+
       <div class="form-group col-md-3">
         <label for="cep">CEP</label>
         <input type="text" class="form-control form-control-contate " id="cep" maxlength="8" value="cep" name="cep">
@@ -196,45 +196,45 @@
       <div class="form-row mt-3 col-md-12">
         <div class="form-group col-md-10">
           <label for="logradouro">Logradouro</label>
-          <input type="text" class="form-control form-control-contate " id="logradouro" value="logradouro" name="logradouro" >
+          <input type="text" class="form-control form-control-contate " id="logradouro" value="logradouro" name="logradouro">
         </div>
         <div class="form-group col-md-2">
-            <label for="telefone">Número</label>
-            <input type="text" class="form-control form-control-contate " placeholder="9 9999-9999" id="numero" value="numero" name="numero"  >
-        </div>
-      </div>
-      
-      </div>
-      
-      <h4 class=" text-center mt-5 ">Você escolheu os serviços abaixo <h4>
-      <div class="container-fluid">
-        <div class="row offset-md-2">
-          <div class="col-lg-3">
-            <div class="feature-item" id="">
-              <a href="#mokup" class="js-scroll-trigger">
-              <img src="../img/logo/mumo1.png" class="img-fluid btn-planos btn-planos-mumo" alt=""></a>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="feature-item">
-              <a href="#mokup" class="js-scroll-trigger">
-              <img src="../img/logo/watch1.png" class="img-fluid  btn-planos btn-planos-watch" alt=""></a>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="feature-item">
-              <a href="#mokup" class="js-scroll-trigger">
-              <img src="../img/logo/noggin1.png" class="img-fluid btn-planos btn-planos-noggin" alt=""></a>
-            </div>
-          </div>
+          <label for="telefone">Número</label>
+          <input type="text" class="form-control form-control-contate " placeholder="9 9999-9999" id="numero" value="numero" name="numero">
         </div>
       </div>
 
     </div>
+
+    <h4 class=" text-center mt-5 ">Você escolheu os serviços abaixo <h4>
+        <div class="container-fluid">
+          <div class="row offset-md-2">
+            <div class="col-lg-3">
+              <div class="feature-item" id="">
+                <a href="#mokup" class="js-scroll-trigger">
+                  <img src="../img/logo/mumo1.png" class="img-fluid btn-planos btn-planos-mumo" alt=""></a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="feature-item">
+                <a href="#mokup" class="js-scroll-trigger">
+                  <img src="../img/logo/watch1.png" class="img-fluid  btn-planos btn-planos-watch" alt=""></a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="feature-item">
+                <a href="#mokup" class="js-scroll-trigger">
+                  <img src="../img/logo/noggin1.png" class="img-fluid btn-planos btn-planos-noggin" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+  </div>
   </div>
 </section>
 
-  
+
 
 
 
