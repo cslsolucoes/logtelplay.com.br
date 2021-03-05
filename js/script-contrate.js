@@ -9,7 +9,7 @@ $( "#acessar-logtelplay").hide();
 $( "#cadastrar-logtelplay").hide();
 =======
 
-$(".passo-um").hide();
+$(".passo-dois").hide();
 $(".passo-tres").hide();
 $(".passo-quatro").hide();
 $(".barra-conversao").show();
