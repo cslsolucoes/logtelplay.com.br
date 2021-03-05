@@ -9,7 +9,6 @@ $( "#acessar-logtelplay").hide();
 $( "#cadastrar-logtelplay").hide();
 =======
 
-
 $(".passo-um").hide();
 $(".passo-tres").hide();
 $(".passo-quatro").hide();
@@ -37,8 +36,7 @@ $( "#passo-um" ).click(function() {
             var servico_internet = JSON.parse(response[i].servico_internet);
             if(servico_internet[0].status == 1 || servico_internet[0].status == 4) {
               internet = true;
-            }
-            else{
+            } else{
               internet = false;
             }
           }
@@ -78,8 +76,7 @@ $( "#passo-um" ).click(function() {
           $("#buscaCPF #response").html("Você já tem contrato ativo conosco. Já tem direito logtel play.");
           $("#acessar-logtelplay").show();
           $("#cadastrar-logtelplay").hide();
-        }
-        else {
+        } else {
           $("#buscaCPF #response").html("Identificamos que você tem um contrato cancelado conosco. Deseja continuar com o contrato de serviço avulso da Logtel Play?");
           $("#acessar-logtelplay").hide();
           $("#cadastrar-logtelplay").show();
@@ -166,8 +163,6 @@ $("#cadastrar-venda").click(function() {
   
 var valorteste = '0,00';
 $("#total").html(valorteste);
-  
-
 
 $(".servico").on("click", function(e){
   var $this = $(this);
@@ -189,17 +184,17 @@ $(".servico").on("click", function(e){
 });
 
 $( "#passo-dois" ).click(function() {
-    $( ".passo-tres").animate({ width: "show", 'left': 0 }, "slow");
-    $( ".passo-um").hide();
-    $( ".passo-dois").hide();
-    $( ".passo-quatro").hide();
+  $( ".passo-tres").animate({ width: "show", 'left': 0 }, "slow");
+  $( ".passo-um").hide();
+  $( ".passo-dois").hide();
+  $( ".passo-quatro").hide();
 });
 
 $( "#passo-tres" ).click(function() {
-    $( ".passo-quatro").animate({ width: "show", 'left': 0 }, "slow");
-    $( ".passo-um").hide();
-    $( ".passo-tres").hide();
-    $( ".passo-dois").hide();
+  $( ".passo-quatro").animate({ width: "show", 'left': 0 }, "slow");
+  $( ".passo-um").hide();
+  $( ".passo-tres").hide();
+  $( ".passo-dois").hide();
 });
 
 function setCookie(name,value,days) {

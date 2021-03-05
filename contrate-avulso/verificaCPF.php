@@ -117,7 +117,7 @@
             <spam class="md-5 book offset-md-1" style="font-size:16px; color:black;"> QUALIFICA</spam><br>
           </div>
           <div class="card-footer">
-            <spam class="md-5" style="font-size:26px; color: #f0f0f0f;">Valor Total</spam>
+            <spam class="md-5" style="font-size:26px; color: #f0f0f0;">Valor Total</spam>
             <spam class="md-2 offset-md-1" style="font-size:26px; color:black;"> RS</spam>
             <spam class="md-2 offset-md-1" id="total" style="font-size:26px; color:black;"></spam>
           </div>

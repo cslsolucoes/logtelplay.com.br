@@ -171,10 +171,9 @@ label {
 .card-planos:hover{
   background-color: #0061de;
   background: #0e5fd959;
-  linear-gradient(to left, #0e5fd991, #0e1cd993);
+  background-image: linear-gradient(to left, #0e5fd991, #0e1cd993);
   cursor: pointer;
   border-radius: 2em;
-  
 }
 
 
