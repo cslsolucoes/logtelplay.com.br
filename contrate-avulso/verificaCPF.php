@@ -42,7 +42,6 @@
   </div>
 </section>
 
-
 <section class="sec-contratar passo-um" id="features">
   <div class="container-fluid">
     <div class="section-heading text-center" >
@@ -63,45 +62,71 @@
     
 <section class="sec-contratar passo-dois" id="features">
   <div class="container">
-    <div class="section-heading text-center" >
-      <h2 class="">Contrate um serviço avulso da Logtel Play</h2>
-      <p class="">Personalize sua Logtel Play. Escolha abaixo os serviços desejados</p>
-      <p id="response"></p>
-      <hr>
-    </div>
-    <div class="row ">
-      <!-- Free Tier -->
-      <div class="col-md-4 text-center offset-md-2">
-        <div class="card mb-5 mb-lg-0">
-          <div class="card-body"><img src="../img/logo/mumo1.png" class="img-fluid btn-planos btn-planos-paramount" alt=""></a>
-            <h6 class="card-price text-center">R$11,90<span class="period">/mês</span></h6>
-          </div>
+    
+  <div class="section-heading text-center col-md-11" >
+          <h2 class="">Contrate um serviço avulso da Logtel Play</h2>
+          <p class="">Personalize sua Logtel Play. Escolha abaixo os serviços desejados</p>
+          <p id="response"></p>
+          <hr><br><br>
         </div>
-      </div>
-      <!-- Pro Tier -->
-      <div class="col-md-4 text-center">
-        <div class="card mb-5">
-          <div class="card-body"><img src="../img/logo/qualifica1.png" class="img-fluid btn-planos btn-planos-paramount" alt=""></a>
-            <h6 class="card-price text-center">R$24,90<span class="period">/mês</span></h6>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="row">
-      <!-- Plus Tier -->
-      <div class="col-md-8 offset-md-2">
-        <div class="card mb-5 mb-lg-0" >
-          <div class="card-body">
-            <div class="row  col-md-11 offset-md-1">
-            <img src="../img/logo/watch1.png" class="img-fluid btn-planos btn-planos-paramount m-3" alt="">
-            <img src="../img/logo/noggin1.png" class="img-fluid btn-planos btn-planos-paramount m-3" alt="">
-            <img src="../img/logo/paramount1.png" class="img-fluid btn-planos btn-planos-paramount m-3" alt="">
+      <div class="col-md-9">
+        <div class="row">
+          <!-- Free Tier -->
+          <div class="col-md-5 text-center">
+            <div class="card mb-5 mb-lg-0 card-planos servico" data-valor="11.90" data-ativo="0">
+              <div class="card-body"><img src="../img/logo/mumo1.png" class="img-fluid btn-planos btn-planos-paramount" alt=""></a>
+                <h6 class="card-price text-center">R$11,90<span class="period">/mês</span></h6>
+              </div>
             </div>
-            <h6 class="card-price text-center">R$62,90<span class="period">/mês</span></h6>
+          </div>
+          <!-- Pro Tier -->
+          <div class="col-md-5 text-center">
+            <div class="card mb-5 card-planos servico" data-valor="24.90"  data-ativo="0">
+              <div class="card-body"><img src="../img/logo/qualifica1.png" class="img-fluid btn-planos btn-planos-paramount" alt=""></a>
+                <h6 class="card-price text-center">R$24,90<span class="period">/mês</span></h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Plus Tier -->
+          <div class="col-md-10">
+            <div class="card mb-5 mb-lg-0 card-planos servico" data-valor="62.90" data-ativo="0">
+              <div class="card-body text-center">
+                <img src="../img/logo/watch1.png" class="img-fluid btn-planos btn-planos-paramount m-3" alt="">
+                <img src="../img/logo/noggin1.png" class="img-fluid btn-planos btn-planos-paramount m-3" alt="">
+                <img src="../img/logo/paramount1.png" class="img-fluid btn-planos btn-planos-paramount m-3" alt="">
+                <h6 class="card-price text-center">R$62,90<span class="period">/mês</span></h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-5">
+        <div class="card card-combo" style="width: 22rem;">
+          <div class="main-cardtitle col-md-12">
+            Sua Logtel PLay
+          </div>
+          <div class="card-body mt-5">
+            <spam class="md-3 movie" style="font-size:26px; ;"><i class="fa fa-film" aria-hidden="true"></i></spam>
+            <spam class="md-5 movie offset-md-1" style="font-size:16px; color:black;">WATCH + NOGGIN + PARAMOUNT</spam><br>
+            <spam class="md-3 music" style="font-size:26px;"><i class="fa fa-music" aria-hidden="true"></i></spam>
+            <spam class="md-5 music offset-md-1" style="font-size:16px; color:black;">  MUMO</spam><br>
+            <spam class="md-3 book" style="font-size:26px;"><i class="fa fa-book" aria-hidden="true"></i></spam>
+            <spam class="md-5 book offset-md-1" style="font-size:16px; color:black;"> QUALIFICA</spam><br>
+          </div>
+          <div class="card-footer">
+            <spam class="md-5" style="font-size:26px; color: #f0f0f0f;">Valor Total</spam>
+            <spam class="md-2 offset-md-1" style="font-size:26px; color:black;"> RS</spam>
+            <spam class="md-2 offset-md-1" id="total" style="font-size:26px; color:black;"></spam>
           </div>
         </div>
       </div>
     </div>
+
+    
+    
   </div>
 </section>
 
@@ -236,10 +261,6 @@
 
   
 
-
-
-
-
 <!-- Modal -->
 <div class="modal fade" id="buscaCPF" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -257,3 +278,30 @@
     </div>
   </div>
 </div>
+
+
+
+
+<!-- barra de conversao -->
+<!-- 
+<div class="barra-conversao active">
+    <div class="container">
+          
+        <div class="form-row">
+          <div class="col-md-9 row btn btn-light mt-1">
+              <div class="col-md-8">
+              <spam style="font-size:32px; color:black;">Valor Total</spam>
+              </div>
+              <div class="col-md-4">
+                <spam id="total" style="font-size:32px; color:black;"></spam>
+              </div>
+          </div>  
+        <div class=" col-md-3  mx-auto">
+          <button type="button" id="passo-um" class="btn btn-primary col-md-11 mt-4"  data-toggle="modal" data-target="#buscaCPF">Contratar</button>
+        </div>
+        </div>
+    </div>
+  </div>
+
+  <p id="total" style="font-size:32px; color:black;"></p>
+   -->

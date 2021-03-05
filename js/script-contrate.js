@@ -4,9 +4,21 @@
 //$(document).ready(function(){
 
 var cpf;
+<<<<<<< HEAD
 $( "#acessar-logtelplay").hide();
 $( "#cadastrar-logtelplay").hide();
+=======
+
+
+$(".passo-um").hide();
+$(".passo-tres").hide();
+$(".passo-quatro").hide();
+$(".barra-conversao").show();
+$("#acessar-logtelplay").hide();
+$("#cadastrar-logtelplay").hide();
+>>>>>>> estilizacaoMarcador
 var cliente; /* Novo cliente / Cliente com contrato cancelado */
+var passos = 1; /* Controlador de onde o cliente está */
 
 $( "#passo-um" ).click(function() {
   cpf = busca = $("#cpf").val().toUpperCase().replace(/[^a-zA-Z0-9 çÇáÁéÉíÍóÓúÚãÃõÕ]/g, "");
@@ -24,7 +36,6 @@ $( "#passo-um" ).click(function() {
           if(response[i].servico_internet) {
             var servico_internet = JSON.parse(response[i].servico_internet);
             if(servico_internet[0].status == 1 || servico_internet[0].status == 4) {
-              console.log(servico_internet[0].status);
               internet = true;
             }
             else{
@@ -65,34 +76,59 @@ $( "#passo-um" ).click(function() {
       try {
         if(internet) {
           $("#buscaCPF #response").html("Você já tem contrato ativo conosco. Já tem direito logtel play.");
-          $( "#acessar-logtelplay").show();
-          $( "#cadastrar-logtelplay").hide();
+          $("#acessar-logtelplay").show();
+          $("#cadastrar-logtelplay").hide();
         }
         else {
           $("#buscaCPF #response").html("Identificamos que você tem um contrato cancelado conosco. Deseja continuar com o contrato de serviço avulso da Logtel Play?");
-          $( "#acessar-logtelplay").hide();
-          $( "#cadastrar-logtelplay").show();
-          console.log(servico_internet[0].status);
+          $("#acessar-logtelplay").hide();
+          $("#cadastrar-logtelplay").show();
         }
       } catch(e) {
         $("#buscaCPF #response").html("Tudo certo. Deseja continuar com o contrato de serviço avulso da Logtel Play?");
-        $( "#acessar-logtelplay").hide();
-        $( "#cadastrar-logtelplay").show();
-        console.log(servico_internet[0].status);
+        $("#acessar-logtelplay").hide();
+        $("#cadastrar-logtelplay").show();
+        // MUDAR A COR DO IDENTIFICADOR DO PASSO EM QUE O CLIENTE ESTÁ PARA O NÚMERO 2
+        // E REMOVER A COR DO PASSO 1
+        $("#identificador-passo2").addClass("identificador-passos-ativo");
+        $("#texto-passo2").css("color", "#7c06c2");
+        $("#identificador-passo1").removeClass("identificador-passos-ativo");
+        $("#texto-passo1").css("color", "#c8cacb");
+        // HABILITAR OS PASSOS 1 E 2 PARA SEREM CLICÁVEIS, DANDO A POSSIBILIDADE DO CLIENTE
+        // VOLTAR E AVANÇAR NOS PASSOS AOS QUAIS ELE JÁ TENHA PASSADO
+        $("#identificador-passo1").css("cursor", "pointer");
+        $("#identificador-passo2").css("cursor", "pointer");
+        $("#identificador-passo1").on("click", function(e) {
+          // ALTERAR AS CORES E MOSTRAR O PASSO 1 NOVAMENTE, OCULTANDO O 2
+          $("#identificador-passo1").addClass("identificador-passos-ativo");
+          $("#texto-passo1").css("color", "#7c06c2");
+          $("#identificador-passo2").removeClass("identificador-passos-ativo");
+          $("#texto-passo2").css("color", "#c8cacb");
+          $(".passo-um").animate({ width: "show", 'left': 0 }, "slow");
+          $(".passo-dois").hide();
+        });
+        $("#identificador-passo2").on("click", function(e) {
+          // ALTERAR AS CORES E MOSTRAR O PASSO 2 NOVAMENTE, OCULTANDO O 1
+          $("#identificador-passo2").addClass("identificador-passos-ativo");
+          $("#texto-passo2").css("color", "#7c06c2");
+          $("#identificador-passo1").removeClass("identificador-passos-ativo");
+          $("#texto-passo1").css("color", "#c8cacb");
+          $(".passo-dois").animate({ width: "show", 'left': 0 }, "slow");
+          $(".passo-um").hide();
+        });
       }
     }
   });
 });
 
 $("#cadastrar-logtelplay").click(function(){
-  $('#buscaCPF').modal('hide');
-  $( ".passo-dois").animate({ width: "show", 'left': 0 }, "slow");
-  $( ".passo-um").hide();
-  $( ".passo-tres").hide();
-  $( ".passo-quatro").hide();
-  $( ".barra-conversao").hide();
+  $("#buscaCPF").modal('hide');
+  $(".passo-dois").animate({ width: "show", 'left': 0 }, "slow");
+  $(".passo-um").hide();
+  $(".passo-tres").hide();
+  $(".passo-quatro").hide();
 });
-
+ 
 /* 
 var cadastroVenda = { 
   
@@ -127,14 +163,30 @@ $("#cadastrar-venda").click(function() {
 });
 
  */
-// NÃO PRECISA DESSE CÓDIGO, VISTO QUE ACIMA JÁ TEM O CÓDIGO QUE FAZ O MESMO
-/* $( "#passo-um" ).click(function() {
-    $( ".passo-dois").animate({ width: "show", 'left': 0 }, "slow");
-    $( ".passo-um").hide();
-    $( ".passo-tres").hide();
-    $( ".passo-quatro").hide();
-    $( ".barra-conversao").hide();
-}); */
+  
+var valorteste = '0,00';
+$("#total").html(valorteste);
+  
+
+
+$(".servico").on("click", function(e){
+  var $this = $(this);
+  var valor = $("#total").html();
+  valor = valor.replace(',', '.');
+  if($this.attr("data-ativo") == "0") {
+    $this.attr("data-ativo", "1");
+    var n = parseFloat(valor) + parseFloat($this.data('valor'));
+    n = n.toFixed(2).toString();
+    n = n.replace('.', ',');
+    $("#total").html(n);
+  } else {
+    $this.attr("data-ativo", "0");
+    var n = parseFloat(valor) - parseFloat($this.data('valor'));
+    n = n.toFixed(2).toString();
+    n = n.replace('.', ',');
+    $("#total").html(n);
+  }
+});
 
 $( "#passo-dois" ).click(function() {
     $( ".passo-tres").animate({ width: "show", 'left': 0 }, "slow");
@@ -148,7 +200,6 @@ $( "#passo-tres" ).click(function() {
     $( ".passo-um").hide();
     $( ".passo-tres").hide();
     $( ".passo-dois").hide();
-    $( ".barra-conversao").hide();
 });
 
 function setCookie(name,value,days) {
@@ -178,3 +229,7 @@ function eraseCookie(name) {
 
 
 //});
+
+// MUDAR A COR DO IDENTIFICADOR DO PASSO EM QUE O CLIENTE ESTÁ PARA O NÚMERO 1
+$("#identificador-passo1").addClass("identificador-passos-ativo");
+$("#texto-passo1").css("color", "#7c06c2");

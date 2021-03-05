@@ -5,6 +5,29 @@ label {
 }
 
 
+/* barra conversao */
+
+/* barra de conversao */
+
+
+.barra-conversao {
+  position: relative;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  transition: margin 0.5s ease-in-out;
+  z-index: 10;
+  box-shadow: 0 0 40px 10px rgba(63, 63, 62, 0.4);
+  background-color:#1f7dde;
+  display: none;
+}
+
+.barra-conversao.active {
+  margin-bottom: 0;
+}
+
 /*------Barra de progresso------*/
 
 .area {
@@ -109,7 +132,7 @@ label {
 
 ::after, ::before {
   box-sizing: border-box;
-  background: url("../img/bg-pattern.png"), #b3b3b359;
+  background:  #b3b3b359;
 }
 
 .TexIdentificao {
@@ -123,12 +146,118 @@ label {
   color: #1f7dde;
 }
 
+/* cores passos */
+.identificador-passos-ativo:before {
+  background-color:#2c2c6f !important;
+}
+
+.identificador-passos-ativo {
+  color: #2c2c6f;
+}
+
+.identificador-passos-inativo::before {
+  color:#c8cacb;
+}
+
+/* fim barra de progresso */
+
+
+/* card */
+
+.card-combo{
+  box-shadow: 0 0 20px 10px rgba(63, 63, 62, 0.2);
+}
+
+.card-planos:hover{
+  background-color: #0061de;
+  background: #0e5fd959;
+  linear-gradient(to left, #0e5fd991, #0e1cd993);
+  cursor: pointer;
+  border-radius: 2em;
+  
+}
+
+
+.card-planos[data-ativo="0"] {
+  border-radius: 2em !important;
+  background-color:#f7f7f770 !important;
+}
+
+.card-planos[data-ativo="1"] {
+  border-radius: 2em !important;
+  background-color:#f7f7f770 !important;
+  border: 3px solid #2c2c6f;
+}
+
+.card-planos[data-ativo="1"]:before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    color: #fff;
+    z-index: 1;
+    border-radius: 20px;
+    text-align: center;
+    background-image: url(../img/icone.png);
+    margin-left: -10px;
+    margin-top: -10px;
+    font-family: var(--font-family-highlight);
+}
+
+
+.main-cardtitle {
+  text-align: center;
+  font-family: "Kulim Park", sans-serif;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 1rem 1rem 0rem 0rem;
+  background-color:#1f7dde;
+  color: #fff;
+  text-shadow: 1px 1px 19px #fff;
+  padding: 0 1.4rem;
+  height: 2rem;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  line-height: 1.75rem;
+  position: absolute;
+  top: -1.5rem;
+}
+
+.main-cardtitle:hover {
+  background-color:#1f7dde !important;
+}
+
+.card {
+  border-radius: 2em;
+}
+
+
+.btn-planos {
+  padding: 20px !important;
+  border: 2px solid rgb(122, 85, 209);
+  border-radius: 50%;
+  margin-bottom: 30px;
+  position: relative;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  cursor: pointer;
+  background-color: #d3d8e2;
+  animation-name: ringer2;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* pagina contratar */
 
 .sec-contratar {
   background-color: #f5f9ff;
-  height: 100%;
   position: relative;
-
+  min-height: 50vh;
 }
 
 .btn-primary {
@@ -137,7 +266,7 @@ label {
   height: 40px;
   border-radius: 20px;
   background-image: linear-gradient(263deg, #ffa351, #ffcb44);
-  border-color: #f5f9ff;
+  border-color: #ffa351;
   
 }
 
@@ -146,7 +275,7 @@ label {
   height: 40px;
   border-radius: 20px;
   background-image: linear-gradient(263deg,#ffcb44, #ffa351 );
-  border-color: #f5f9ff;
+  border-color: #ffa351;
   
 }
 
@@ -219,25 +348,6 @@ section.pricing {
   transition: all 0.2s;
 }
 
-
-.barra-conversao {
-  position: relative;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  margin-bottom: -200px;
-  transition: margin 0.5s ease-in-out;
-  z-index: 10;
-  box-shadow: 0 0 40px 10px rgba(63, 63, 62, 0.4);
-  background-color:#ffffff!important;
-  display: none;
-}
-
-.barra-conversao.active {
-  margin-bottom: 0;
-}
 
 /* Hover Effects on Card */
 
