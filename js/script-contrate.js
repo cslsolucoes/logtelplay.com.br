@@ -159,55 +159,29 @@ $("#cadastrar-venda").click(function() {
 
  */
   
-    var valorteste = 0.00;
-    $("#total").html(valorteste);
+var valorteste = '0,00';
+$("#total").html(valorteste);
   
 
 
-$("#mumo").on("click", function(e){
+$(".servico").on("click", function(e){
   var $this = $(this);
-  var valor = $("#total").html() || 0.00;
-  if($this.attr("data-ativo") == "0") {
-    $this.attr("data-ativo", "1");
-    $("#total").html(parseFloat(valor) + parseFloat($this.data('valor')));
-    $("#total").html(n.toPrecision(4));
-    $(".music").hide();
-  } else {
-    $this.attr("data-ativo", "0");
-    $("#total").html(parseFloat(valor) - parseFloat($this.data('valor')));
-    $("#total").html(n.toPrecision(4));
-    $(".music").show();
-  }
-});
-
-$("#qualifica").on("click", function(e){
-  var $this = $(this);
-  var valor = $("#total").html() || 0.00;
+  var valor = $("#total").html();
+  valor = valor.replace(',', '.');
   if($this.attr("data-ativo") == "0") {
     $this.attr("data-ativo", "1");
     var n = parseFloat(valor) + parseFloat($this.data('valor'));
-    $("#total").html(n.toPrecision(4));
+    n = n.toFixed(2).toString();
+    n = n.replace('.', ',');
+    $("#total").html(n);
   } else {
     $this.attr("data-ativo", "0");
     var n = parseFloat(valor) - parseFloat($this.data('valor'));
-    $("#total").html(n.toPrecision(4));
+    n = n.toFixed(2).toString();
+    n = n.replace('.', ',');
+    $("#total").html(n);
   }
 });
-
-$("#watch").on("click", function(e){
-  var $this = $(this);
-  var valor = $("#total").html() || 0.00;
-  if($this.attr("data-ativo") == "0") {
-    $this.attr("data-ativo", "1");
-    var n = parseFloat(valor) + parseFloat($this.data('valor'));
-    $("#total").html(n.toPrecision(4));
-  } else {
-    $this.attr("data-ativo", "0");
-    var n = parseFloat(valor) - parseFloat($this.data('valor'));
-    $("#total").html(n.toPrecision(4));
-  }
-});
-
 
 $( "#passo-dois" ).click(function() {
     $( ".passo-tres").animate({ width: "show", 'left': 0 }, "slow");

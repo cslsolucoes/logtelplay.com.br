@@ -74,7 +74,7 @@
         <div class="row">
           <!-- Free Tier -->
           <div class="col-md-5 text-center">
-            <div class="card mb-5 mb-lg-0 card-planos" id="mumo" data-valor="11.90" data-ativo="0">
+            <div class="card mb-5 mb-lg-0 card-planos servico" data-valor="11.90" data-ativo="0">
               <div class="card-body"><img src="../img/logo/mumo1.png" class="img-fluid btn-planos btn-planos-paramount" alt=""></a>
                 <h6 class="card-price text-center">R$11,90<span class="period">/mês</span></h6>
               </div>
@@ -82,7 +82,7 @@
           </div>
           <!-- Pro Tier -->
           <div class="col-md-5 text-center">
-            <div class="card mb-5 card-planos" id="qualifica" data-valor="24.90"  data-ativo="0">
+            <div class="card mb-5 card-planos servico" data-valor="24.90"  data-ativo="0">
               <div class="card-body"><img src="../img/logo/qualifica1.png" class="img-fluid btn-planos btn-planos-paramount" alt=""></a>
                 <h6 class="card-price text-center">R$24,90<span class="period">/mês</span></h6>
               </div>
@@ -92,7 +92,7 @@
         <div class="row">
           <!-- Plus Tier -->
           <div class="col-md-10">
-            <div class="card mb-5 mb-lg-0 card-planos" id="watch" data-valor="62.90" data-ativo="0">
+            <div class="card mb-5 mb-lg-0 card-planos servico" data-valor="62.90" data-ativo="0">
               <div class="card-body text-center">
                 <img src="../img/logo/watch1.png" class="img-fluid btn-planos btn-planos-paramount m-3" alt="">
                 <img src="../img/logo/noggin1.png" class="img-fluid btn-planos btn-planos-paramount m-3" alt="">
