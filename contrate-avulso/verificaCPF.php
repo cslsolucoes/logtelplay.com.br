@@ -63,66 +63,110 @@
 <section class="sec-contratar passo-dois" id="features">
   <div class="container">
     
-  <div class="section-heading text-center col-md-11" >
-          <h2 class="">Contrate um serviço avulso da Logtel Play</h2>
-          <p class="">Personalize sua Logtel Play. Escolha abaixo os serviços desejados</p>
-          <p id="response"></p>
-          <hr><br><br>
-        </div>
-    <div class="row">
+    <div class="section-heading text-center col-md-11" >
+      <h2 class="">Contrate um serviço avulso da Logtel Play</h2>
+      <p class="">Personalize sua Logtel Play. Escolha abaixo os serviços desejados</p>
+      <p id="response"></p>
+      <hr><br><br>
+    </div>
+    <div class="container carrinho">
+      <ul class="social-network social-circle mt-3">
+          <li><a  class="icoTwitter" title="Twitter"><i class="fa fa-cart-plus" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+<div class="row">
       <div class="col-md-9">
         <div class="row">
           <!-- Free Tier -->
-          <div class="col-md-5 text-center">
-            <div class="card mb-5 mb-lg-0 card-planos servico" data-valor="11.90" data-ativo="0">
-              <div class="card-body"><img src="../img/logo/mumo1.png" class="img-fluid btn-planos btn-planos-paramount" alt=""></a>
+          <div class="col-md-4 ">
+            <div class="card mb-5 card-planos servico card-mumo" data-valor="11.90" data-ativo="0">
+              <div class="card-header text-center">
+                Escute música toda hora
+              </div>
+              <div class="card-body text-center">
+                <img src="../img/logo/mumo1.png" class="img-fluid btn-planos btn-planos-paramount m-3" style="width: 50px;" alt=""></a>
+                <hr class="mb-2">
+                <div class="text-left">
+                  <spam class="text-right"> <i class="fa fa-check-circle-o text-danger mr-2" aria-hidden="true"></i> Disponível para Android, iOS.</spam><br>
+                  <spam> <i class="fa fa-check-circle-o text-danger mr-2" aria-hidden="true"></i> Estações online</spam><br>
+                  <spam> <i class="fa fa-check-circle-o text-danger mr-2" aria-hidden="true"></i> 24h por dia e sem propagandas.</spam><br>
+                </div>
+              </div>
+              <div class="card-footer">
                 <h6 class="card-price text-center">R$11,90<span class="period">/mês</span></h6>
               </div>
             </div>
           </div>
           <!-- Pro Tier -->
-          <div class="col-md-5 text-center">
-            <div class="card mb-5 card-planos servico" data-valor="24.90"  data-ativo="0">
-              <div class="card-body"><img src="../img/logo/qualifica1.png" class="img-fluid btn-planos btn-planos-paramount" alt=""></a>
+          <div class="col-md-4 text-center">
+            <div class="card mb-5 card-planos servico card-qualifica" data-valor="24.90"  data-ativo="0">
+              <div class="card-header">
+                Estude sem sair de casa
+              </div>
+              <div class="card-body">
+                <img src="../img/logo/qualifica1.png" class="img-fluid btn-planos btn-planos-paramount m-3" style="width: 55px;" alt=""></a>
+                <hr class="mb-2">
+                <div class="text-left">
+                  <spam> <i class="fa fa-check-circle-o text-danger mr-2" aria-hidden="true"></i> Acesse a todos os cursos</spam><br>
+                  <spam> <i class="fa fa-check-circle-o text-danger mr-2" aria-hidden="true"></i> Certificações Digitais</spam><br>
+                  <spam> <i class="fa fa-check-circle-o text-danger mr-2" aria-hidden="true"></i> Artigos e Quizzes</spam><br>
+                </div>
+              </div>
+              <div class="card-footer">
                 <h6 class="card-price text-center">R$24,90<span class="period">/mês</span></h6>
               </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <!-- Plus Tier -->
-          <div class="col-md-10">
-            <div class="card mb-5 mb-lg-0 card-planos servico" data-valor="62.90" data-ativo="0">
+          <div class="col-md-4 text-center">
+            <div class="card mb-5 mb-lg-0 card-planos servico card-watch" data-valor="62.90" data-ativo="0">
+              <div class="card-header">
+                Filme para toda a família
+              </div>
               <div class="card-body text-center">
-                <img src="../img/logo/watch1.png" class="img-fluid btn-planos btn-planos-paramount m-3" alt="">
-                <img src="../img/logo/noggin1.png" class="img-fluid btn-planos btn-planos-paramount m-3" alt="">
-                <img src="../img/logo/paramount1.png" class="img-fluid btn-planos btn-planos-paramount m-3" alt="">
+                <img src="../img/logo/watch1.png" class="img-fluid btn-planos m-3" style="width: 50px;" alt="">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                <img src="../img/logo/noggin1.png" class="img-fluid btn-planos m-3" style="width: 50px;" alt="">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                <img src="../img/logo/paramount1.png" class="img-fluid btn-planos  m-3" style="width: 50px;" alt="">
+                <hr class="mb-2">
+                <div class="text-left">
+                  <spam> <i class="fa fa-check-circle-o text-danger mr-2" aria-hidden="true"></i> Dirversão Infantil.</spam><br>
+                  <spam> <i class="fa fa-check-circle-o text-danger mr-2" aria-hidden="true"></i> Filmes e séries originais.</spam><br>
+                  <spam> <i class="fa fa-check-circle-o text-danger mr-2" aria-hidden="true"></i> Disponível para Android, iOS.</spam><br>
+                </div>
+              </div>
+              <div class="card-footer">
                 <h6 class="card-price text-center">R$62,90<span class="period">/mês</span></h6>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-md-3 mt-5">
-        <div class="card card-combo" style="width: 22rem;">
+      <div class="col-md-3 mt-4">
+        <div class="card card-combo">
           <div class="main-cardtitle col-md-12">
             Sua Logtel PLay
           </div>
-          <div class="card-body mt-5">
-            <spam class="md-3 movie" style="font-size:26px; ;"><i class="fa fa-film" aria-hidden="true"></i></spam>
-            <spam class="md-5 movie offset-md-1" style="font-size:16px; color:black;">WATCH + NOGGIN + PARAMOUNT</spam><br>
+          <div class="card-body mt-5 card-body-logtelplay">
+            <spam class="md-5 vazio d-block text-center" style="font-size:18px; color: #2c2c6f; psition: center;">Você ainda não selecionou nenhum serviço</spam><br>
+            <spam class="md-3 movie" style="font-size:26px;"><i class="fa fa-film" aria-hidden="true"></i></spam>
+            <spam class="md-5 movie offset-md-1" style="font-size:12px; color:black;">WATCH + NOGGIN + PARAMOUNT</spam><br>
             <spam class="md-3 music" style="font-size:26px;"><i class="fa fa-music" aria-hidden="true"></i></spam>
-            <spam class="md-5 music offset-md-1" style="font-size:16px; color:black;">  MUMO</spam><br>
+            <spam class="md-5 music offset-md-1" style="font-size:12px; color:black;">MUMO</spam><br>
             <spam class="md-3 book" style="font-size:26px;"><i class="fa fa-book" aria-hidden="true"></i></spam>
-            <spam class="md-5 book offset-md-1" style="font-size:16px; color:black;"> QUALIFICA</spam><br>
+            <spam class="md-5 book offset-md-1" style="font-size:12px; color:black;">QUALIFICA</spam><br>
           </div>
           <div class="card-footer">
-            <spam class="md-5" style="font-size:26px; color: #f0f0f0;">Valor Total</spam>
-            <spam class="md-2 offset-md-1" style="font-size:26px; color:black;"> RS</spam>
-            <spam class="md-2 offset-md-1" id="total" style="font-size:26px; color:black;"></spam>
+            <spam class="md-5" style="font-size:18px; ">Valor Total</spam>
+            <spam class="md-2 offset-md-1" style="font-size:18px; color:black;"> R$</spam>
+            <spam class="md-2 offset-md-1" id="total" style="font-size:20px; color:black;"></spam>
           </div>
         </div>
-      </div>
+    </div>
+          
+    <div class=" col-md-3  mx-auto">
+      <button type="button" id="passo-um" class="btn btn-primary col-md-11 mt-4"  data-toggle="modal" data-target="#buscaCPF">Contratar</button>
+    </div>
     </div>
 
     
@@ -282,26 +326,25 @@
 
 
 
-<!-- barra de conversao -->
 <!-- 
 <div class="barra-conversao active">
-    <div class="container">
-          
-        <div class="form-row">
-          <div class="col-md-9 row btn btn-light mt-1">
-              <div class="col-md-8">
-              <spam style="font-size:32px; color:black;">Valor Total</spam>
-              </div>
-              <div class="col-md-4">
-                <spam id="total" style="font-size:32px; color:black;"></spam>
-              </div>
-          </div>  
-        <div class=" col-md-3  mx-auto">
-          <button type="button" id="passo-um" class="btn btn-primary col-md-11 mt-4"  data-toggle="modal" data-target="#buscaCPF">Contratar</button>
-        </div>
-        </div>
+  <div class="container">
+    <div class="form-row">
+      <div class="col-5 btn btn-light">
+            <spam class="md-5 vazio d-block text-center" style="font-size:18px; color: #2c2c6f; psition: center;">Você ainda não selecionou nenhum serviço</spam><br>
+            <spam class="md-3 movie" style="font-size:26px;"><i class="fa fa-film" aria-hidden="true"></i></spam>
+            <spam class="md-5 movie offset-md-1" style="font-size:12px; color:black;">WATCH + NOGGIN + PARAMOUNT</spam><br>
+            <spam class="md-3 music" style="font-size:26px;"><i class="fa fa-music" aria-hidden="true"></i></spam>
+            <spam class="md-5 music offset-md-1" style="font-size:12px; color:black;">MUMO</spam><br>
+            <spam class="md-3 book" style="font-size:26px;"><i class="fa fa-book" aria-hidden="true"></i></spam>
+            <spam class="md-5 book offset-md-1" style="font-size:12px; color:black;">QUALIFICA</spam><br>
+      </div>
+      <div class="col-4">
+      </div>
     </div>
   </div>
+</div>
 
-  <p id="total" style="font-size:32px; color:black;"></p>
-   -->
+
+
+ -->

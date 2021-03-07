@@ -5,7 +5,13 @@
 
 var cpf;
 
-$(".passo-dois").hide();
+$(".movie").hide();
+$(".book").hide();
+$(".music").hide();
+
+
+$(".passo-um").hide();
+
 $(".passo-tres").hide();
 $(".passo-quatro").hide();
 $(".barra-conversao").show();
@@ -176,21 +182,28 @@ $(".servico").on("click", function(e){
     n = n.replace('.', ',');
     $("#total").html(n);
   }
+  console.log(n);
+  if(n  == "0,00"){
+    $(".vazio").html("Você ainda não selecionou nenhum serviço");
+  } else {
+    $(".vazio").html("Você escolheu os serviços abaixo:");
+  }
 });
 
-$( "#passo-dois" ).click(function() {
-  $( ".passo-tres").animate({ width: "show", 'left': 0 }, "slow");
-  $( ".passo-um").hide();
-  $( ".passo-dois").hide();
-  $( ".passo-quatro").hide();
+
+$(".card-watch").click(function() {
+  $(".movie").toggle();
+});$(".card-mumo").click(function() {
+  $(".music").toggle();
+});$(".card-qualifica").click(function() {
+  $(".book").toggle();
 });
 
-$( "#passo-tres" ).click(function() {
-  $( ".passo-quatro").animate({ width: "show", 'left': 0 }, "slow");
-  $( ".passo-um").hide();
-  $( ".passo-tres").hide();
-  $( ".passo-dois").hide();
-});
+
+
+
+
+/* passo dois */
 
 function setCookie(name,value,days) {
   var expires = "";
