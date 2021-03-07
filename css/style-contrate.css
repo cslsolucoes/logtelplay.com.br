@@ -129,12 +129,12 @@ label {
   color: #fff;
   background-color: #1f7dde;
 }
-
+/* 
 ::after, ::before {
   box-sizing: border-box;
   background:  #b3b3b359;
 }
-
+ */
 .TexIdentificao {
   font-size: 20px;
   font-weight: normal;
@@ -164,29 +164,46 @@ label {
 
 /* card */
 
+
+.carrinho {
+  position: fixed;
+  right: 0%;
+  top: 50%;
+  width: 8em;
+  margin-top: -2.5em;
+}
+
 .card-combo{
   box-shadow: 0 0 20px 10px rgba(63, 63, 62, 0.2);
 }
 
+.card-planos {
+  transition: transform .2s;
+}
+
 .card-planos:hover{
-  background-color: #0061de;
-  background: #0e5fd959;
-  linear-gradient(to left, #0e5fd991, #0e1cd993);
+  transform: scale(1.015);
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
   cursor: pointer;
   border-radius: 2em;
-  
 }
 
 
 .card-planos[data-ativo="0"] {
   border-radius: 2em !important;
-  background-color:#f7f7f770 !important;
+}
+
+.card-body-logtelplay{
+   padding: 0.5em !important;
+}
+.fa{
+  font-size: 15px;
 }
 
 .card-planos[data-ativo="1"] {
   border-radius: 2em !important;
   background-color:#f7f7f770 !important;
-  border: 3px solid #2c2c6f;
+  border: 1px solid #2c2c6f;
 }
 
 .card-planos[data-ativo="1"]:before {
@@ -210,9 +227,8 @@ label {
   text-align: center;
   font-family: "Kulim Park", sans-serif;
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
-  letter-spacing: 1px;
   border-radius: 1rem 1rem 0rem 0rem;
   background-color:#1f7dde;
   color: #fff;
@@ -233,19 +249,22 @@ label {
 .card {
   border-radius: 2em;
 }
-
+.card-body > div > spam{
+ font-size: 12px;
+}
 
 .btn-planos {
-  padding: 20px !important;
-  border: 2px solid rgb(122, 85, 209);
+  padding: 5px !important;
+  border: 1px solid rgb(122, 85, 209);
   border-radius: 50%;
-  margin-bottom: 30px;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
   position: relative;
   -webkit-transition: all ease 0.3s;
   -moz-transition: all ease 0.3s;
   transition: all ease 0.3s;
   cursor: pointer;
-  background-color: #d3d8e2;
+  background-color: #ffffff;
   animation-name: ringer2;
   animation-duration: 6s;
   animation-timing-function: linear;
@@ -324,6 +343,11 @@ section.pricing {
 
 .pricing .card-price {
   font-size: 3rem;
+  margin: 0;
+}
+
+.card-price {
+  font-size: 20px;
   margin: 0;
 }
 
