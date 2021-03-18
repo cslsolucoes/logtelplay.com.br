@@ -4,15 +4,17 @@
 //$(document).ready(function(){
 
 var cpf;
+var n;
+var nome, email, telefone;
+var cep, bairro, cidade, uf, rua, numeroCasa;
 
 $(".movie").hide();
 $(".book").hide();
 $(".music").hide();
-
-
 $(".passo-dois").hide();
 $(".passo-tres").hide();
 $(".passo-quatro").hide();
+$(".passo-cinco").hide();
 $(".barra-conversao").show();
 $("#acessar-logtelplay").hide();
 $("#passo-um-cadastrar-logtelplay").hide();
@@ -125,6 +127,46 @@ $("#passo-um-cadastrar-logtelplay").click(function(){
   $(".passo-tres").hide();
   $(".passo-quatro").hide();
 });
+  
+var valorteste = '0,00';
+$(".total").html(valorteste);
+
+$(".servico").on("click", function(e){
+  var $this = $(this);
+  var valor = $(".total").html();
+  valor = valor.replace(',', '.');
+  if($this.attr("data-ativo") == "0") {
+    $this.attr("data-ativo", "1");
+    var n = parseFloat(valor) + parseFloat($this.data('valor'));
+    n = n.toFixed(2).toString();
+    n = n.replace('.', ',');
+    $(".total").html(n);
+  } else {
+    $this.attr("data-ativo", "0");
+    var n = parseFloat(valor) - parseFloat($this.data('valor'));
+    n = n.toFixed(2).toString();
+    n = n.replace('.', ',');
+    $(".total").html(n);
+  }
+  console.log(n);
+  if(n  == "0,00"){
+    $(".vazio").html("Você ainda não selecionou nenhum serviço");
+    $("#btn-passo-dois").prop("disabled", true);
+  } else {
+    $(".vazio").html("Você escolheu os serviços abaixo:");
+    $("#btn-passo-dois").prop("disabled", false);
+  }
+});
+
+
+$(".card-watch").click(function() {
+  $(".movie").toggle();
+});$(".card-mumo").click(function() {
+  $(".music").toggle();
+});$(".card-qualifica").click(function() {
+  $(".book").toggle();
+});
+
 
 $("#btn-passo-dois").click(function(){
   $("#modal-text").modal('hide');
@@ -133,9 +175,100 @@ $("#btn-passo-dois").click(function(){
   $("#cpf-disabled").val(cpf);
 });
 
+
+function limpa_formulário_cep() {
+  // Limpa valores do formulário de cep.
+  $("#rua").val("");
+  $("#bairro").val("");
+  $("#cidade").val("");
+  $("#uf").val("");
+}
+
+//Quando o campo cep perde o foco.
+$('body').on('blur', '#cep', function() {
+
+  //Nova variável "cep" somente com dígitos.
+  var cep = $(this).val().replace(/\D/g, '');
+
+  //Verifica se campo cep possui valor informado.
+  if (cep != "") {
+
+      //Expressão regular para validar o CEP.
+      var validacep = /^[0-9]{8}$/;
+
+      //Valida o formato do CEP.
+      if(validacep.test(cep)) {
+
+          //Preenche os campos com "..." enquanto consulta webservice.
+          $("#rua").val("...");
+          $("#bairro").val("...");
+          $("#cidade").val("...");
+          $("#uf").val("...");
+
+          //Consulta o webservice viacep.com.br/
+          $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
+            console.log(dados);
+            if (!("erro" in dados)) {
+                  //Atualiza os campos com os valores da consulta.
+                  $("#rua").val(dados.logradouro).prop("disabled", false);
+                  $("#numero-casa").prop("disabled", false);;
+                  $("#bairro").val(dados.bairro);
+                  $("#cidade").val(dados.localidade);
+                  $("#uf").val(dados.uf);
+                  
+              } //end if.
+              else {
+                  //CEP pesquisado não foi encontrado.
+                  limpa_formulário_cep();
+                  console.log("CEP não encontrado.");
+              }
+          });
+      } //end if.
+      else {
+          //cep é inválido.
+          limpa_formulário_cep();
+          console.log("Formato de CEP inválido.");
+      }
+  } //end if.
+  else {
+      //cep sem valor, limpa formulário.
+      limpa_formulário_cep();
+  }
+});
+
 $("#btn-passo-tres").click(function(){
   $(".passo-tres").hide();
   $(".passo-quatro").show();
+});
+
+$("#btn-passo-quatro").click(function(){
+  $(".passo-quatro").hide();
+  $(".passo-cinco").show();
+  $(".total").html(n);
+  
+  nome = $("#nome").val();
+  email = $("#email").val();
+  telefone = $('#telefone').val();
+  cep = $('#cep').val();
+  bairro = $('#bairro').val();
+  cidade = $('#cidade').val();
+  uf = $('#uf').val();
+  rua = $('#rua').val();
+  numeroCara = $('#numero-casa').val();
+  $(".nome").html(nome);
+  $(".telefone").html(telefone);
+  $(".email").html(email);
+  $(".cep").html(cep);
+  $(".bairro").html(bairro);
+  $(".cidade").html(cidade);
+  $(".uf").html(uf);
+  $(".rua").html(rua);
+  $(".numero-casa").html(numeroCasa);
+});
+
+$("#btn-passo-cinco").click(function(){
+  $("#modal-text").modal('show');
+  $("#modal-text #response").html("Seus dados foram enviados com sucesso<p> Em até 24 horas enviaremos seu boleto de pagamento para o e-mail cadastrado.</p>" + email);
 });
 
  
@@ -173,108 +306,6 @@ $("#cadastrar-venda").click(function() {
 });
 
  */
-  
-var valorteste = '0,00';
-$("#total").html(valorteste);
-
-$(".servico").on("click", function(e){
-  var $this = $(this);
-  var valor = $("#total").html();
-  valor = valor.replace(',', '.');
-  if($this.attr("data-ativo") == "0") {
-    $this.attr("data-ativo", "1");
-    var n = parseFloat(valor) + parseFloat($this.data('valor'));
-    n = n.toFixed(2).toString();
-    n = n.replace('.', ',');
-    $("#total").html(n);
-  } else {
-    $this.attr("data-ativo", "0");
-    var n = parseFloat(valor) - parseFloat($this.data('valor'));
-    n = n.toFixed(2).toString();
-    n = n.replace('.', ',');
-    $("#total").html(n);
-  }
-  console.log(n);
-  if(n  == "0,00"){
-    $(".vazio").html("Você ainda não selecionou nenhum serviço");
-    $("#btn-passo-dois").prop("disabled", true);
-  } else {
-    $(".vazio").html("Você escolheu os serviços abaixo:");
-    $("#btn-passo-dois").prop("disabled", false);
-  }
-});
-
-
-$(".card-watch").click(function() {
-  $(".movie").toggle();
-});$(".card-mumo").click(function() {
-  $(".music").toggle();
-});$(".card-qualifica").click(function() {
-  $(".book").toggle();
-});
-
-
-
-function limpa_formulário_cep() {
-  // Limpa valores do formulário de cep.
-  $("#rua").val("");
-  $("#bairro").val("");
-  $("#cidade").val("");
-  $("#uf").val("");
-}
-
-
-//Quando o campo cep perde o foco.
-$('form').on('blur', '#cep', function() {
-
-  //Nova variável "cep" somente com dígitos.
-  var cep = $(this).val().replace(/\D/g, '');
-
-  //Verifica se campo cep possui valor informado.
-  if (cep != "") {
-
-      //Expressão regular para validar o CEP.
-      var validacep = /^[0-9]{8}$/;
-
-      //Valida o formato do CEP.
-      if(validacep.test(cep)) {
-
-          //Preenche os campos com "..." enquanto consulta webservice.
-          $("#rua").val("...");
-          $("#bairro").val("...");
-          $("#cidade").val("...");
-          $("#uf").val("...");
-
-          //Consulta o webservice viacep.com.br/
-          $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
-            if (!("erro" in dados)) {
-                  //Atualiza os campos com os valores da consulta.
-                  $("#mail_vendas #rua").val(dados.logradouro);
-                  $("#mail_vendas #bairro").val(dados.bairro);
-                  $("#mail_vendas #cidade").val(dados.localidade);
-                  $("#mail_vendas #uf").val(dados.uf);
-              } //end if.
-              else {
-                  //CEP pesquisado não foi encontrado.
-                  limpa_formulário_cep();
-                  console.log("CEP não encontrado.");
-              }
-          });
-      } //end if.
-      else {
-          //cep é inválido.
-          limpa_formulário_cep();
-          console.log("Formato de CEP inválido.");
-      }
-  } //end if.
-  else {
-      //cep sem valor, limpa formulário.
-      limpa_formulário_cep();
-  }
-});
-
-
-
 
 
 function setCookie(name,value,days) {

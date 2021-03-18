@@ -9,7 +9,7 @@
       <ul class="navbar-nav mr-auto">
         
       </ul>
-      <form class="form-inline my-2 my-lg-0" method="post" id="mail_vendas" action="mail_vendas.php" id="mail_vendas">
+      <form class="form-inline my-2 my-lg-0 " method="post" action="mail_vendas.php" id="mail_vendas">
       <i class="fa fa-question-circle-o" aria-hidden="true"></i> 
       <h6 class="m-2"> Precisa de Ajuda?</h6>
       </form>
@@ -73,7 +73,7 @@
           <li><a  class="icoTwitter" title="Twitter"><i class="fa fa-cart-plus" aria-hidden="true"></i></a></li>
       </ul>
     </div>
-<div class="row">
+    <div class="row">
       <div class="col-md-9">
         <div class="row">
           <!-- Free Tier -->
@@ -158,7 +158,7 @@
           <div class="card-footer">
             <spam class="md-5" style="font-size:18px; ">Valor Total</spam>
             <spam class="md-2 offset-md-1" style="font-size:18px; color:black;"> R$</spam>
-            <spam class="md-2 offset-md-1" id="total" style="font-size:20px; color:black;"></spam>
+            <spam class="md-2 offset-md-1 total" style="font-size:20px; color:black;"></spam>
           </div>
         </div>
     </div>
@@ -212,46 +212,96 @@
 <section class="sect-contratar passo-quatro" id="features">
   <div class="container-fluid">
     <div class="section-heading text-center" >
-      <h2 class="">Me informe seu CEP<br>
+      <h2 class="">Me informe seu Endereço<br>
       <hr>
     </div>
-    <div class="container text-center mt-4">
-      <div class=" col-md-3  mx-auto text-center">
-        <input type="text" class="form-control form-control-contate text-center" id="cep" maxlength="8" name="cep" placeholder="00.000-00" aria-label="Insira seu CEP" aria-describedby="submit-button">
-      </div>
-      <div class=" col-md-3  mx-auto">
-        <button type="button" id="btn-passo-cep" class="btn btn-primary col-md-11 mt-4">Consultar CEP</button>
-      </div>
-    </div>
     <div class="container " >
-      <div class="form-row mt-3 col-md-12 endereco">
+      <div class="form-row col-md-8 mt-4 mx-auto">
+        <div class="col-md-3">
+          <input type="text" class="form-control form-control-contate" id="cep" maxlength="8" name="cep" placeholder="00.000-00" aria-label="Insira seu CEP" aria-describedby="submit-button">
+        </div>
+      </div>
+      <div class="form-row mt-3 col-md-8 mx-auto">
         <div class="form-group col-md-5">
           <label for="bairro">Bairro</label>
-          <input type="text" class="form-control form-control-contate " id="bairro" name="bairro">
+          <input type="text" class="form-control form-control-contate " id="bairro" name="bairro" disabled>
         </div>
         <div class="form-group col-md-5">
           <label for="cidade">Cidade</label>
-          <input type="text" class="form-control form-control-contate " id="cidade"  name="cidade">
+          <input type="text" class="form-control form-control-contate " id="cidade"  name="cidade" disabled>
         </div>
         <div class="form-group col-md-2">
           <label for="uf">UF</label>
-          <input type="text" class="form-control form-control-contate " id="uf" name="uf">
+          <input type="text" class="form-control form-control-contate " id="uf" name="uf" disabled>
         </div>
       </div>
-      <div class="form-row mt-3 col-md-12 endereco">
+      <div class="form-row mt-3 col-md-8 mx-auto">
         <div class="form-group col-md-10">
           <label for="rua">Logradouro</label>
-          <input type="text" class="form-control form-control-contate " id="rua" name="rua" >
+          <input type="text" class="form-control form-control-contate " id="rua" name="rua"  disabled>
         </div>
         <div class="form-group col-md-2">
-            <label for="numero">Número</label>
-            <input type="text" class="form-control form-control-contate " placeholder="9 9999-9999" id="numero" name="numero"  >
+            <label for="numero-casa">Número</label>
+            <input type="text" class="form-control form-control-contate " id="numero-casa" name="numero-casa"   disabled>
         </div>
       </div>
       </div>
     </div>
+    <div class=" col-md-3  mx-auto">
+      <button type="button" id="btn-passo-quatro" class="btn btn-primary col-md-11 mt-4">Próximo</button>
+    </div>
   </div>
 </section>
+    
+    <section class="sec-contratar passo-cinco" id="features">
+      <div class="container">
+        <div class="section-heading text-center col-md-12" >
+          <h2 class="">Pagamento</h2>
+          <hr><br><br>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mt-4 offset-md-2">
+            <div class="card card-combo">
+              <div class="main-cardtitle col-md-12">
+                Resumo da Compra
+              </div>
+              <div class="card-body mt-5 card-body-logtelplay">
+                <spam class="md-5 vazio d-block text-center" style="font-size:18px; color: #2c2c6f; psition: center;">Você ainda não selecionou nenhum serviço</spam><br>
+                <spam class="md-3 movie" style="font-size:26px;"><i class="fa fa-film" aria-hidden="true"></i></spam>
+                <spam class="md-5 movie offset-md-1" style="font-size:12px; color:black;">WATCH + NOGGIN + PARAMOUNT</spam><br>
+                <spam class="md-3 music" style="font-size:26px;"><i class="fa fa-music" aria-hidden="true"></i></spam>
+                <spam class="md-5 music offset-md-1" style="font-size:12px; color:black;">MUMO</spam><br>
+                <spam class="md-3 book" style="font-size:26px;"><i class="fa fa-book" aria-hidden="true"></i></spam>
+                <spam class="md-5 book offset-md-1" style="font-size:12px; color:black;">QUALIFICA</spam><br>
+              </div>
+              <div class="card-footer">
+                <spam class="md-5" style="font-size:18px; ">Subtotal</spam>
+                <spam class="md-2 offset-md-1" style="font-size:18px; color:black;"> R$</spam>
+                <spam class="md-2 offset-md-1 total" style="font-size:20px; color:black;"></spam>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+          <h4 class="">Identificação</h4>
+            <h6>Nome:  <spam class="nome"></spam> </h6>
+            <h6>Telefone: <spam class="telefone"></spam></h6> 
+            <h6>Email: <spam class="email"></spam></h6> 
+          <h4 class="">Endereço</h4>
+            <h6>CEP:  <spam class="cep"></spam> </h6>
+            <h6>Logradouro: <spam class="rua"></spam> <spam class="numero-casa"></spam></h6> 
+            <h6>Endereço: <spam class="bairro"></spam> - <spam class="cidade"></spam> / <spam class="uf"></spam></h6> 
+            <div class=" col-md-6  mx-auto">
+              <button type="button" id="btn-passo-cinco" class="btn btn-primary col-md-11 mt-4">Cofirmar</button>
+            </div>
+          </div>
+              
+        
+        </div>
+    
+        
+        
+      </div>
+    </section>
 
   
 
