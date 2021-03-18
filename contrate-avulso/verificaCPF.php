@@ -54,7 +54,7 @@
         <input type="text" class="form-control form-control-contate text-center" id="cpf" placeholder="000.000.000-00" aria-label="Insira seu CPF" aria-describedby="submit-button">
       </div>
       <div class=" col-md-3  mx-auto">
-        <button type="button" id="passo-um" class="btn btn-primary col-md-11 mt-4"  data-toggle="modal" data-target="#buscaCPF">Começar</button>
+        <button type="button" id="btn-passo-um" class="btn btn-primary col-md-11 mt-4"  data-toggle="modal" data-target="#buscaCPF">Começar</button>
       </div>
     </div>
   </div>
@@ -66,7 +66,6 @@
     <div class="section-heading text-center col-md-11" >
       <h2 class="">Contrate um serviço avulso da Logtel Play</h2>
       <p class="">Personalize sua Logtel Play. Escolha abaixo os serviços desejados</p>
-      <p id="response"></p>
       <hr><br><br>
     </div>
     <div class="container carrinho">
@@ -165,7 +164,7 @@
     </div>
           
     <div class=" col-md-3  mx-auto">
-      <button type="button" id="passo-um" class="btn btn-primary col-md-11 mt-4"  data-toggle="modal" data-target="#buscaCPF">Contratar</button>
+      <button type="button" id="btn-passo-dois" class="btn btn-primary col-md-11 mt-4"  data-toggle="modal" data-target="#buscaCPF" disabled>Contratar</button>
     </div>
     </div>
 

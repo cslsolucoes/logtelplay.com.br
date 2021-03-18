@@ -10,8 +10,7 @@ $(".book").hide();
 $(".music").hide();
 
 
-$(".passo-um").hide();
-
+$(".passo-dois").hide();
 $(".passo-tres").hide();
 $(".passo-quatro").hide();
 $(".barra-conversao").show();
@@ -20,7 +19,7 @@ $("#cadastrar-logtelplay").hide();
 var cliente; /* Novo cliente / Cliente com contrato cancelado */
 var passos = 1; /* Controlador de onde o cliente está */
 
-$( "#passo-um" ).click(function() {
+$( "#btn-passo-um" ).click(function() {
   cpf = busca = $("#cpf").val().toUpperCase().replace(/[^a-zA-Z0-9 çÇáÁéÉíÍóÓúÚãÃõÕ]/g, "");
   var data = { busca:cpf, tipo:"todos" }
   $.ajax({
@@ -185,8 +184,10 @@ $(".servico").on("click", function(e){
   console.log(n);
   if(n  == "0,00"){
     $(".vazio").html("Você ainda não selecionou nenhum serviço");
+    $("#btn-passo-dois").prop("disabled", true);
   } else {
     $(".vazio").html("Você escolheu os serviços abaixo:");
+    $("#btn-passo-dois").prop("disabled", false);
   }
 });
 
