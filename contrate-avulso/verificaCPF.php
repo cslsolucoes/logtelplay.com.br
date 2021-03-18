@@ -9,7 +9,7 @@
       <ul class="navbar-nav mr-auto">
         
       </ul>
-      <form class="form-inline my-2 my-lg-0">
+      <form class="form-inline my-2 my-lg-0" method="post" id="mail_vendas" action="mail_vendas.php" id="mail_vendas">
       <i class="fa fa-question-circle-o" aria-hidden="true"></i> 
       <h6 class="m-2"> Precisa de Ajuda?</h6>
       </form>
@@ -34,7 +34,7 @@
         <ul class="progressbar">
             <li class="TexIdentificao">CPF</li>
             <li class="TexIdentificao">PLANOS</li>
-            <li class="TexIdentificao">SEU NÚMERO</li>
+            <li class="TexIdentificao">DADOS PESSOAIS</li>
             <li class="TexIdentificao">ENDEREÇO</li>
             <li class="TexIdentificao">PAGAMENTO</li>
         </ul>
@@ -54,7 +54,7 @@
         <input type="text" class="form-control form-control-contate text-center" id="cpf" placeholder="000.000.000-00" aria-label="Insira seu CPF" aria-describedby="submit-button">
       </div>
       <div class=" col-md-3  mx-auto">
-        <button type="button" id="btn-passo-um" class="btn btn-primary col-md-11 mt-4"  data-toggle="modal" data-target="#buscaCPF">Começar</button>
+        <button type="button" id="btn-passo-um" class="btn btn-primary col-md-11 mt-4"  data-toggle="modal" data-target="#modal-text">Começar</button>
       </div>
     </div>
   </div>
@@ -164,7 +164,7 @@
     </div>
           
     <div class=" col-md-3  mx-auto">
-      <button type="button" id="btn-passo-dois" class="btn btn-primary col-md-11 mt-4"  data-toggle="modal" data-target="#buscaCPF" disabled>Contratar</button>
+      <button type="button" id="btn-passo-dois" class="btn btn-primary col-md-11 mt-4" disabled>Contratar</button>
     </div>
     </div>
 
@@ -176,61 +176,35 @@
 <section class="sec-contratar passo-tres" id="features">
   <div class="container">
     <div class="section-heading text-center" >
-      <h2 class="">Tudo Ok com o CPF, agora, me informe os dados abaixo, por gentileza... <br>
-      <p class="">Cadastro</p>
-      <hr>
+      <h2 class="">Me informe os dados abaixo<br>
+      <hr><br>
     </div>
     <div class="container " >
       <div class=" col-md-4  mb-3 offset-md-4">
         <!-- <label for="cpf">CPF</label> -->
-        <input type="text" id="cpf" class="form-control form-control-contate text-center" aria-label="Insira seu CPF" value="cpf" name="cpf" disabled>
+        <input type="text" id="cpf-disabled" class="form-control form-control-contate text-center" name="cpf-disabled" disabled>
         <div class="input-group-append">
         </div>
       </div>
       <div class=" col-md-4 mb-3 offset-md-4">
         <!-- <label for="nome">Nome</label> -->
-        <input type="text" id="nome" class="form-control form-control-contate text-center" placeholder="Insira seu nome" aria-label="Insira seu nome" value="nome" name="nome">
+        <input type="text" id="nome" class="form-control form-control-contate text-center" placeholder="Insira seu nome" aria-label="Insira seu nome" name="nome">
         <div class="input-group-append">
         </div>
       </div>
       <div class=" col-md-4 mb-3 offset-md-4">
         <!-- <label for="email">E-mail</label> -->
-        <input type="text" id="email" class="form-control form-control-contate text-center" placeholder="exemplo@logtel.com.br" aria-label="Insira seu e-mail" value="email" name="email">
+        <input type="text" id="email" class="form-control form-control-contate text-center" placeholder="exemplo@logtel.com.br" aria-label="Insira seu e-mail" name="email">
         <div class="input-group-append">
         </div>
       </div>
       <div class=" col-md-4  mb-3 offset-md-4">
         <!-- <label for="telefone">Telefone</label> -->
-        <input type="text" id="telefone" class="form-control  form-control-contate text-center" placeholder="9 9999-9999" aria-label="Insira seu Telefone" id="telefone" value="telefone" name="telefone">
+        <input type="text" id="telefone" class="form-control  form-control-contate text-center" placeholder="9 9999-9999" aria-label="Insira seu Telefone" id="telefone" name="telefone">
       </div>
       <div class=" col-md-3  mx-auto">
-        <button type="button" id="passo-um" class="btn btn-primary col-md-11 mt-4"  data-toggle="modal" data-target="#buscaCPF">Começar</button>
+        <button type="button" id="btn-passo-tres" class="btn btn-primary col-md-11 mt-4">Próximo</button>
       </div>
-      
-      <h4 class=" text-center mt-5 ">Você escolheu os serviços abaixo <h4>
-        <div class="container-fluid mt-5">
-          <div class="row offset-md-2">
-            <div class="col-lg-3">
-              <div class="feature-item" id="">
-                <a href="#mokup" class="js-scroll-trigger">
-                <img src="../img/logo/mumo1.png" class="img-fluid btn-planos btn-planos-mumo" alt=""></a>
-              </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="feature-item">
-                <a href="#mokup" class="js-scroll-trigger">
-                <img src="../img/logo/watch1.png" class="img-fluid  btn-planos btn-planos-watch" alt=""></a>
-              </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="feature-item">
-                <a href="#mokup" class="js-scroll-trigger">
-                <img src="../img/logo/noggin1.png" class="img-fluid btn-planos btn-planos-noggin" alt=""></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
     </div>
   </div>
 </section>
@@ -238,66 +212,43 @@
 <section class="sect-contratar passo-quatro" id="features">
   <div class="container-fluid">
     <div class="section-heading text-center" >
-      <h2 class="">Certo, Agora me informe seu endereço...<br>
+      <h2 class="">Me informe seu CEP<br>
       <hr>
     </div>
-    <div class="container " >
-      
-      <div class="form-group col-md-3">
-        <label for="cep">CEP</label>
-        <input type="text" class="form-control form-control-contate " id="cep" maxlength="8" value="cep" name="cep">
+    <div class="container text-center mt-4">
+      <div class=" col-md-3  mx-auto text-center">
+        <input type="text" class="form-control form-control-contate text-center" id="cep" maxlength="8" name="cep" placeholder="00.000-00" aria-label="Insira seu CEP" aria-describedby="submit-button">
       </div>
-      <div class="form-row mt-3 col-md-12">
+      <div class=" col-md-3  mx-auto">
+        <button type="button" id="btn-passo-cep" class="btn btn-primary col-md-11 mt-4">Consultar CEP</button>
+      </div>
+    </div>
+    <div class="container " >
+      <div class="form-row mt-3 col-md-12 endereco">
         <div class="form-group col-md-5">
           <label for="bairro">Bairro</label>
-          <input type="text" class="form-control form-control-contate " id="bairro" value="bairro" name="bairro">
+          <input type="text" class="form-control form-control-contate " id="bairro" name="bairro">
         </div>
         <div class="form-group col-md-5">
           <label for="cidade">Cidade</label>
-          <input type="text" class="form-control form-control-contate " id="cidade" value="cidade" name="cidade">
+          <input type="text" class="form-control form-control-contate " id="cidade"  name="cidade">
         </div>
         <div class="form-group col-md-2">
           <label for="uf">UF</label>
-          <input type="text" class="form-control form-control-contate " id="uf" value="uf" name="uf">
+          <input type="text" class="form-control form-control-contate " id="uf" name="uf">
         </div>
       </div>
-      <div class="form-row mt-3 col-md-12">
+      <div class="form-row mt-3 col-md-12 endereco">
         <div class="form-group col-md-10">
-          <label for="logradouro">Logradouro</label>
-          <input type="text" class="form-control form-control-contate " id="logradouro" value="logradouro" name="logradouro" >
+          <label for="rua">Logradouro</label>
+          <input type="text" class="form-control form-control-contate " id="rua" name="rua" >
         </div>
         <div class="form-group col-md-2">
-            <label for="telefone">Número</label>
-            <input type="text" class="form-control form-control-contate " placeholder="9 9999-9999" id="numero" value="numero" name="numero"  >
+            <label for="numero">Número</label>
+            <input type="text" class="form-control form-control-contate " placeholder="9 9999-9999" id="numero" name="numero"  >
         </div>
       </div>
-      
       </div>
-      
-      <h4 class=" text-center mt-5 ">Você escolheu os serviços abaixo <h4>
-      <div class="container-fluid">
-        <div class="row offset-md-2">
-          <div class="col-lg-3">
-            <div class="feature-item" id="">
-              <a href="#mokup" class="js-scroll-trigger">
-              <img src="../img/logo/mumo1.png" class="img-fluid btn-planos btn-planos-mumo" alt=""></a>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="feature-item">
-              <a href="#mokup" class="js-scroll-trigger">
-              <img src="../img/logo/watch1.png" class="img-fluid  btn-planos btn-planos-watch" alt=""></a>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="feature-item">
-              <a href="#mokup" class="js-scroll-trigger">
-              <img src="../img/logo/noggin1.png" class="img-fluid btn-planos btn-planos-noggin" alt=""></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -305,7 +256,7 @@
   
 
 <!-- Modal -->
-<div class="modal fade" id="buscaCPF" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+<div class="modal fade" id="modal-text" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-body">
@@ -316,7 +267,7 @@
         <a href="<?= $uri ?>#cta" id="acessar-logtelplay">
           <button type="button" class="btn btn-primary">Saiba como acessar</button>
         </a>
-        <button type="button" id="cadastrar-logtelplay" class="btn btn-primary">Contratar Logtel Play</button>
+        <button type="button" id="passo-um-cadastrar-logtelplay" class="btn btn-primary">Contratar Logtel Play</button>
       </div>
     </div>
   </div>

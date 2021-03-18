@@ -15,7 +15,7 @@ $(".passo-tres").hide();
 $(".passo-quatro").hide();
 $(".barra-conversao").show();
 $("#acessar-logtelplay").hide();
-$("#cadastrar-logtelplay").hide();
+$("#passo-um-cadastrar-logtelplay").hide();
 var cliente; /* Novo cliente / Cliente com contrato cancelado */
 var passos = 1; /* Controlador de onde o cliente está */
 
@@ -73,18 +73,18 @@ $( "#btn-passo-um" ).click(function() {
 
       try {
         if(internet) {
-          $("#buscaCPF #response").html("Você já tem contrato ativo conosco. Já tem direito logtel play.");
+          $("#modal-text #response").html("Você já tem contrato ativo conosco. Já tem direito logtel play.");
           $("#acessar-logtelplay").show();
-          $("#cadastrar-logtelplay").hide();
+          $("#passo-um-cadastrar-logtelplay").hide();
         } else {
-          $("#buscaCPF #response").html("Identificamos que você tem um contrato cancelado conosco. Deseja continuar com o contrato de serviço avulso da Logtel Play?");
+          $("#modal-text #response").html("Identificamos que você tem um contrato cancelado conosco. Deseja continuar com o contrato de serviço avulso da Logtel Play?");
           $("#acessar-logtelplay").hide();
-          $("#cadastrar-logtelplay").show();
+          $("#passo-um-cadastrar-logtelplay").show();
         }
       } catch(e) {
-        $("#buscaCPF #response").html("Tudo certo. Deseja continuar com o contrato de serviço avulso da Logtel Play?");
+        $("#modal-text #response").html("Tudo certo. Deseja continuar com o contrato de serviço avulso da Logtel Play?");
         $("#acessar-logtelplay").hide();
-        $("#cadastrar-logtelplay").show();
+        $("#passo-um-cadastrar-logtelplay").show();
         // MUDAR A COR DO IDENTIFICADOR DO PASSO EM QUE O CLIENTE ESTÁ PARA O NÚMERO 2
         // E REMOVER A COR DO PASSO 1
         $("#identificador-passo2").addClass("identificador-passos-ativo");
@@ -118,13 +118,26 @@ $( "#btn-passo-um" ).click(function() {
   });
 });
 
-$("#cadastrar-logtelplay").click(function(){
-  $("#buscaCPF").modal('hide');
+$("#passo-um-cadastrar-logtelplay").click(function(){
+  $("#modal-text").modal('hide');
   $(".passo-dois").animate({ width: "show", 'left': 0 }, "slow");
   $(".passo-um").hide();
   $(".passo-tres").hide();
   $(".passo-quatro").hide();
 });
+
+$("#btn-passo-dois").click(function(){
+  $("#modal-text").modal('hide');
+  $(".passo-dois").hide();
+  $(".passo-tres").show();
+  $("#cpf-disabled").val(cpf);
+});
+
+$("#btn-passo-tres").click(function(){
+  $(".passo-tres").hide();
+  $(".passo-quatro").show();
+});
+
  
 /* 
 var cadastroVenda = { 
@@ -202,9 +215,67 @@ $(".card-watch").click(function() {
 
 
 
+function limpa_formulário_cep() {
+  // Limpa valores do formulário de cep.
+  $("#rua").val("");
+  $("#bairro").val("");
+  $("#cidade").val("");
+  $("#uf").val("");
+}
 
 
-/* passo dois */
+//Quando o campo cep perde o foco.
+$('form').on('blur', '#cep', function() {
+
+  //Nova variável "cep" somente com dígitos.
+  var cep = $(this).val().replace(/\D/g, '');
+
+  //Verifica se campo cep possui valor informado.
+  if (cep != "") {
+
+      //Expressão regular para validar o CEP.
+      var validacep = /^[0-9]{8}$/;
+
+      //Valida o formato do CEP.
+      if(validacep.test(cep)) {
+
+          //Preenche os campos com "..." enquanto consulta webservice.
+          $("#rua").val("...");
+          $("#bairro").val("...");
+          $("#cidade").val("...");
+          $("#uf").val("...");
+
+          //Consulta o webservice viacep.com.br/
+          $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
+            if (!("erro" in dados)) {
+                  //Atualiza os campos com os valores da consulta.
+                  $("#mail_vendas #rua").val(dados.logradouro);
+                  $("#mail_vendas #bairro").val(dados.bairro);
+                  $("#mail_vendas #cidade").val(dados.localidade);
+                  $("#mail_vendas #uf").val(dados.uf);
+              } //end if.
+              else {
+                  //CEP pesquisado não foi encontrado.
+                  limpa_formulário_cep();
+                  console.log("CEP não encontrado.");
+              }
+          });
+      } //end if.
+      else {
+          //cep é inválido.
+          limpa_formulário_cep();
+          console.log("Formato de CEP inválido.");
+      }
+  } //end if.
+  else {
+      //cep sem valor, limpa formulário.
+      limpa_formulário_cep();
+  }
+});
+
+
+
+
 
 function setCookie(name,value,days) {
   var expires = "";
