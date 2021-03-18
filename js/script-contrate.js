@@ -4,10 +4,6 @@
 //$(document).ready(function(){
 
 var cpf;
-<<<<<<< HEAD
-$( "#acessar-logtelplay").hide();
-$( "#cadastrar-logtelplay").hide();
-=======
 
 $(".movie").hide();
 $(".book").hide();
@@ -21,7 +17,6 @@ $(".passo-quatro").hide();
 $(".barra-conversao").show();
 $("#acessar-logtelplay").hide();
 $("#cadastrar-logtelplay").hide();
->>>>>>> estilizacaoMarcador
 var cliente; /* Novo cliente / Cliente com contrato cancelado */
 var passos = 1; /* Controlador de onde o cliente está */
 
