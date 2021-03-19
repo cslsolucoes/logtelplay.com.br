@@ -18,6 +18,7 @@ $(".passo-cinco").hide();
 $(".barra-conversao").show();
 $("#acessar-logtelplay").hide();
 $("#passo-um-cadastrar-logtelplay").hide();
+$("#passo-cinco-ok").hide();
 
 barraProgresso();
 var cliente; /* Novo cliente / Cliente com contrato cancelado */
@@ -101,7 +102,7 @@ $("#passo-um-cadastrar-logtelplay").click(function(){
   $(".passo-tres").hide();
   $(".passo-quatro").hide();
 });
-  
+
 var valorteste = '0,00';
 $(".total").html(valorteste);
 
@@ -135,9 +136,11 @@ $(".servico").on("click", function(e){
 
 $(".card-watch").click(function() {
   $(".movie").toggle();
-});$(".card-mumo").click(function() {
+});
+$(".card-mumo").click(function() {
   $(".music").toggle();
-});$(".card-qualifica").click(function() {
+});
+$(".card-qualifica").click(function() {
   $(".book").toggle();
 });
 
@@ -228,7 +231,7 @@ $("#btn-passo-quatro").click(function(){
   cidade = $('#cidade').val();
   uf = $('#uf').val();
   rua = $('#rua').val();
-  numeroCara = $('#numero-casa').val();
+  numeroCasa = $('#numero-casa').val();
   $(".nome").html(nome);
   $(".telefone").html(telefone);
   $(".email").html(email);
@@ -402,3 +405,47 @@ function eraseCookie(name) {
 }
 
 
+$('#btn-passo-cinco').on('click', function(e) {
+  $("#passo-um-cadastrar-logtelplay").hide();
+  $(".btn-light").hide();
+  $("#passo-cinco-ok").show();
+
+  e.preventDefault();
+  var bit = 0;
+  var servicos = '';
+  $('.servico[data-ativo=1]').each(function(i) {
+    bit += $(this).data('bitwise');
+  });
+  switch(bit) {
+    case 7: servicos = 'Mumo, Qualifica, WatchTV';
+    break;
+    case 6: servicos = 'Qualifica, WatchTV';
+    break;
+    case 5: servicos = 'Mumo, WatchTV';
+    break;
+    case 4: servicos = 'WatchTV';
+    break;
+    case 3: servicos = 'Mumo, Qualifica';
+    break;
+    case 2: servicos = 'Qualifica';
+    break;
+    case 1: servicos = 'Mumo';
+    break;
+    default: servicos = 'Não identificado';
+    break;
+  }
+  var msg = '** VENDA DE PLANOS AVULSOS **';
+  msg = msg + '\n\nPlanos escolhidos: ' + servicos;
+  msg = msg + '\nCPF: ' + $('#cpf').val();
+  msg = msg + '\nNome: ' + $(".nome").html();
+  msg = msg + '\nTelefone: ' + $(".telefone").html();
+  msg = msg + '\nE-mail: ' + $(".email").html();
+  msg = msg + '\nCEP: ' + $(".cep").html();
+  msg = msg + '\nRua: ' + $(".rua").html();
+  msg = msg + '\nNúmero: ' + $(".numero-casa").html();
+  msg = msg + '\nBairro: ' + $(".bairro").html();
+  msg = msg + '\nCidade: ' + $(".cidade").html();
+  msg = msg + '\nUF: ' + $(".uf").html();
+  msg = msg + '\nPreço Total: ' + $(".total").html();
+  console.log(msg);
+});
