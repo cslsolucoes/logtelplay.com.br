@@ -51,7 +51,7 @@
       </div>
       <div class="container text-center mt-4">
         <div class=" col-md-3  mx-auto text-center">
-          <input type="text" class="form-control form-control-contate text-center" id="cpf" val="" placeholder="000.000.000-00" aria-label="Insira seu CPF" aria-describedby="submit-button" required>
+          <input type="text" class="form-control form-control-contate text-center" id="cpf" val="" placeholder="000.000.000-00" aria-label="Insira seu CPF" maxlength="11" aria-describedby="submit-button" required>
           <p id="label"></p>
         </div>
         <div class=" col-md-3  mx-auto">
@@ -201,7 +201,7 @@
         </div>
         <div class=" col-md-4  mb-3 offset-md-4">
           <!-- <label for="telefone">Telefone</label> -->
-          <input type="text" id="telefone" class="form-control  form-control-contate text-center" placeholder="9 9999-9999" aria-label="Insira seu Telefone" id="telefone" name="telefone">
+          <input type="text" id="telefone" class="form-control  form-control-contate text-center" placeholder="9 9999-9999" maxlength="15"  aria-label="Insira seu Telefone" id="telefone" name="telefone">
         </div>
         <div class=" col-md-3  mx-auto">
           <button type="button" id="btn-passo-tres" class="btn btn-primary col-md-11 mt-4">Próximo</button>
