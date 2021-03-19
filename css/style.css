@@ -62,6 +62,11 @@
   }
 }
 
+
+.btn-primary.disabled, .btn-primary:disabled {
+  border-color:#ffa351 !important; 
+}
+
 .mumo {
   padding-top: -550px !important;
 }
