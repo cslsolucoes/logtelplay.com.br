@@ -32,11 +32,11 @@
   <div class="row">
     <div class="col-12 col-xl-10 px-0 px-lg-3 py-3 m-auto" style="overflow: auto">
         <ul class="progressbar">
-            <li class="TexIdentificao">CPF</li>
-            <li class="TexIdentificao">PLANOS</li>
-            <li class="TexIdentificao">DADOS PESSOAIS</li>
-            <li class="TexIdentificao">ENDEREÇO</li>
-            <li class="TexIdentificao">PAGAMENTO</li>
+            <li class="TexIdentificao active" id="progressbar-um">CPF</li>
+            <li class="TexIdentificao" id="progressbar-dois">PLANOS</li>
+            <li class="TexIdentificao" id="progressbar-tres">DADOS PESSOAIS</li>
+            <li class="TexIdentificao" id="progressbar-quatro">ENDEREÇO</li>
+            <li class="TexIdentificao" id="progressbar-cinco">PAGAMENTO</li>
         </ul>
     </div>
   </div>
@@ -142,7 +142,7 @@
         </div>
       </div>
       <div class="col-md-3 mt-4">
-        <div class="card card-combo">
+        <div class="card card-combo" style="min-height:310px;">
           <div class="main-cardtitle col-md-12">
             Sua Logtel PLay
           </div>

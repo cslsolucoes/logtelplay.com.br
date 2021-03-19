@@ -18,6 +18,8 @@ $(".passo-cinco").hide();
 $(".barra-conversao").show();
 $("#acessar-logtelplay").hide();
 $("#passo-um-cadastrar-logtelplay").hide();
+
+barraProgresso();
 var cliente; /* Novo cliente / Cliente com contrato cancelado */
 var passos = 1; /* Controlador de onde o cliente está */
 
@@ -87,34 +89,6 @@ $( "#btn-passo-um" ).click(function() {
         $("#modal-text #response").html("Tudo certo. Deseja continuar com o contrato de serviço avulso da Logtel Play?");
         $("#acessar-logtelplay").hide();
         $("#passo-um-cadastrar-logtelplay").show();
-        // MUDAR A COR DO IDENTIFICADOR DO PASSO EM QUE O CLIENTE ESTÁ PARA O NÚMERO 2
-        // E REMOVER A COR DO PASSO 1
-        $("#identificador-passo2").addClass("identificador-passos-ativo");
-        $("#texto-passo2").css("color", "#7c06c2");
-        $("#identificador-passo1").removeClass("identificador-passos-ativo");
-        $("#texto-passo1").css("color", "#c8cacb");
-        // HABILITAR OS PASSOS 1 E 2 PARA SEREM CLICÁVEIS, DANDO A POSSIBILIDADE DO CLIENTE
-        // VOLTAR E AVANÇAR NOS PASSOS AOS QUAIS ELE JÁ TENHA PASSADO
-        $("#identificador-passo1").css("cursor", "pointer");
-        $("#identificador-passo2").css("cursor", "pointer");
-        $("#identificador-passo1").on("click", function(e) {
-          // ALTERAR AS CORES E MOSTRAR O PASSO 1 NOVAMENTE, OCULTANDO O 2
-          $("#identificador-passo1").addClass("identificador-passos-ativo");
-          $("#texto-passo1").css("color", "#7c06c2");
-          $("#identificador-passo2").removeClass("identificador-passos-ativo");
-          $("#texto-passo2").css("color", "#c8cacb");
-          $(".passo-um").animate({ width: "show", 'left': 0 }, "slow");
-          $(".passo-dois").hide();
-        });
-        $("#identificador-passo2").on("click", function(e) {
-          // ALTERAR AS CORES E MOSTRAR O PASSO 2 NOVAMENTE, OCULTANDO O 1
-          $("#identificador-passo2").addClass("identificador-passos-ativo");
-          $("#texto-passo2").css("color", "#7c06c2");
-          $("#identificador-passo1").removeClass("identificador-passos-ativo");
-          $("#texto-passo1").css("color", "#c8cacb");
-          $(".passo-dois").animate({ width: "show", 'left': 0 }, "slow");
-          $(".passo-um").hide();
-        });
       }
     }
   });
@@ -171,7 +145,7 @@ $(".card-watch").click(function() {
 $("#btn-passo-dois").click(function(){
   $("#modal-text").modal('hide');
   $(".passo-dois").hide();
-  $(".passo-tres").show();
+  $(".passo-tres").animate({ width: "show", 'left': 0 }, "slow");
   $("#cpf-disabled").val(cpf);
 });
 
@@ -238,12 +212,12 @@ $('body').on('blur', '#cep', function() {
 
 $("#btn-passo-tres").click(function(){
   $(".passo-tres").hide();
-  $(".passo-quatro").show();
+  $(".passo-quatro").animate({ width: "show", 'left': 0 }, "slow");
 });
 
 $("#btn-passo-quatro").click(function(){
   $(".passo-quatro").hide();
-  $(".passo-cinco").show();
+  $(".passo-cinco").animate({ width: "show", 'left': 0 }, "slow");
   $(".total").html(n);
   
   nome = $("#nome").val();
@@ -307,6 +281,53 @@ $("#cadastrar-venda").click(function() {
 
  */
 
+function barraProgresso() {
+  $("#passo-um-cadastrar-logtelplay").click(function(){
+    $("#progressbar-um").addClass("last");
+    $("#progressbar-dois").addClass("active");
+  }); 
+  $("#btn-passo-dois").click(function(){
+    $("#progressbar-dois").addClass("last");
+    $("#progressbar-tres").addClass("active");
+  }); 
+  $("#btn-passo-tres").click(function(){
+    $("#progressbar-tres").addClass("last");
+    $("#progressbar-quatro").addClass("active");
+  }); 
+  $("#btn-passo-quatro").click(function(){
+    $("#progressbar-quatro").addClass("last");
+    $("#progressbar-cinco").addClass("active ");
+  }); 
+
+  
+  $("#progressbar-um").click(function(){
+    $(".passo-um").animate({ width: "show", 'left': 0 }, "slow");
+    $(".passo-dois").hide();
+    $(".passo-tres").hide();
+    $(".passo-quatro").hide();
+    $(".passo-cinco").hide();
+    $("#progressbar-um").addClass("last");
+    $("#progressbar-dois").removeClass("last");
+    $("#progressbar-tres").removeClass("last");
+    $("#progressbar-quatro").removeClass("last");
+    $("#progressbar-cinco").removeClass("last");
+  }); 
+
+  $("#progressbar-dois").click(function(){
+    $(".passo-dois").animate({ width: "show", 'left': 0 }, "slow");
+    $(".passo-um").hide();
+    $(".passo-tres").hide();
+    $(".passo-quatro").hide();
+    $(".passo-cinco").hide();
+    $("#progressbar-um").addClass("last");
+    $("#progressbar-dois").addClass("last");
+    $("#progressbar-tres").removeClass("last");
+    $("#progressbar-quatro").removeClass("last");
+    $("#progressbar-cinco").removeClass("last");
+  }); 
+  
+}
+
 
 function setCookie(name,value,days) {
   var expires = "";
@@ -334,8 +355,3 @@ function eraseCookie(name) {
 }
 
 
-//});
-
-// MUDAR A COR DO IDENTIFICADOR DO PASSO EM QUE O CLIENTE ESTÁ PARA O NÚMERO 1
-$("#identificador-passo1").addClass("identificador-passos-ativo");
-$("#texto-passo1").css("color", "#7c06c2");
