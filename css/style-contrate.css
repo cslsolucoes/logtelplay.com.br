@@ -129,12 +129,12 @@ label {
   color: #fff;
   background-color: #1f7dde;
 }
-/* 
+
 ::after, ::before {
   box-sizing: border-box;
   background:  #b3b3b359;
 }
- */
+ 
 .TexIdentificao {
   font-size: 20px;
   font-weight: normal;
@@ -153,6 +153,7 @@ label {
 
 .identificador-passos-ativo {
   color: #2c2c6f;
+  cursor: pointer;
 }
 
 .identificador-passos-inativo::before {
