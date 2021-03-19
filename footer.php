@@ -56,6 +56,7 @@
 
   <!-- Custom scripts for this template -->
   <script src="<?= $uri ?>/js/new-age.min.js"></script>
+  
   <script src="<?= $uri ?>/js/script.js"></script>
 
 </body>

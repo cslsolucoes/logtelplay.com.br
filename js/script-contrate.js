@@ -8,6 +8,10 @@ var n;
 var nome, email, telefone;
 var cep, bairro, cidade, uf, rua, numeroCasa;
 
+
+
+
+
 $(".movie").hide();
 $(".book").hide();
 $(".music").hide();

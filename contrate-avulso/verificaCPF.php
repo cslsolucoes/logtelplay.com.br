@@ -51,7 +51,8 @@
       </div>
       <div class="container text-center mt-4">
         <div class=" col-md-3  mx-auto text-center">
-          <input type="text" class="form-control form-control-contate text-center" id="cpf" val="" placeholder="000.000.000-00" aria-label="Insira seu CPF" aria-describedby="submit-button" required>
+        <input type="text" class="form-control cpf-mask" placeholder="Ex.: 000.000.000-00">
+          <input type="text" class="form-control form-control-contate text-center cpf" id="cpf"  data-mask="000.000.000-00" data-mask-selectonfocus="true" placeholder="000.000.000-00" aria-label="Insira seu CPF"  required>
           <p id="label"></p>
         </div>
         <div class=" col-md-3  mx-auto">
