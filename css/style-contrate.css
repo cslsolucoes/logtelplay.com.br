@@ -101,6 +101,7 @@ label {
 
 .progressbar li.active {
   color: #1f7dde;
+  cursor: pointer;
 }
 
 .progressbar li.active:before {
