@@ -275,6 +275,11 @@ label {
   animation-iteration-count: infinite;
 }
 
+.btn-planos:hover {
+  background: #ffffff !important;
+  background: #fff !important;
+}
+
 /* pagina contratar */
 
 .sec-contratar {

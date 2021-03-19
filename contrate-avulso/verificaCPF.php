@@ -79,7 +79,7 @@
           <div class="row">
             <!-- Free Tier -->
             <div class="col-md-4 ">
-              <div class="card mb-5 card-planos servico card-mumo" data-valor="11.90" data-ativo="0">
+              <div class="card mb-5 card-planos servico card-mumo" data-valor="11.90" data-ativo="0" data-bitwise="1">
                 <div class="card-header text-center">
                   Escute música toda hora
                 </div>
@@ -99,7 +99,7 @@
             </div>
             <!-- Pro Tier -->
             <div class="col-md-4 text-center">
-              <div class="card mb-5 card-planos servico card-qualifica" data-valor="24.90"  data-ativo="0">
+              <div class="card mb-5 card-planos servico card-qualifica" data-valor="24.90"  data-ativo="0" data-bitwise="2">
                 <div class="card-header">
                   Estude sem sair de casa
                 </div>
@@ -118,7 +118,7 @@
               </div>
             </div>
             <div class="col-md-4 text-center">
-              <div class="card mb-5 mb-lg-0 card-planos servico card-watch" data-valor="62.90" data-ativo="0">
+              <div class="card mb-5 mb-lg-0 card-planos servico card-watch" data-valor="62.90" data-ativo="0" data-bitwise="4">
                 <div class="card-header">
                   Filme para toda a família
                 </div>
@@ -319,6 +319,7 @@
           <button type="button" class="btn btn-primary">Saiba como acessar</button>
         </a>
         <button type="button" id="passo-um-cadastrar-logtelplay" class="btn btn-primary">Contratar Logtel Play</button>
+        <button type="button" id="passo-cinco-ok" class="btn btn-primary"  data-dismiss="modal">OK</button>
       </div>
     </div>
   </div>
