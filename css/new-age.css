@@ -233,10 +233,16 @@ header.masthead .device-container .screen img {
     font-size: 70px;
   }
 }
+section.feature {
+  background: linear-gradient(to left, #a10eeb, #dc2430);
+  background-image: url("../img/bg-cta.png");
+  background-position: center;
+  background-size: cover;
+}
 
 section.features {
   background: linear-gradient(to left, #a10eeb, #dc2430);
-  background-image: url("../img/counter-bg.png");
+  background-image: url("../img/counter-bg2.png");
   background-position: center;
   background-size: cover;
 }
@@ -520,7 +526,7 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   }
 
   .banner-slide{
-    top: 20%;
+    top: 10%;
     left: 10%;
     width: 45%;
   }
@@ -545,11 +551,11 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
     min-height: 400px;
     max-height: 540px;
     right: -45%;
-    top: 20%
+    top: 10%
 }
 
 .banner-slide{
-  top: 20%;
+  top: 10%;
   left: 10%;
   width: 45%;
 }

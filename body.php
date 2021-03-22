@@ -61,7 +61,7 @@
       <div class="row mx-auto d-block pb-md-4">
         <img src="<?= $uri ?>/img/banner/Ativo 4.png" class="img-fluid col-2" alt="">
         <img src="<?= $uri ?>/img/imagens/teste.png" class="img-fluid col-2" alt="">
-        <img src="<?= $uri ?>/img/banner/Ativo 4.png" class="img-fluid col-2" alt="">
+        <img src="<?= $uri ?>/img/imagens/Ativo 1.png" class="img-fluid col-2" alt="">
       </div>
       <h1 class="texto text-center">SOLTE O PLAY</h1>
       <div class="row mx-auto d-block mt-md-5">
@@ -188,21 +188,13 @@
                 </div>
               </div>
             </div>
-            <div class="row ">
-              <div class="">
-                <div class="feature-item">
-                  <a href="#mokup" class="js-scroll-trigger">
-                  <img src="<?= $uri ?>/img/imagens/watch.png" class="img-fluid" alt=""></a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="cta" id="cta">
+  <section class="feature" id="cta">
     <div class="cta-content">
       <div class="container-fluid col-md-10 offset-md-1 text-center">
         <h2>Veja como é fácil ter acesso</h2>
