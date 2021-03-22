@@ -520,7 +520,7 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   }
 
   .banner-slide{
-    top: 10%;
+    top: 20%;
     left: 10%;
     width: 45%;
   }
@@ -545,11 +545,11 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
     min-height: 400px;
     max-height: 540px;
     right: -45%;
-    top: 10%
+    top: 20%
 }
 
 .banner-slide{
-  top: 10%;
+  top: 20%;
   left: 10%;
   width: 45%;
 }

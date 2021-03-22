@@ -51,7 +51,7 @@
     </div>
   </header>
  -->
-<header class="header-slide">
+<header class="header-slide" id="inicio">
     <div class="container container-banner">
       <img src="<?= $uri ?>/img/Banner-logtelplay2.png" class="img-fluid img-fluid-banner" alt="">
     </div>
@@ -60,7 +60,7 @@
       <h4 class="text-white pt-md-5 pt-3 text-h4">NOSSO ACERVO DE FILMES, MÚSICAS E CURSOS ONLINE</h4><br>
       <div class="row mx-auto d-block pb-md-4">
         <img src="<?= $uri ?>/img/banner/Ativo 4.png" class="img-fluid col-2" alt="">
-        <img src="<?= $uri ?>/img/banner/Ativo 4.png" class="img-fluid col-2" alt="">
+        <img src="<?= $uri ?>/img/imagens/teste.png" class="img-fluid col-2" alt="">
         <img src="<?= $uri ?>/img/banner/Ativo 4.png" class="img-fluid col-2" alt="">
       </div>
       <h1 class="texto text-center">SOLTE O PLAY</h1>
@@ -69,26 +69,26 @@
         <a href="<?= $uri ?>/contrate-avulso" target="_link" class="btn btn-outline col-4 offset-1">CONTRATE AVULSO</a>
       </div>
     </div>
-
 </header>
 
 
-  <div class="download bg-primary" id="download">
+  <div class="download " id="download">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 mt-2 pt-5">
+        <div class="col-md-6 mt-2">
           <h2 class="section-heading mt-5 pt-5">O Mumo é o jeito mais fácil de ouvir música!</h2>
-          <p>O serviço oferece diversas rádios online com
+          <p>O serviço oferece diversas estações online com
             diferentes estilos musicais, 24h por dia e sem
             propagandas.</p>
           <div class="badges">
-            <a class="badge-link" href="#"><img src="<?= $uri ?>/img/google-play-badge.svg" alt=""></a>
-            <a class="badge-link" href="#"><img src="<?= $uri ?>/img/app-store-badge.svg" alt=""></a>
-            <a href="#download" class="btn btn-primary btn-xl js-scroll-trigger mt-5">Login mumo</a>
+            <a class="badge-link" href="https://play.google.com/store/apps/details?id=fm.mumo.music"><img src="<?= $uri ?>/img/google-play-badge.svg" alt=""></a>
+            <a class="badge-link" href="https://apps.apple.com/us/app/mumo/id1220194162?ls=1"><img src="<?= $uri ?>/img/app-store-badge.svg" alt=""></a>
+            <!-- <a href="#download" class="btn btn-primary btn-xl js-scroll-trigger mt-5">Login mumo</a> -->
           </div>
         </div>
-        <div class="col-md-6 mumo d-none d-xl-block"">
-            <!-- <a href="#"><img src="<?= $uri ?>/img/Mumo-celulares_Desktop.png" alt=""></a> -->
+        <div class="col-md-6 mumo text-danger text-center">
+          <img src="/logtelplay.com.br/img/imagens/mumo.png" class="img-fluid mb-2 mt-5 pt-5" alt="">
+          <p>Escute o MUMO!</p>
         </div>
       </div>
     </div>
@@ -99,7 +99,7 @@
       <h2 class="section-heading">Estude com a Logtel no <img src="<?= $uri ?>/img/logo/qualifica.png" class="img-fluid" alt=""></h2>
       <div class="row">
         <div class="col-md-5 mt-5 pt-5">
-          <img src="<?= $uri ?>/img/qualifica.png" class="img-fluid mb-2" alt="">
+          <img src="<?= $uri ?>/img/imagens/qualifica.png" class="img-fluid mb-2" alt="">
           <p>A qualifica oferece mais de 2 mil aulas com certificado digital. Faça parte dessa equipe de mais de 3 mil alunos!</p>
         </div>
         <div class="col-md-7">
@@ -130,9 +130,9 @@
           </div>
           <p>Dosponível em todas a plataformas</p>
           <div class="badges">
-            <a class="badge-link" href="#"><img src="<?= $uri ?>/img/google-play-badge.svg" alt=""></a>
-            <a class="badge-link" href="#"><img src="<?= $uri ?>/img/app-store-badge.svg" alt=""></a>
-            <a class="badge-link" href="#"><img src="<?= $uri ?>/img/versaoweb.png" alt=""></a>
+            <a class="badge-link" href="https://play.google.com/store/apps/details?id=br.com.mlearn.qualifica&hl=pt_BR&gl=US"><img src="<?= $uri ?>/img/google-play-badge.svg" alt=""></a>
+            <a class="badge-link" href="https://apps.apple.com/br/app/qualifica-cursos/id1143628742"><img src="<?= $uri ?>/img/app-store-badge.svg" alt=""></a>
+            <a class="badge-link" href="https://qualifica.com/"><img src="<?= $uri ?>/img/versaoweb.png" alt=""></a>
           </div>
         </div>
     </div>
@@ -180,13 +180,19 @@
                   <p class="text-muted text-justify">Tenha acesso a conteúdos relevantes e diversificados dos maiores estúdios do mundo.</p>
                 </div>
               </div>
-            </div>
-            <div class="row ">
-              <div class="col-lg-4 offset-md-2">
+              <div class="col-lg-4">
                 <div class="feature-item">
                   <a href="#mokup" class="js-scroll-trigger">
                   <img src="<?= $uri ?>/img/logo/noggin1.png" class="img-fluid btn-planos btn-planos-noggin" alt=""></a>
-                  <p class="text-muted text-justify">O Noggin é o único serviço de aprendizagem que é dirigida pelos queridos personagens do Nick Jr.</p>
+                  <p class="text-muted text-justify">O Noggin é o único canal que é dirigida pelos personagens do Nick Jr.</p>
+                </div>
+              </div>
+            </div>
+            <div class="row ">
+              <div class="">
+                <div class="feature-item">
+                  <a href="#mokup" class="js-scroll-trigger">
+                  <img src="<?= $uri ?>/img/imagens/watch.png" class="img-fluid" alt=""></a>
                 </div>
               </div>
             </div>
@@ -242,7 +248,7 @@
                       <spam><i class="fa fa-check fa-lg text-info" aria-hidden="true"></i> Prontinho!!! Agora você tem acesso ao MUMO </spam><br>
                       <hr>
                       <h4> Se ainda assim não conseguiu acesso, entre em contato com o SUPORTE! </h4>
-                      <h5> É sempre uma satisfação te atender!</h5>
+                      <h5> É sempre uma satisfação  atendê-lo!</h5>
                       <a href="#contact" class="btn btn-primary btn-xl js-scroll-trigger mt-3">SUPORTE</a>
                   </div>
                   <div class="tab-pane fade p-3 text-justify" id="perfil" role="tabpanel" aria-labelledby="profile-tab">
@@ -254,7 +260,7 @@
                       <spam><i class="fa fa-check fa-lg text-info" aria-hidden="true"></i> Prontinho!!! Agora você já tem acesso ao Watch.  </spam><br>
                       <hr>
                       <h4> Se ainda assim não conseguiu acesso, entre em contato com o SUPORTE! </h4>
-                      <h5> É sempre um satisfação te atender!</h5>
+                      <h5> É sempre um satisfação atendê-lo!</h5>
                       <a href="#contact" class="btn btn-primary btn-xl js-scroll-trigger mt-3">SUPORTE</a>
                   </div>
                   <div class="tab-pane fade p-3 text-justify" id="perfil2" role="tabpanel" aria-labelledby="profile2-tab">
@@ -266,7 +272,7 @@
                       <spam><i class="fa fa-check fa-lg text-info" aria-hidden="true"></i> Prontinho!!! Agora você já tem acesso ao Watch.  </spam><br>
                       <hr>
                       <h4> Se ainda assim não conseguiu acesso, entre em contato com o SUPORTE! </h4>
-                      <h5> É sempre um satisfação te atender!</h5>
+                      <h5> É sempre um satisfação  atendê-lo!</h5>
                       <a href="#contact" class="btn btn-primary btn-xl js-scroll-trigger mt-3">SUPORTE</a>
                   </div>
                   <div class="tab-pane fade p-3 text-justify" id="contato" role="tabpanel" aria-labelledby="contact-tab">
@@ -277,7 +283,7 @@
                       <spam><i class="fa fa-check fa-lg text-info" aria-hidden="true"></i>  Prontinho!!! Agora você já tem acesso ao Paramount+.</spam><br>
                       <hr>
                       <h4> Se ainda assim não conseguiu acesso, entre em contato com o SUPORTE! </h4>
-                      <h5> É sempre um satisfação te atender!</h5>
+                      <h5> É sempre um satisfação  atendê-lo!</h5>
                       <a href="#contact" class="btn btn-primary btn-xl js-scroll-trigger mt-3">SUPORTE</a>
                   </div>
                       <div class="tab-pane fade p-3 text-justify" id="outros" role="tabpanel" aria-labelledby="outros-tab">
@@ -288,7 +294,7 @@
                         <spam><i class="fa fa-check fa-lg text-info" aria-hidden="true"></i>  Prontinho!!! Agora você já tem acesso ao Noggin</spam><br>
                         <hr>
                         <h4> Se ainda assim não conseguiu acesso, entre em contato com o SUPORTE! </h4>
-                        <h5> É sempre um satisfação te atender!</h5>
+                        <h5> É sempre um satisfação  atendê-lo!</h5>
                         <a href="#contact" class="btn btn-primary btn-xl js-scroll-trigger mt-3">SUPORTE</a>
                     </div>
                 </div>
