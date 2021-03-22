@@ -1,3 +1,3 @@
 <?php
 
-$uri = '/logtelplay.com.br';
+$uri = '';
