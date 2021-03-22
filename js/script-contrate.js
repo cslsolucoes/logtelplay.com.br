@@ -123,7 +123,6 @@ $(".servico").on("click", function(e){
     n = n.replace('.', ',');
     $(".total").html(n);
   }
-  console.log(n);
   if(n  == "0,00"){
     $(".vazio").html("Você ainda não selecionou nenhum serviço");
     $("#btn-passo-dois").prop("disabled", true);
@@ -184,7 +183,6 @@ $('body').on('blur', '#cep', function() {
 
           //Consulta o webservice viacep.com.br/
           $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
-            console.log(dados);
             if (!("erro" in dados)) {
                   //Atualiza os campos com os valores da consulta.
                   $("#rua").val(dados.logradouro).prop("disabled", false);
@@ -453,8 +451,7 @@ $('#btn-passo-cinco').on('click', function(e) {
     data: data,
     dataType: "json",
     success: function (response) {
-      console.log(response);
+      
     }
   });
-  console.log(data);
 });
