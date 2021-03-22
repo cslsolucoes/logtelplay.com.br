@@ -29,7 +29,7 @@ $( "#btn-passo-um" ).click(function() {
   var data = { busca:cpf, tipo:"todos" }
   $.ajax({
     method: "POST",
-    url: "../api/index.php?consultar_cliente",
+    url: "../api/consultar_cliente",
     data: data,
     dataType: "json",
     success: function (response) {
@@ -447,7 +447,7 @@ $('#btn-passo-cinco').on('click', function(e) {
   var data = {plano:servicos, cpf:$('#cpf').val(), nome:$(".nome").html(),telefone:$(".telefone").html(),email:$(".email").html(),cep:$(".cep").html(),logradouro:$(".rua").html(),numero:$(".numero-casa").html(),bairro:$(".bairro").html(),cidade:$(".cidade").html(),uf:$(".uf").html(),total:$(".total").html()};
   $.ajax({
     method: "POST",
-    url: "../api/index.php?cadastrar_venda",
+    url: "../api/cadastrar_venda",
     data: data,
     dataType: "json",
     success: function (response) {
