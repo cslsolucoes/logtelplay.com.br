@@ -404,7 +404,6 @@ function eraseCookie(name) {
   document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
-
 $('#btn-passo-cinco').on('click', function(e) {
   $("#passo-um-cadastrar-logtelplay").hide();
   $(".btn-light").hide();
@@ -447,5 +446,15 @@ $('#btn-passo-cinco').on('click', function(e) {
   msg = msg + '\nCidade: ' + $(".cidade").html();
   msg = msg + '\nUF: ' + $(".uf").html();
   msg = msg + '\nPreço Total: ' + $(".total").html();
-  console.log(msg);
+  var data = {plano:servicos, cpf:$('#cpf').val(), nome:$(".nome").html(),telefone:$(".telefone").html(),email:$(".email").html(),cep:$(".cep").html(),logradouro:$(".rua").html(),numero:$(".numero-casa").html(),bairro:$(".bairro").html(),cidade:$(".cidade").html(),uf:$(".uf").html(),total:$(".total").html()};
+  $.ajax({
+    method: "POST",
+    url: "../api/cadastrar_venda",
+    data: data,
+    dataType: "json",
+    success: function (response) {
+      console.log(response);
+    }
+  });
+  console.log(data);
 });

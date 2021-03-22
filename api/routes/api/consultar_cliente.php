@@ -10,6 +10,10 @@ $this->post('consultar_cliente', function () {
   }
 });
 
+$this->post('cadastrar_venda', function () {
+  $this->core->loadModule('template')->render('cadastrar_venda', $_POST);
+});
+
 $this->get('consultar_cliente', function () {
   $this->core->loadModule('template')->render('403');
 });

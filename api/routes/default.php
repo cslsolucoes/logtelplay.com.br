@@ -30,8 +30,8 @@ $this->loadRouteFile('cadastros/logtelchip'); */
 
 // API route files
 $this->loadRouteFile('api/consultar_cliente');
-/* $this->loadRouteFile('api/consultar_ocorrencias');
 $this->loadRouteFile('api/cadastrar_venda');
+/* $this->loadRouteFile('api/consultar_ocorrencias');
 $this->loadRouteFile('api/criar_ocorrencia');
 $this->loadRouteFile('api/consultar_onu_uid');
 $this->loadRouteFile('api/consultar_consumo_onu');
