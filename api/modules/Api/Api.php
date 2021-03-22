@@ -124,19 +124,21 @@ class Api {
   }
 
   public function cadastrarVenda($dados) {
+    $cpf = $dados['cpf'] ?? "Não informado";
+    $total = $dados['total'] ?? "0,00";
     $nome = $dados['nome'] ?? "Não informado";
     if(!isset($dados['telefone'])) {
       echo "
       <script type='text/javascript'>
         alert('Sua solicitação foi enviada com sucesso!');
-        window.location='http://www.logteltelecom.com.br/site';
+        window.location='http://www.logtelplay.com.br/';
       </script>
       ";
       return true;
     }
     $telefone = $dados['telefone'] ?? "Não informado";
     $email = $dados['email'] ?? "Não informado";
-    $planoCombo = $dados['plano-combo'] ?? "Não informado";
+    $planoCombo = $dados['plano'] ?? "Não informado";
     if($dados['cep'] == "") {
       $cep = "Não informado";
     } else {
@@ -174,6 +176,8 @@ class Api {
     }
     
     $mensagem = "FORMULÁRIO VIA SITE";
+    $mensagem .= "\n** VENDA DE PLANOS AVULSOS **";
+    $mensagem .= "\nCPF: ". $cpf;
     $mensagem .= "\nNome: ".$nome;
     $mensagem .= "\nE-mail: ".$email;
     $mensagem .= "\nTelefone: ". $telefone;
@@ -184,8 +188,9 @@ class Api {
     $mensagem .= "\nCidade: ". $cidade;
     $mensagem .= "\nUF: ". $uf;
     $mensagem .= "\nNúmero: ". $numero;
+    $mensagem .= "\nPreço Total: R$". $total;
     $realIP = file_get_contents("http://ipecho.net/plain");
-    $qry = "SELECT * FROM \"funcaoOcorrenciaAbrir\"(0, 115574, 90212, NULL, 55, 14, 272, 1, '$mensagem', '', '$nome', '$telefone', '$realIP')";
+    $qry = "SELECT * FROM \"funcaoOcorrenciaAbrir\"(0, 90212, 1, 55, 14, 272, 1, '$mensagem', '', '$nome', '$telefone', '$realIP')";
     $sql = $this->db->query($qry);
     $resultado = $sql->fetchAll();
     $qry = "SELECT * FROM \"funcaoVendasPreCadastroCria\"('$nome', '$telefone', '$email', '$logradouro', '$numero', '$bairro', '$cidade', '$uf', '$cep', '$planoCombo', '$realIP')";
@@ -194,7 +199,7 @@ class Api {
     echo "
       <script type='text/javascript'>
         alert('Sua solicitação foi enviada com sucesso! Aqui está seu protocolo: " . $resultado[0]['OcorrenciaNumero'] . "');
-        window.location='http://www.logteltelecom.com.br/site';
+        window.location='http://www.logtelplay.com.br/';
       </script>
     ";
     return true;
