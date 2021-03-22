@@ -65,8 +65,8 @@
       </div>
       <h1 class="texto text-center">SOLTE O PLAY</h1>
       <div class="row mx-auto d-block mt-md-5">
-        <a href="http://www.logteltelecom.com.br/site/#nossosPlanos" target="_link" class="btn btn-primary col-5">CONTRATE NO COMBO</a>
-        <a href="<?= $uri ?>/contrate-avulso" target="_link" class="btn btn-outline col-4 offset-1">CONTRATE AVULSO</a>
+        <a href="http://www.logteltelecom.com.br/site/#nossosPlanos" target="_link" class="btn btn-primary col-md-5 mt-2">CONTRATE NO COMBO</a>
+        <a href="<?= $uri ?>/contrate-avulso" target="_link" class="btn btn-outline col-md-4 mt-2">CONTRATE AVULSO</a>
       </div>
     </div>
 </header>
