@@ -30,5 +30,6 @@
   <!-- Custom styles for this template -->
   <link href="<?= $uri ?>/css/new-age.css" rel="stylesheet">
   <link href="<?= $uri ?>/css/style.css" rel="stylesheet">
+  <link href="<?= $uri ?>/css/footer.css" rel="stylesheet">
 
   <!-- CSS Adicionais -->

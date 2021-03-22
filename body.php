@@ -25,7 +25,7 @@
               <a class="nav-link js-scroll-trigger" href="#qualifica">QUALIFICA</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#features">SERVIÇOS</a>
+              <a class="nav-link js-scroll-trigger" href="#features">FILMES</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#cta">COMO ACESSAR</a>
@@ -37,7 +37,7 @@
         </div>
     </div>
   </nav>
-
+<!-- 
   <header class="masthead" id="inicio">
     <div class="container container-banner">
       <img src="<?= $uri ?>/img/Banner-logtelplay2.png" class="img-fluid img-fluid-banner d-none d-xl-block"" alt="">
@@ -47,12 +47,31 @@
       <h1 class="texto  text-center">SOLTE O PLAY</h1>
       <a href="http://www.logteltelecom.com.br/site/#nossosPlanos" target="_link" class="btn btn-primary btn-xl js-scroll-trigger btn1 mt-3 mb-3 col-md-2">CONTRATE NO COMBO</a>
       <a href="<?= $uri ?>/contrate-avulso" target="_link" class="btn btn-outline btn-xl js-scroll-trigger btn2 mt-3 mb-3 col-md-2">CONTRATE AVULSO</a>
-      <!-- 
-      <div  data-toggle="modal" data-target="#modal_contratar" class="btn btn-outline btn-xl js-scroll-trigger btn2 mt-3 mb-3 col-md-2">CONTRATE AVULSO</div>
-       -->
       <img src="<?= $uri ?>/img/logoplay-preta-oficial-mini.png" class="img-fluid img-logo" alt="">
     </div>
   </header>
+ -->
+<header class="header-slide">
+    <div class="container container-banner">
+      <img src="<?= $uri ?>/img/Banner-logtelplay2.png" class="img-fluid img-fluid-banner" alt="">
+    </div>
+    <div class="container banner-slide">
+      <img src="<?= $uri ?>/img/logoplay-preta-oficial-mini.png" class="img-fluid col-md-4  mx-auto d-block" alt="">
+      <h4 class="text-white pt-md-5 pt-3 text-h4">NOSSO ACERVO DE FILMES, MÚSICAS E CURSOS ONLINE</h4><br>
+      <div class="row mx-auto d-block pb-md-4">
+        <img src="<?= $uri ?>/img/banner/Ativo 4.png" class="img-fluid col-2" alt="">
+        <img src="<?= $uri ?>/img/banner/Ativo 4.png" class="img-fluid col-2" alt="">
+        <img src="<?= $uri ?>/img/banner/Ativo 4.png" class="img-fluid col-2" alt="">
+      </div>
+      <h1 class="texto text-center">SOLTE O PLAY</h1>
+      <div class="row mx-auto d-block mt-md-5">
+        <a href="http://www.logteltelecom.com.br/site/#nossosPlanos" target="_link" class="btn btn-primary col-5">CONTRATE NO COMBO</a>
+        <a href="<?= $uri ?>/contrate-avulso" target="_link" class="btn btn-outline col-4 offset-1">CONTRATE AVULSO</a>
+      </div>
+    </div>
+
+</header>
+
 
   <div class="download bg-primary" id="download">
     <div class="container">
@@ -69,7 +88,7 @@
           </div>
         </div>
         <div class="col-md-6 mumo d-none d-xl-block"">
-            <a href="#"><img src="<?= $uri ?>/img/Mumo-celulares_Desktop.png" alt=""></a>
+            <!-- <a href="#"><img src="<?= $uri ?>/img/Mumo-celulares_Desktop.png" alt=""></a> -->
         </div>
       </div>
     </div>
@@ -122,7 +141,7 @@
   <section class="features" id="features">
     <div class="container-fluid col-md-9 offset-md-2">
       <div class="section-heading text-center" >
-        <h2>Conheça todos os serviços da LogtelPlay</h2>
+        <h2>Nosso acervo de filmes e séries</h2>
         <p class="text-muted">São 4 serviços com conteúdos exclusivos para divertir-se com a família</p>
         <hr>
       </div>
@@ -135,7 +154,6 @@
                   <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
                   <img src="<?= $uri ?>/img/demo-screen-watch2.jpg" class="img-fluid img-fluid-watch" alt="">
                   <img src="<?= $uri ?>/img/demo-screen-noggin.jpg" class="img-fluid img-fluid-noggin" alt="">
-                  <img src="<?= $uri ?>/img/demo-screen-mumo.jpg" class="img-fluid img-fluid-mumo" alt="">
                   <img src="<?= $uri ?>/img/demo-screen-paramount.jpg" class="img-fluid img-fluid-paramount" alt="">
                 </div>
                 <div class="button">
@@ -149,28 +167,12 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-lg-4">
-                <div class="feature-item" id="">
-                  <a href="#mokup" class="js-scroll-trigger">
-                  <img src="<?= $uri ?>/img/logo/mumo1.png" class="img-fluid btn-planos btn-planos-mumo" alt=""></a>
-                  <p class="text-muted text-justify">O serviço oferece diversas estações com diferentes estilos musicais, 24h por dia e sem propagandas.</p>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="feature-item">
-                  <a href="#mokup" class="js-scroll-trigger">
-                  <img src="<?= $uri ?>/img/logo/qualifica1.png" class="img-fluid  btn-planos btn-planos-watch" alt=""></a>
-                  <p class="text-muted text-justify">O serviço oferece mais de 5 mil horas de filmes e séries exclusivos para você e toda a sua família.</p>
-                </div>
-              </div>
-              <div class="col-lg-4">
                 <div class="feature-item">
                   <a href="#mokup" class="js-scroll-trigger">
                   <img src="<?= $uri ?>/img/logo/watch1.png" class="img-fluid  btn-planos btn-planos-watch" alt=""></a>
                   <p class="text-muted text-justify">O serviço oferece mais de 5 mil horas de filmes e séries exclusivos para você e toda a sua família.</p>
                 </div>
               </div>
-            </div>
-            <div class="row">
               <div class="col-lg-4">
                 <div class="feature-item">
                   <a href="#mokup" class="js-scroll-trigger">
@@ -178,7 +180,9 @@
                   <p class="text-muted text-justify">Tenha acesso a conteúdos relevantes e diversificados dos maiores estúdios do mundo.</p>
                 </div>
               </div>
-              <div class="col-lg-4">
+            </div>
+            <div class="row ">
+              <div class="col-lg-4 offset-md-2">
                 <div class="feature-item">
                   <a href="#mokup" class="js-scroll-trigger">
                   <img src="<?= $uri ?>/img/logo/noggin1.png" class="img-fluid btn-planos btn-planos-noggin" alt=""></a>
@@ -353,7 +357,7 @@
           <input type="text" class="form-control form-control-contate" id="cep" maxlength="8" value="" name="cep">
         </div>
         <div class="form-group col-md-1">
-          <a href="#contact" class="btn btn-primary btn-xl js-scroll-trigger mt-3">ENVIAR</a>
+          <a href="#contact" class="btn btn-primary mt-3">ENVIAR</a>
         </div>
         </div>
         <div class="form-group ">

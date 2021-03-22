@@ -13,8 +13,7 @@
 }
 
 .img-fluid-banner {
-  min-height: 100vh;
-  width: auto;
+  min-height: 400px;
 }
 
 .footer-site {
@@ -22,44 +21,6 @@
   color: #fff;
   padding-top: 50px;
   padding-bottom: 50px;
-}
-
-@media (min-width: 1700px) {
-  .container-banner {
-    margin-right: 0px !important;
-    margin-bottom: 0px !important;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-
-  .texto {
-    font-family: "Righteous", cursive;
-    font-size: 110px;
-    font-weight: 600;
-    color: rgb(255, 255, 255);
-    position: absolute;
-    text-align: center;
-    top: 350px;
-    height: 30px;
-    left: 2em;
-  }
-  .btn1 {
-    position: absolute;
-    top: 550px;
-    left: 22em;
-  }
-  .btn2 {
-    position: absolute;
-    top: 550px;
-    left: 55em;
-  }
-  .img-logo {
-    position: absolute;
-    top: 700px;
-    left: 28em;
-  }
 }
 
 
@@ -104,8 +65,7 @@
   background: url("../img/bg-pattern.png"),
     linear-gradient(to left, #0e5fd991, #0e1cd993);
 }
-.btn-planos:hover,
-::after {
+.btn-planos:hover {
   background: url("../img/bg-pattern.png"), #0e5fd959;
   background: url("../img/bg-pattern.png"),
     linear-gradient(to left, #0e5fd991, #0e1cd993);
@@ -350,3 +310,6 @@ a.socialIcon:hover,
 #mumo[data-ativo=1] {
   background-color:rgb(255, 255, 255);
 }
+
+
+
