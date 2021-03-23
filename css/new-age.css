@@ -491,8 +491,8 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   .img-fluid-banner {
     position: relative;
     min-height: 400px;
-    max-height: 1024px;
-    right: -10%;
+    max-height: 900px;
+    right: -0%;
     top: 40%
   }
 
