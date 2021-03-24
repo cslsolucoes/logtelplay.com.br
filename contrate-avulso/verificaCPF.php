@@ -189,19 +189,19 @@
         </div>
         <div class=" col-md-4 mb-3 offset-md-4">
           <!-- <label for="nome">Nome</label> -->
-          <input type="text" id="nome" class="form-control form-control-contate text-center" placeholder="Insira seu nome" aria-label="Insira seu nome" name="nome">
+          <input type="text" id="nome" class="form-control form-control-contate text-center obrigatorio" placeholder="Insira seu nome" aria-label="Insira seu nome" name="nome">
           <div class="input-group-append">
           </div>
         </div>
         <div class=" col-md-4 mb-3 offset-md-4">
           <!-- <label for="email">E-mail</label> -->
-          <input type="text" id="email" class="form-control form-control-contate text-center" placeholder="exemplo@logtel.com.br" aria-label="Insira seu e-mail" name="email">
+          <input type="text" id="email" class="form-control form-control-contate text-center obrigatorio" placeholder="exemplo@logtel.com.br" aria-label="Insira seu e-mail" name="email">
           <div class="input-group-append">
           </div>
         </div>
         <div class=" col-md-4  mb-3 offset-md-4">
           <!-- <label for="telefone">Telefone</label> -->
-          <input type="text" id="telefone" class="form-control  form-control-contate text-center" placeholder="9 9999-9999" maxlength="15"  aria-label="Insira seu Telefone" id="telefone" name="telefone">
+          <input type="text" id="telefone" class="form-control  form-control-contate text-center obrigatorio" maxlength="15" placeholder="(61) 9999-9999" aria-label="Insira seu Telefone" id="telefone" name="telefone">
         </div>
         <div class=" col-md-3  mx-auto">
           <button type="button" id="btn-passo-tres" class="btn btn-primary col-md-11 mt-4">Próximo</button>
@@ -218,8 +218,9 @@
       </div>
       <div class="container " >
         <div class="form-row col-md-8 mt-4 mx-auto">
-          <div class="col-md-3">
-            <input type="text" class="form-control form-control-contate" id="cep" maxlength="8" name="cep" placeholder="00.000-00" aria-label="Insira seu CEP" aria-describedby="submit-button">
+          <div class="col-md-4">
+            <input type="text" class="form-control form-control-contate" id="cep" name="cep" placeholder="00.000-000" aria-label="Insira seu CEP" aria-describedby="submit-button">
+            <spam class="text-danger" id="labelcep"></spam>
           </div>
         </div>
         <div class="form-row mt-3 col-md-8 mx-auto">
@@ -249,7 +250,7 @@
         </div>
       </div>
       <div class=" col-md-3  mx-auto">
-        <button type="button" id="btn-passo-quatro" class="btn btn-primary col-md-11 mt-4">Próximo</button>
+        <button type="button" id="btn-passo-quatro" class="btn btn-primary col-md-11 mt-4" disabled>Próximo</button>
       </div>
     </div>
   </section>

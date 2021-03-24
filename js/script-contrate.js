@@ -179,12 +179,16 @@ $("#btn-passo-dois").click(function(){
   $("#modal-text").modal('hide');
   $(".passo-dois").hide();
   $(".passo-tres").animate({ width: "show", 'left': 0 }, "slow");
+  $('#cpf-disabled').mask('000.000.000-00');
+  $('#telefone').mask('(00) 0 0000-0000');
   $("#cpf-disabled").val(cpf);
 });
 
 
 function limpa_formulário_cep() {
   // Limpa valores do formulário de cep.
+  
+  
   $("#rua").val("");
   $("#bairro").val("");
   $("#cidade").val("");
@@ -217,23 +221,26 @@ $('body').on('blur', '#cep', function() {
             if (!("erro" in dados)) {
                   //Atualiza os campos com os valores da consulta.
                   $("#rua").val(dados.logradouro).prop("disabled", false);
-                  $("#numero-casa").prop("disabled", false);;
+                  $("#numero-casa").prop("disabled", false);
                   $("#bairro").val(dados.bairro);
                   $("#cidade").val(dados.localidade);
                   $("#uf").val(dados.uf);
+                  $("#btn-passo-quatro").prop("disabled", false);
                   
               } //end if.
               else {
                   //CEP pesquisado não foi encontrado.
                   limpa_formulário_cep();
-                  console.log("CEP não encontrado.");
+                  $("#labelcep").html("CEP não encontrado.");
+                  $("#btn-passo-quatro").prop("disabled", true);
               }
           });
       } //end if.
       else {
           //cep é inválido.
           limpa_formulário_cep();
-          console.log("Formato de CEP inválido.");
+          $("#labelcep").html("Formato de CEP inválido.");
+          $("#btn-passo-quatro").prop("disabled", true);
       }
   } //end if.
   else {
@@ -244,6 +251,7 @@ $('body').on('blur', '#cep', function() {
 
 $("#btn-passo-tres").click(function(){
   $(".passo-tres").hide();
+  $('#cep').mask('00.000-000');
   $(".passo-quatro").animate({ width: "show", 'left': 0 }, "slow");
 });
 
