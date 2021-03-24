@@ -21,8 +21,39 @@ $("#passo-um-cadastrar-logtelplay").hide();
 $("#passo-cinco-ok").hide();
 
 barraProgresso();
+validacaoCPF();
 var cliente; /* Novo cliente / Cliente com contrato cancelado */
 var passos = 1; /* Controlador de onde o cliente está */
+
+function validacaoCPF() {
+  $('#cpf').mask('000.000.000-00');
+  $('#cpf').focusout(function () {
+    if ($(this).val() != "") {
+      let cpf = $(this).unmask().val();
+      let cpfValido = validaCpf(cpf);
+      if (!cpfValido) {
+        $("#label").html("Digite um CPF válido");
+        $("#btn-passo-um").prop("disabled", true);
+        $('#cpf').mask('000.000.000-00');
+        return false;
+      }else{
+        $('#cpf').mask('000.000.000-00');
+        $("#btn-passo-um").prop("disabled", false);
+      }
+    }
+  });
+
+  $('#cpf').focus(function () {
+    $('#cpf').mask('000.000.000-00');
+    $("#label").html("");
+    $("#btn-passo-um").prop("disabled", true);
+  });
+  
+}
+
+
+  
+
 
 $( "#btn-passo-um" ).click(function() {
   cpf = busca = $("#cpf").val().toUpperCase().replace(/[^a-zA-Z0-9 çÇáÁéÉíÍóÓúÚãÃõÕ]/g, "");
@@ -250,42 +281,6 @@ $("#btn-passo-cinco").click(function(){
 
 });
 
- 
-/* 
-var cadastroVenda = { 
-  
-  'cpf' : cpf,
-  'nome': $('#nome').val(),
-  'email': $('#email').val(),
-  'telefone': $('#telefone').val(),
-  'cep':$('#cep').val(),
-  'bairro': $('#bairro').val(),
-  'cidade': $('#cidade').val(),
-  'uf': $('#uf').val(),
-  'logradouro': $('#logradouro').val(),
-  'numero': $('#numero').val(),
-  'servico': $('#servico').val()
- };
-
-$("#cadastrar_venda");
-console.log(cadastroVenda);
- */
-/* 
-$("#cadastrar-venda").click(function() {
-  $.ajax({
-    method: "POST",
-    url: "../api/cadastrar_vendas",
-    data: data,
-    dataType: "json",
-    success: function (response) {
-      var internet = false, mumo = false, cdn = false, tv = false, qualifica = false;
-     
-    }
-  });
-});
-
- */
-
 function barraProgresso() {
   $("#passo-um-cadastrar-logtelplay").click(function(){
     $("#progressbar-um").removeClass("last");
@@ -459,3 +454,66 @@ $('#btn-passo-cinco').on('click', function(e) {
     }
   });
 });
+
+
+/**
+ * Valida o CPF através de sua fórmula
+ * @param mixed cpf - .val() do input a ser validado
+ */
+ function validaCpf(cpf) {
+	if (cpf === null) {
+		return false;
+	}
+
+	cpf = cpf
+		//.split('.')
+		//.join('')
+		//.split('-')
+		//.join('');
+	var numeros, digitos, soma, i, resultado, digitos_iguais;
+	digitos_iguais = 1;
+
+	if (cpf.length < 10) {
+		return false;
+	}
+	if (cpf.length == 10) {
+		cpf = '0' + cpf;
+	}
+	for (i = 0; i < cpf.length - 1; i++) {
+		if (cpf.charAt(i) != cpf.charAt(i + 1)) {
+			digitos_iguais = 0;
+			break;
+		}
+	}
+
+	if (!digitos_iguais) {
+		numeros = cpf.substring(0, 9);
+		digitos = cpf.substring(9);
+		soma = 0;
+
+		for (i = 10; i > 1; i--) {
+			soma += numeros.charAt(10 - i) * i;
+		}
+
+		resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
+		if (resultado != digitos.charAt(0)) {
+			return false;
+		}
+
+		numeros = cpf.substring(0, 10);
+		soma = 0;
+		for (i = 11; i > 1; i--) {
+			soma += numeros.charAt(11 - i) * i;
+		}
+
+		resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
+
+		if (resultado != digitos.charAt(1)) {
+			return false;
+		}
+
+		return true;
+	} else {
+		return false;
+	}
+}

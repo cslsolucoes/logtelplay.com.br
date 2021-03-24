@@ -52,10 +52,10 @@
       <div class="container text-center mt-4">
         <div class=" col-md-3  mx-auto text-center">
           <input type="text" class="form-control form-control-contate text-center" id="cpf" val="" placeholder="000.000.000-00" aria-label="Insira seu CPF" maxlength="15" aria-describedby="submit-button" required>
-          <p id="label"></p>
+          <p class="text-danger" id="label"></p>
         </div>
         <div class=" col-md-3  mx-auto">
-          <button type="button" id="btn-passo-um" class="btn btn-primary col-md-11 mt-4"  data-toggle="modal" data-target="#modal-text">Começar</button>
+          <button type="button" id="btn-passo-um" class="btn btn-primary col-md-11 mt-4"  data-toggle="modal" data-target="#modal-text" disabled>Começar</button>
         </div>
       </div>
     </div>
