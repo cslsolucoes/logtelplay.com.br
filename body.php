@@ -87,7 +87,7 @@
           </div>
         </div>
         <div class="col-md-6 mumo text-danger text-center">
-          <img src="/logtelplay.com.br/img/imagens/mumo.png" class="img-fluid mb-2 mt-5 pt-5" alt="">
+          <img src="<?= $uri ?>/img/imagens/mumo.png" class="img-fluid mb-2 mt-5 pt-5" alt="">
           <p>Escute o MUMO!</p>
         </div>
       </div>
