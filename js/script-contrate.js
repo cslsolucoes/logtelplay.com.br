@@ -244,6 +244,10 @@ $("#btn-passo-quatro").click(function(){
 $("#btn-passo-cinco").click(function(){
   $("#modal-text").modal('show');
   $("#modal-text #response").html("Seus dados foram enviados com sucesso<p> Em até 24 horas enviaremos seu boleto de pagamento para o e-mail cadastrado.</p>" + email);
+  $("#passo-cinco-ok").click(function(){
+    window.location.href = "http://www.logtelplay.com.br";
+  });
+
 });
 
  
