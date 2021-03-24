@@ -492,7 +492,7 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
     position: relative;
     min-height: 400px;
     max-height: 900px;
-    right: -0%;
+    right: 0%;
     top: 40%
   }
 
