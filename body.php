@@ -257,11 +257,11 @@
                   </div>
                   <div class="tab-pane fade p-3 text-justify" id="perfil2" role="tabpanel" aria-labelledby="profile2-tab">
                       <spam><i class="fa fa-check fa-lg text-info" aria-hidden="true"></i> Se você já é cliente logtel, o seu cadastro está PRONTO! </spam><br>
-                      <spam><i class="fa fa-check fa-lg text-info" aria-hidden="true"></i> Acesse o link  para <a href="https://watch.tv.br/esqueci-minha-senha">Recuperar a senha</a> </spam><br>
-                      <spam><i class="fa fa-check fa-lg text-info" aria-hidden="true"></i> Insira o mesmo e-mail que você cadastrou na LOGTEL </spam><br>
-                      <spam><i class="fa fa-check fa-lg text-info" aria-hidden="true"></i> Você vai receber um e-mail para redefinir a senha: PODE ESCOLHER! </spam><br>
-                      <spam><i class="fa fa-check fa-lg text-info" aria-hidden="true"></i> A única regra é: mínimo 6 caractéres, tenho 1 minúscula e 1 maiúscula </spam><br>
-                      <spam><i class="fa fa-check fa-lg text-info" aria-hidden="true"></i> Prontinho!!! Agora você já tem acesso ao Watch.  </spam><br>
+                      <spam><i class="fa fa-check fa-lg text-info" aria-hidden="true"></i> Acesse o link  para <a href="https://app.qualifica.mobi/#/sign-in/partners_list/logtel">QUALIFICA</a> </spam><br>
+                      <spam><i class="fa fa-check fa-lg text-info" aria-hidden="true"></i> Procure por LOGTEL </spam><br>
+                      <spam><i class="fa fa-check fa-lg text-info" aria-hidden="true"></i> Seu Login será seu CPF </spam><br>
+                      <spam><i class="fa fa-check fa-lg text-info" aria-hidden="true"></i> Sua senha são os 5 útimos dígitos do CPF </spam><br>
+                      <spam><i class="fa fa-check fa-lg text-info" aria-hidden="true"></i> Prontinho!!! Agora você já tem acesso ao Qualifica  </spam><br>
                       <hr>
                       <h4> Se ainda assim não conseguiu acesso, entre em contato com o SUPORTE! </h4>
                       <h5> É sempre um satisfação  atendê-lo!</h5>
