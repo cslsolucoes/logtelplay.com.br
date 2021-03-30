@@ -70,11 +70,11 @@ $( "#btn-passo-um" ).click(function() {
           // VERIFICAR INTERNET
           if(response[i].servico_internet) {
             var servico_internet = JSON.parse(response[i].servico_internet);
-            if(servico_internet[0].status == 1 || servico_internet[0].status == 4) {
-              internet = true;
-            } else{
-              internet = false;
-            }
+            //if(servico_internet[0].status == 1 || servico_internet[0].status == 4) {
+              //internet = servico_internet[0].status;
+            //} else{
+              internet = servico_internet[0].status;
+            //}
           }
           
           if(response[i].servico_multimida) {
@@ -107,21 +107,22 @@ $( "#btn-passo-um" ).click(function() {
         } catch (e) {}
       }
 
-      try {
-        if(internet) {
+      //try {
+        console.log(internet);
+        if(internet == 1 || internet == 4) {
           $("#modal-text #response").html("Você já tem contrato ativo conosco. Já tem direito logtel play.");
           $("#acessar-logtelplay").show();
           $("#passo-um-cadastrar-logtelplay").hide();
-        } else {
+        } else if(internet == 3) {
           $("#modal-text #response").html("Identificamos que você tem um contrato cancelado conosco. Deseja continuar com o contrato de serviço avulso da Logtel Play?");
           $("#acessar-logtelplay").hide();
           $("#passo-um-cadastrar-logtelplay").show();
-        }
-      } catch(e) {
+        } else {
+      //} catch(e) {
         $("#modal-text #response").html("Tudo certo. Deseja continuar com o contrato de serviço avulso da Logtel Play?");
         $("#acessar-logtelplay").hide();
         $("#passo-um-cadastrar-logtelplay").show();
-      }
+        }
     }
   });
 });
