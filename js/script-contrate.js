@@ -26,13 +26,24 @@ var cliente; /* Novo cliente / Cliente com contrato cancelado */
 var passos = 1; /* Controlador de onde o cliente está */
 
 function validacaoCPF() {
-  $('#cpf').mask('000.000.000-00');
-  $('#cpf').focusout(function () {
-    if ($(this).val() != "") {
+  $('#cpf').on('keyup', function (e) {
+    $(this).mask('000.000.000-00');
+    if(validaCpf($(this).val())) {
+      $("#btn-passo-um").prop("disabled", false);
+      $("#label").html("");
+    } else {
+      $("#btn-passo-um").prop("disabled", true);
+      if($(this).val().length == 14)
+      $("#label").html("Digite um CPF válido");
+    }
+    if(e.keyCode == 13) {
+      $("#btn-passo-um").trigger('click');
+    }
+/*     if ($(this).val() != "") {
       let cpf = $(this).unmask().val();
       let cpfValido = validaCpf(cpf);
       if (!cpfValido) {
-        $("#label").html("Digite um CPF válido");
+        
         $("#btn-passo-um").prop("disabled", true);
         $('#cpf').mask('000.000.000-00');
         return false;
@@ -40,13 +51,13 @@ function validacaoCPF() {
         $('#cpf').mask('000.000.000-00');
         $("#btn-passo-um").prop("disabled", false);
       }
-    }
+    } */
   });
 
   $('#cpf').focus(function () {
     $('#cpf').mask('000.000.000-00');
     $("#label").html("");
-    $("#btn-passo-um").prop("disabled", true);
+    //$("#btn-passo-um").prop("disabled", true);
   });
   
 }
@@ -108,7 +119,6 @@ $( "#btn-passo-um" ).click(function() {
       }
 
       //try {
-        console.log(internet);
         if(internet == 1 || internet == 4) {
           $("#modal-text #response").html("Você já tem contrato ativo conosco. Já tem direito logtel play.");
           $("#acessar-logtelplay").show();
@@ -474,7 +484,7 @@ $('#btn-passo-cinco').on('click', function(e) {
 		return false;
 	}
 
-	cpf = cpf
+	cpf = cpf.replace(/[^0-9]/g, '');
 		//.split('.')
 		//.join('')
 		//.split('-')
